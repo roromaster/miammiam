@@ -18,77 +18,88 @@
           "quantity": 400,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "tomate concassée en boîte",
           "quantity": 800,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.6
         },
         {
           "name": "anchois à l'huile",
           "quantity": 50,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 2
         },
         {
           "name": "olive noire",
           "quantity": 120,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.44
         },
         {
           "name": "câpre",
           "quantity": 2,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.5
         },
         {
           "name": "ail",
           "quantity": 3,
           "unit": "gousse",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.3
         },
         {
           "name": "piment en flocons",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.15
         },
         {
           "name": "pois chiche en boîte",
           "quantity": 480,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.44
         },
         {
           "name": "paprika fumé",
           "quantity": 2,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.4
         },
         {
           "name": "huile d'olive",
           "quantity": 5,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 1
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         }
       ],
       "steps": [
@@ -115,98 +126,112 @@
           "quantity": 1400,
           "unit": "g",
           "aisle": "Viandes et poissons",
-          "staple": false
+          "staple": false,
+          "price": 25.2
         },
         {
           "name": "courge butternut",
           "quantity": 1200,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 3.6
         },
         {
           "name": "oignon",
           "quantity": 2,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.4
         },
         {
           "name": "pâte de curry jaune",
           "quantity": 120,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 2.4
         },
         {
           "name": "lait de coco",
           "quantity": 800,
           "unit": "ml",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 3.2
         },
         {
           "name": "sauce poisson",
           "quantity": 5,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.5
         },
         {
           "name": "sucre",
           "quantity": 50,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.08
         },
         {
           "name": "citron vert",
           "quantity": 5,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 2
         },
         {
           "name": "coriandre fraîche",
           "quantity": 40,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "riz jasmin",
           "quantity": 640,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.92
         },
         {
           "name": "chou chinois",
           "quantity": 800,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 2.4
         },
         {
           "name": "cacahuète",
           "quantity": 100,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "huile neutre",
           "quantity": 2,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.1
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         }
       ],
       "steps": [
@@ -243,91 +268,104 @@
           "quantity": 1400,
           "unit": "g",
           "aisle": "Viandes et poissons",
-          "staple": false
+          "staple": false,
+          "price": 19.6
         },
         {
           "name": "tomate concassée en boîte",
           "quantity": 1200,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 2.4
         },
         {
           "name": "oignon",
           "quantity": 4,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "ail",
           "quantity": 4,
           "unit": "gousse",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.4
         },
         {
           "name": "piment chipotle en adobo",
           "quantity": 100,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 3
         },
         {
           "name": "origan séché",
           "quantity": 3,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.3
         },
         {
           "name": "tortilla de maïs",
           "quantity": 24,
           "unit": "pièce",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 4.8
         },
         {
           "name": "crème fraîche",
           "quantity": 250,
           "unit": "ml",
           "aisle": "Produits laitiers",
-          "staple": false
+          "staple": false,
+          "price": 1
         },
         {
           "name": "coriandre fraîche",
           "quantity": 40,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "chou rouge",
           "quantity": 800,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1.6
         },
         {
           "name": "citron vert",
           "quantity": 3,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1.2
         },
         {
           "name": "huile neutre",
           "quantity": 3,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.15
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         }
       ],
       "steps": [
@@ -363,105 +401,120 @@
           "quantity": 1600,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 12.8
         },
         {
           "name": "porc haché",
           "quantity": 500,
           "unit": "g",
           "aisle": "Viandes et poissons",
-          "staple": false
+          "staple": false,
+          "price": 5.5
         },
         {
           "name": "pâte de piment doubanjiang",
           "quantity": 6,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.5
         },
         {
           "name": "ail",
           "quantity": 6,
           "unit": "gousse",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "gingembre",
           "quantity": 60,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "oignon nouveau",
           "quantity": 6,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.9
         },
         {
           "name": "poivre de Sichuan",
           "quantity": 2,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "bouillon de volaille",
           "quantity": 800,
           "unit": "ml",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "fécule de maïs",
           "quantity": 3,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.15
         },
         {
           "name": "sauce soja",
           "quantity": 5,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.5
         },
         {
           "name": "riz jasmin",
           "quantity": 640,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.92
         },
         {
           "name": "brocoli",
           "quantity": 1200,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 4.8
         },
         {
           "name": "graine de sésame",
           "quantity": 3,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.45
         },
         {
           "name": "vinaigre noir",
           "quantity": 3,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.45
         },
         {
           "name": "huile neutre",
           "quantity": 6,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.3
         }
       ],
       "steps": [
@@ -498,105 +551,120 @@
           "quantity": 800,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 4
         },
         {
           "name": "saucisse de Morteau",
           "quantity": 3,
           "unit": "pièce",
           "aisle": "Viandes et poissons",
-          "staple": false
+          "staple": false,
+          "price": 21
         },
         {
           "name": "carotte",
           "quantity": 4,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "oignon",
           "quantity": 2,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.4
         },
         {
           "name": "feuille de laurier",
           "quantity": 2,
           "unit": "pièce",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.1
         },
         {
           "name": "thym séché",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.1
         },
         {
           "name": "moutarde",
           "quantity": 3,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.3
         },
         {
           "name": "vinaigre de vin",
           "quantity": 2,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.06
         },
         {
           "name": "endive",
           "quantity": 12,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 4.8
         },
         {
           "name": "orange",
           "quantity": 3,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1.5
         },
         {
           "name": "beurre",
           "quantity": 50,
           "unit": "g",
           "aisle": "Produits laitiers",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "miel",
           "quantity": 2,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.5
         },
         {
           "name": "huile d'olive",
           "quantity": 3,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.6
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         },
         {
           "name": "poivre",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.1
         }
       ],
       "steps": [
@@ -632,77 +700,88 @@
           "quantity": 800,
           "unit": "g",
           "aisle": "Boucher (à acheter vendredi)",
-          "staple": false
+          "staple": false,
+          "price": 22.4
         },
         {
           "name": "échalote",
           "quantity": 6,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1.5
         },
         {
           "name": "vin rouge",
           "quantity": 100,
           "unit": "ml",
           "aisle": "Boissons",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "beurre",
           "quantity": 50,
           "unit": "g",
           "aisle": "Produits laitiers",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "pomme de terre",
           "quantity": 1000,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1.5
         },
         {
           "name": "panais",
           "quantity": 600,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 2.4
         },
         {
           "name": "miel",
           "quantity": 2,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.5
         },
         {
           "name": "thym séché",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.1
         },
         {
           "name": "huile d'olive",
           "quantity": 4,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.8
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         },
         {
           "name": "poivre",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.1
         }
       ],
       "steps": [
@@ -728,105 +807,120 @@
           "quantity": 600,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1.5
         },
         {
           "name": "farine",
           "quantity": 250,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.25
         },
         {
           "name": "œuf",
           "quantity": 4,
           "unit": "pièce",
           "aisle": "Produits laitiers",
-          "staple": false
+          "staple": false,
+          "price": 1.2
         },
         {
           "name": "dashi en poudre",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.3
         },
         {
           "name": "crevette décortiquée",
           "quantity": 400,
           "unit": "g",
           "aisle": "Surgelés",
-          "staple": false
+          "staple": false,
+          "price": 7.2
         },
         {
           "name": "oignon nouveau",
           "quantity": 4,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "sauce okonomiyaki",
           "quantity": 8,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 2.4
         },
         {
           "name": "mayonnaise",
           "quantity": 4,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.4
         },
         {
           "name": "bonite séchée",
           "quantity": 10,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.5
         },
         {
           "name": "carotte",
           "quantity": 8,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1.2
         },
         {
           "name": "pâte de miso",
           "quantity": 3,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.9
         },
         {
           "name": "miel",
           "quantity": 1,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.25
         },
         {
           "name": "graine de sésame",
           "quantity": 1,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.15
         },
         {
           "name": "huile neutre",
           "quantity": 5,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.25
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         }
       ],
       "steps": [
@@ -853,119 +947,136 @@
           "quantity": 4,
           "unit": "pièce",
           "aisle": "Viandes et poissons",
-          "staple": false
+          "staple": false,
+          "price": 10
         },
         {
           "name": "tomate concassée en boîte",
           "quantity": 400,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "vin blanc",
           "quantity": 150,
           "unit": "ml",
           "aisle": "Boissons",
-          "staple": false
+          "staple": false,
+          "price": 1.2
         },
         {
           "name": "oignon",
           "quantity": 1,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.2
         },
         {
           "name": "carotte",
           "quantity": 1,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.15
         },
         {
           "name": "céleri branche",
           "quantity": 2,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1
         },
         {
           "name": "ail",
           "quantity": 2,
           "unit": "gousse",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.2
         },
         {
           "name": "romarin frais",
           "quantity": 5,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.5
         },
         {
           "name": "olive noire",
           "quantity": 80,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.96
         },
         {
           "name": "polenta instantanée",
           "quantity": 250,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.25
         },
         {
           "name": "beurre",
           "quantity": 30,
           "unit": "g",
           "aisle": "Produits laitiers",
-          "staple": false
+          "staple": false,
+          "price": 0.36
         },
         {
           "name": "fenouil",
           "quantity": 3,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 3.6
         },
         {
           "name": "orange",
           "quantity": 1,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.5
         },
         {
           "name": "graine de fenouil",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.1
         },
         {
           "name": "huile d'olive",
           "quantity": 5,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 1
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         },
         {
           "name": "poivre",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.1
         }
       ],
       "steps": [
@@ -992,98 +1103,112 @@
           "quantity": 600,
           "unit": "g",
           "aisle": "Viandes et poissons",
-          "staple": false
+          "staple": false,
+          "price": 12
         },
         {
           "name": "pain à burger",
           "quantity": 4,
           "unit": "pièce",
           "aisle": "Boulangerie",
-          "staple": false
+          "staple": false,
+          "price": 2
         },
         {
           "name": "comté",
           "quantity": 120,
           "unit": "g",
           "aisle": "Produits laitiers",
-          "staple": false
+          "staple": false,
+          "price": 2.16
         },
         {
           "name": "oignon",
           "quantity": 3,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "sucre",
           "quantity": 15,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.02
         },
         {
           "name": "roquette",
           "quantity": 50,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1.25
         },
         {
           "name": "fromage blanc",
           "quantity": 100,
           "unit": "g",
           "aisle": "Produits laitiers",
-          "staple": false
+          "staple": false,
+          "price": 0.4
         },
         {
           "name": "moutarde",
           "quantity": 2,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.2
         },
         {
           "name": "betterave crue",
           "quantity": 800,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 2.4
         },
         {
           "name": "orange",
           "quantity": 1,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.5
         },
         {
           "name": "cumin moulu",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.1
         },
         {
           "name": "huile d'olive",
           "quantity": 4,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.8
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         },
         {
           "name": "poivre",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.1
         }
       ],
       "steps": [
@@ -1109,91 +1234,104 @@
           "quantity": 1600,
           "unit": "g",
           "aisle": "Viandes et poissons",
-          "staple": false
+          "staple": false,
+          "price": 19.2
         },
         {
           "name": "pomme de terre",
           "quantity": 1600,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 2.4
         },
         {
           "name": "sauce soja",
           "quantity": 8,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.8
         },
         {
           "name": "vin de Shaoxing",
           "quantity": 150,
           "unit": "ml",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 1.8
         },
         {
           "name": "sucre",
           "quantity": 80,
           "unit": "g",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.12
         },
         {
           "name": "étoile de badiane",
           "quantity": 3,
           "unit": "pièce",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.6
         },
         {
           "name": "bâton de cannelle",
           "quantity": 1,
           "unit": "pièce",
           "aisle": "Épicerie",
-          "staple": false
+          "staple": false,
+          "price": 0.3
         },
         {
           "name": "gingembre",
           "quantity": 100,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 1
         },
         {
           "name": "oignon nouveau",
           "quantity": 6,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.9
         },
         {
           "name": "pak choï",
           "quantity": 1200,
           "unit": "g",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 6
         },
         {
           "name": "ail",
           "quantity": 4,
           "unit": "gousse",
           "aisle": "Fruits et légumes",
-          "staple": false
+          "staple": false,
+          "price": 0.4
         },
         {
           "name": "huile neutre",
           "quantity": 4,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.2
         },
         {
           "name": "sel",
           "quantity": 1,
           "unit": "c. à café",
           "aisle": "Épicerie",
-          "staple": true
+          "staple": true,
+          "price": 0.01
         }
       ],
       "steps": [

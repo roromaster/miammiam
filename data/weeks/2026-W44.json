@@ -1,0 +1,1204 @@
+{
+  "week": "2026-W44",
+  "startDate": "2026-10-26",
+  "status": "validated",
+  "meals": [
+    {
+      "day": "lundi",
+      "slot": "midi",
+      "title": "Penne aux haricots blancs et à la tomate",
+      "emoji": "🍝",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "penne",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "haricot blanc en boîte",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "tomate concassée en boîte",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "ail",
+          "quantity": 2,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": true
+        },
+        {
+          "name": "origan séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Porter une grande casserole d'eau salée à ébullition et y cuire les penne le temps indiqué sur le paquet.",
+        "Pendant ce temps, faire revenir l'ail émincé 1 minute dans l'huile d'olive, à feu moyen.",
+        "Ajouter les tomates et l'origan, puis laisser mijoter 10 minutes.",
+        "Ajouter les haricots blancs rincés et égouttés, puis réchauffer 5 minutes. Saler et poivrer.",
+        "Égoutter les penne, les mélanger à la sauce et servir aussitôt."
+      ]
+    },
+    {
+      "day": "lundi",
+      "slot": "soir",
+      "title": "Filet de lieu noir à la moutarde, carottes glacées et riz",
+      "emoji": "🐟",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "filet de lieu noir",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "moutarde",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "crème fraîche",
+          "quantity": 10,
+          "unit": "cl",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "carotte",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "riz basmati",
+          "quantity": 300,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "beurre",
+          "quantity": 30,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "citron",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Cuire le riz dans une casserole d'eau salée le temps indiqué sur le paquet.",
+        "Couper les carottes en rondelles fines et les mettre dans une sauteuse avec le beurre, une pincée de sel et un fond d'eau. Couvrir et cuire 15 minutes à feu moyen, puis découvrir pour laisser l'eau s'évaporer.",
+        "Mélanger la moutarde et la crème fraîche, puis saler et poivrer.",
+        "Poser le lieu noir dans un plat, le napper de sauce et enfourner 12 à 15 minutes, jusqu'à ce que la chair s'effeuille.",
+        "Arroser de jus de citron et servir avec le riz et les carottes."
+      ]
+    },
+    {
+      "day": "mardi",
+      "slot": "midi",
+      "title": "Croque-monsieur et salade de mâche aux noix",
+      "emoji": "🥪",
+      "minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "pain de mie",
+          "quantity": 16,
+          "unit": "tranche",
+          "aisle": "Boulangerie",
+          "staple": false
+        },
+        {
+          "name": "jambon blanc",
+          "quantity": 8,
+          "unit": "tranche",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "emmental râpé",
+          "quantity": 200,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "beurre",
+          "quantity": 40,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "mâche",
+          "quantity": 200,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "cerneau de noix",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "moutarde",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "vinaigre de vin",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.25,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four en position gril à 220 °C et tapisser une plaque de papier cuisson.",
+        "Beurrer une face de chaque tranche de pain de mie. Poser 8 tranches sur la plaque, face beurrée dessous.",
+        "Répartir le jambon et la moitié de l'emmental, couvrir avec les 8 autres tranches, face beurrée dessus, puis parsemer du reste d'emmental.",
+        "Enfourner 8 à 10 minutes, jusqu'à ce que le dessus soit bien doré.",
+        "Fouetter la moutarde, le vinaigre, l'huile, le sel et le poivre, puis y mélanger la mâche et les noix concassées. Servir avec les croque-monsieur."
+      ]
+    },
+    {
+      "day": "mardi",
+      "slot": "soir",
+      "title": "Poulet au cumin, chou-fleur rôti et semoule",
+      "emoji": "🍗",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "blanc de poulet",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "chou-fleur",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "semoule",
+          "quantity": 300,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "cumin moulu",
+          "quantity": 3,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "citron",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C. Détailler le chou-fleur en petits bouquets, les mélanger avec 2 cuillères à soupe d'huile, 2 cuillères à café de cumin et du sel, puis les étaler sur une plaque.",
+        "Enfourner 25 minutes en remuant à mi-cuisson, jusqu'à ce que les bouquets soient dorés et tendres.",
+        "Couper le poulet en lanières et le mélanger avec le reste du cumin, du sel et du poivre.",
+        "Verser la semoule dans un saladier avec 1 cuillère à soupe d'huile, couvrir de 300 ml d'eau bouillante salée et laisser gonfler 5 minutes à couvert, puis égrener à la fourchette.",
+        "Saisir le poulet 6 à 8 minutes dans le reste d'huile, à feu vif, jusqu'à ce qu'il soit bien cuit. Arroser de jus de citron et servir avec la semoule et le chou-fleur."
+      ]
+    },
+    {
+      "day": "mercredi",
+      "slot": "midi",
+      "title": "Gnocchis à la courge butternut et au parmesan",
+      "emoji": "🎃",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "gnocchi frais",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "courge butternut",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "échalote",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "crème fraîche",
+          "quantity": 15,
+          "unit": "cl",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "parmesan râpé",
+          "quantity": 80,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "thym séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Éplucher la courge et la couper en petits cubes de 1 cm. Émincer les échalotes.",
+        "Faire revenir les échalotes 2 minutes dans l'huile d'olive, ajouter la courge et le thym, puis couvrir et cuire 15 minutes à feu moyen en remuant, avec un fond d'eau si nécessaire.",
+        "Porter une casserole d'eau salée à ébullition et y cuire les gnocchis jusqu'à ce qu'ils remontent à la surface. Les égoutter.",
+        "Ajouter la crème dans la sauteuse et écraser légèrement quelques cubes de courge. Saler et poivrer.",
+        "Mélanger les gnocchis à la sauce, parsemer de parmesan et servir."
+      ]
+    },
+    {
+      "day": "mercredi",
+      "slot": "soir",
+      "title": "Boulettes de bœuf à la tomate et polenta crémeuse",
+      "emoji": "🍖",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "bœuf haché",
+          "quantity": 500,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "chapelure",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "œuf",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "ail",
+          "quantity": 2,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": true
+        },
+        {
+          "name": "tomate concassée en boîte",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "origan séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "polenta",
+          "quantity": 250,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "lait",
+          "quantity": 25,
+          "unit": "cl",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "beurre",
+          "quantity": 30,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "parmesan râpé",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Mélanger le bœuf, la chapelure, l'œuf, du sel et du poivre, puis former une vingtaine de boulettes.",
+        "Les faire dorer 5 minutes dans l'huile d'olive, à feu vif, puis les réserver.",
+        "Dans la même sauteuse, faire revenir l'oignon émincé et l'ail 3 minutes. Ajouter les tomates et l'origan, puis les boulettes, et laisser mijoter 15 minutes à couvert.",
+        "Porter le lait et 75 cl d'eau salée à ébullition, verser la polenta en pluie et cuire le temps indiqué sur le paquet en remuant sans cesse.",
+        "Hors du feu, ajouter le beurre et le parmesan à la polenta. Servir avec les boulettes et leur sauce."
+      ]
+    },
+    {
+      "day": "jeudi",
+      "slot": "midi",
+      "title": "Tortilla de pommes de terre aux oignons et salade de laitue",
+      "emoji": "🍳",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "pomme de terre",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "œuf",
+          "quantity": 8,
+          "unit": "pièce",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "laitue",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 6,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "moutarde",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "vinaigre de vin",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Éplucher les pommes de terre et les couper en tranches très fines. Émincer les oignons.",
+        "Faire chauffer 4 cuillères à soupe d'huile dans une grande poêle et y cuire les pommes de terre et les oignons 15 minutes à feu moyen, à couvert, en remuant souvent.",
+        "Battre les œufs avec le sel et le poivre, y ajouter les pommes de terre et les oignons, puis reverser le tout dans la poêle.",
+        "Cuire 5 minutes à feu doux, retourner la tortilla à l'aide d'une assiette et cuire encore 3 minutes.",
+        "Fouetter la moutarde, le vinaigre et le reste d'huile, assaisonner la laitue et servir avec la tortilla."
+      ]
+    },
+    {
+      "day": "jeudi",
+      "slot": "soir",
+      "title": "Médaillons de porc aux pommes et au cidre, tagliatelles",
+      "emoji": "🍎",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "filet mignon de porc",
+          "quantity": 700,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "pomme",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "échalote",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "cidre brut",
+          "quantity": 20,
+          "unit": "cl",
+          "aisle": "Boissons",
+          "staple": false
+        },
+        {
+          "name": "crème fraîche",
+          "quantity": 10,
+          "unit": "cl",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "tagliatelle",
+          "quantity": 350,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "beurre",
+          "quantity": 40,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Porter une grande casserole d'eau salée à ébullition. Couper le filet mignon en médaillons de 2 cm et les pommes en quartiers.",
+        "Faire dorer les pommes 5 minutes dans la moitié du beurre, puis les réserver.",
+        "Dans la même poêle, saisir les médaillons 3 minutes par face dans le reste du beurre, saler et poivrer, puis les réserver.",
+        "Faire revenir les échalotes émincées 2 minutes, verser le cidre et laisser réduire de moitié. Ajouter la crème, puis remettre le porc et les pommes 5 minutes à feu doux.",
+        "Pendant ce temps, cuire les tagliatelles le temps indiqué sur le paquet, les égoutter et servir avec le porc et sa sauce."
+      ]
+    },
+    {
+      "day": "vendredi",
+      "slot": "midi",
+      "title": "Salade de quinoa au fenouil, à la pomme et à la feta",
+      "emoji": "🥗",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "quinoa",
+          "quantity": 300,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "fenouil",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "pomme",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "feta",
+          "quantity": 200,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "cerneau de noix",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "citron",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Rincer le quinoa et le cuire 12 à 15 minutes dans deux fois son volume d'eau salée, puis l'étaler dans un plat pour le faire tiédir.",
+        "Émincer finement le fenouil et couper les pommes en petits dés.",
+        "Fouetter le jus du citron avec l'huile d'olive, le sel et le poivre.",
+        "Mélanger le quinoa, le fenouil, les pommes et la sauce.",
+        "Parsemer de feta émiettée et de noix concassées, puis servir."
+      ]
+    },
+    {
+      "day": "vendredi",
+      "slot": "soir",
+      "title": "Quesadillas aux haricots rouges et au cheddar",
+      "emoji": "🌮",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "tortilla de blé",
+          "quantity": 8,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "haricot rouge en boîte",
+          "quantity": 500,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "cheddar râpé",
+          "quantity": 250,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "tomate concassée en boîte",
+          "quantity": 200,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "cumin moulu",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "laitue",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "vinaigre de vin",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Faire revenir l'oignon émincé 3 minutes dans 1 cuillère à soupe d'huile. Ajouter le cumin, les tomates et les haricots rouges rincés, puis cuire 8 minutes en écrasant grossièrement. Saler et poivrer.",
+        "Répartir la préparation et le cheddar sur la moitié de chaque tortilla, puis replier.",
+        "Dorer les quesadillas à sec dans une grande poêle, 2 minutes par face, à feu moyen.",
+        "Assaisonner la laitue avec le reste d'huile et le vinaigre.",
+        "Couper les quesadillas en deux et servir aussitôt avec la salade."
+      ]
+    },
+    {
+      "day": "samedi",
+      "slot": "midi",
+      "title": "Lasagnes aux épinards et à la ricotta",
+      "emoji": "🥘",
+      "minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "feuille de lasagne",
+          "quantity": 250,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "épinard surgelé",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Surgelés",
+          "staple": false
+        },
+        {
+          "name": "ricotta",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "ail",
+          "quantity": 1,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": true
+        },
+        {
+          "name": "beurre",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "farine",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "lait",
+          "quantity": 75,
+          "unit": "cl",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "parmesan râpé",
+          "quantity": 80,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 180 °C. Faire décongeler les épinards à la poêle avec l'ail haché, les presser pour retirer l'eau, puis les mélanger à la ricotta. Saler et poivrer.",
+        "Faire fondre le beurre dans une casserole, ajouter la farine et cuire 1 minute. Verser le lait peu à peu en fouettant et laisser épaissir 5 minutes. Saler.",
+        "Dans un plat beurré, alterner béchamel, feuilles de lasagne et préparation aux épinards, en terminant par la béchamel.",
+        "Parsemer de parmesan et enfourner 35 minutes, jusqu'à ce que le dessus soit doré.",
+        "Laisser reposer 5 minutes avant de servir."
+      ]
+    },
+    {
+      "day": "samedi",
+      "slot": "soir",
+      "title": "Tajine d'agneau aux pruneaux et aux amandes, semoule",
+      "emoji": "🍲",
+      "minutes": 85,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "épaule d'agneau en morceaux",
+          "quantity": 900,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "pruneau dénoyauté",
+          "quantity": 200,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "amande effilée",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "cannelle moulue",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "gingembre moulu",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "miel",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "semoule",
+          "quantity": 300,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Dans une cocotte, faire dorer l'agneau 8 minutes dans 2 cuillères à soupe d'huile, puis ajouter les oignons émincés, la cannelle et le gingembre. Saler et poivrer.",
+        "Couvrir d'eau à hauteur, porter à frémissement et laisser mijoter 55 minutes à couvert.",
+        "Ajouter les pruneaux et le miel, puis poursuivre la cuisson 15 minutes à découvert pour faire réduire la sauce.",
+        "Faire dorer les amandes à sec 2 minutes dans une poêle.",
+        "Verser la semoule dans un saladier avec le reste d'huile, couvrir de 300 ml d'eau bouillante salée et laisser gonfler 5 minutes à couvert, puis égrener à la fourchette. Servir le tajine parsemé d'amandes, avec la semoule."
+      ]
+    },
+    {
+      "day": "dimanche",
+      "slot": "midi",
+      "title": "Pintade rôtie aux châtaignes et aux choux de Bruxelles",
+      "emoji": "🌰",
+      "minutes": 85,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "pintade",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "châtaigne cuite sous vide",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "chou de Bruxelles",
+          "quantity": 500,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "beurre",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "thym séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "échalote",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "sel",
+          "quantity": 1.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Enduire la pintade de la moitié du beurre, saler, poivrer et parsemer de thym.",
+        "L'enfourner 1 heure 10 dans un plat, en l'arrosant de son jus toutes les 20 minutes et avec un fond d'eau dans le plat.",
+        "Pendant ce temps, cuire les choux de Bruxelles 10 minutes dans une casserole d'eau bouillante salée, puis les égoutter.",
+        "Faire revenir les échalotes émincées dans le reste du beurre, ajouter les choux et les châtaignes, puis faire dorer 10 minutes.",
+        "Laisser reposer la pintade 10 minutes hors du four, la découper et la servir avec la poêlée et son jus."
+      ]
+    },
+    {
+      "day": "dimanche",
+      "slot": "soir",
+      "title": "Tarte flambée aux oignons et aux lardons, salade de mâche",
+      "emoji": "🍕",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "pâte à pizza",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "fromage blanc",
+          "quantity": 200,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "crème fraîche",
+          "quantity": 20,
+          "unit": "cl",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "lardon fumé",
+          "quantity": 250,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "mâche",
+          "quantity": 150,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "moutarde",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "vinaigre de vin",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 0.5,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 240 °C avec deux plaques à l'intérieur.",
+        "Mélanger le fromage blanc et la crème fraîche, puis saler légèrement et poivrer. Émincer finement les oignons.",
+        "Dérouler les pâtes sur du papier cuisson, étaler la crème en couche fine, puis répartir les oignons et les lardons.",
+        "Faire glisser sur les plaques chaudes et enfourner 12 à 15 minutes, jusqu'à ce que les bords soient bien dorés.",
+        "Fouetter la moutarde, le vinaigre et l'huile, y mélanger la mâche et servir avec les tartes flambées."
+      ]
+    }
+  ]
+}

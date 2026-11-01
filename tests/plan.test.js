@@ -181,3 +181,10 @@ test("le riz et les pâtes sont permis en accompagnement, au plus deux fois chac
   assert.deepEqual(validatePlan(sides(["lundi", "Pâtes au beurre"], ["mardi", "Orzo au citron"])), []);
   assert.match(errorsFor(sides(["lundi", "Pâtes au beurre"], ["mardi", "Orzo au citron"], ["mercredi", "Tagliatelles à l'ail"])), /pâtes/);
 });
+
+test("le même riz peut servir deux fois, mais les autres accompagnements ne se répètent pas", () => {
+  const twice = (side) => withMeal(withMeal(makePlan(), "lundi", "soir", { side }), "mardi", "soir", { side });
+  assert.deepEqual(validatePlan(twice("Riz jasmin")), []);
+  assert.deepEqual(validatePlan(twice("Pâtes au beurre")), []);
+  assert.match(errorsFor(twice("Carottes au miso")), /accompagnement présent deux fois/);
+});

@@ -64,3 +64,7 @@ test("planHash ne dépend pas du statut, mais du contenu", () => {
   assert.equal(planHash(makePlan()), planHash(makePlan({ status: "sent" })));
   assert.notEqual(planHash(makePlan()), planHash(withMeal(makePlan(), "lundi", "midi", { title: "Autre" })));
 });
+
+test("planHash ne dépend pas de notified", () => {
+  assert.equal(planHash(makePlan()), planHash(makePlan({ notified: true })));
+});

@@ -162,7 +162,7 @@ Les deux tâches peuvent être relancées sans risque :
 | Samedi manqué | « envoyer » génère le plan elle-même |
 | Mac éteint ou app fermée | La tâche part au prochain lancement. L'email indique alors simplement la semaine concernée |
 | Plan invalide | Claude le corrige, jusqu'à 3 essais, puis la tâche échoue visiblement |
-| Échec de publication | Pas d'email, pour éviter un lien mort. L'état ne change pas |
+| Échec de publication | Pas d'email, pour éviter un lien mort. La validation reste acquise (`validated`), et une relance republie |
 | Échec d'envoi | L'état reste inchangé, donc une relance renvoie l'email |
 | Autorisation `gws` expirée | La tâche échoue visiblement dans Claude Desktop, car aucun email d'alerte ne peut partir |
 

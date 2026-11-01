@@ -50,7 +50,7 @@ Le plan ne contient jamais la liste de courses : elle est toujours recalculée.
 
 ## Procédures
 
-**Générer une semaine.** Écrire le plan dans un fichier temporaire, puis `save-proposal <fichier>`. En cas d'erreurs, corriger et recommencer, 3 essais au maximum.
+**Générer une semaine.** Écrire le plan dans un fichier temporaire, puis `save-proposal <fichier>`. En cas d'erreurs, corriger et recommencer, 3 essais au maximum. Lancer ensuite `notify-proposal <semaine>`, sans risque de doublon : l'email ne part qu'une fois.
 
 **Remplacer un plat.**
 1. Trouver la semaine avec `status <semaine>`. Le fichier est dans `data/proposals/` si elle est `proposed`, sinon dans `data/weeks/`.

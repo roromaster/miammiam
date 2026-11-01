@@ -134,3 +134,26 @@ test("sendRaw refuse un message trop gros avant d'appeler gws", async () => {
   await assert.rejects(sendRaw("x".repeat(800_000), { exec: async () => { called = true; return { stdout: "{}" }; } }), /trop volumineux/);
   assert.equal(called, false);
 });
+
+test("sendRaw donne l'erreur utile de gws, sans recopier l'email", async () => {
+  const exec = async (cmd, args) => {
+    throw Object.assign(new Error(`Command failed: gws ${args.join(" ")}`), {
+      code: 1,
+      stdout: '{"error":{"code":401,"message":"invalid_grant"}}',
+      stderr: "hint: gws auth login",
+    });
+  };
+  await assert.rejects(sendRaw("corps-secret-du-message", { exec }), (error) => {
+    assert.match(error.message, /invalid_grant/);
+    assert.match(error.message, /gws auth login/);
+    assert.ok(!error.message.includes(Buffer.from("corps-secret-du-message").toString("base64url")));
+    return true;
+  });
+});
+
+test("sendRaw n'accepte comme succès qu'une réponse avec un id", async () => {
+  for (const stdout of ["", "ok", "{}", '{"labelIds":["SENT"]}', '{"id":""}']) {
+    await assert.rejects(sendRaw("x", { exec: async () => ({ stdout }) }), /Échec d'envoi/, stdout);
+  }
+  await sendRaw("x", { exec: async () => ({ stdout: 'Using keyring backend: keyring\n{"id":"abc"}' }) });
+});

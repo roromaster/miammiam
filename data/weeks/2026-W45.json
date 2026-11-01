@@ -1,0 +1,1211 @@
+{
+  "week": "2026-W45",
+  "startDate": "2026-11-02",
+  "status": "validated",
+  "meals": [
+    {
+      "day": "lundi",
+      "slot": "midi",
+      "title": "Spaghetti alla puttanesca",
+      "emoji": "🍝",
+      "cuisine": "italienne",
+      "side": "Pois chiches croustillants au paprika fumé",
+      "minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "spaghetti",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "tomate concassée en boîte",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "anchois à l'huile",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "olive noire",
+          "quantity": 120,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "câpre",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "ail",
+          "quantity": 3,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "piment en flocons",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "pois chiche en boîte",
+          "quantity": 480,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "paprika fumé",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 5,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C. Égoutter et sécher les pois chiches, les mélanger avec 2 c. à soupe d'huile d'olive, le paprika fumé et une pincée de sel, puis les enfourner 20 minutes sur une plaque, en les remuant à mi-cuisson.",
+        "Porter à ébullition une grande casserole d'eau salée.",
+        "Dans une sauteuse, chauffer 3 c. à soupe d'huile d'olive avec l'ail émincé, le piment et les anchois, 2 minutes, jusqu'à ce que les anchois fondent.",
+        "Ajouter les tomates, les olives coupées en deux et les câpres, puis laisser mijoter 12 minutes à feu moyen.",
+        "Cuire les spaghetti al dente, les égoutter en gardant une louche d'eau de cuisson, puis les finir 1 minute dans la sauce, en détendant avec un peu de cette eau.",
+        "Servir avec les pois chiches croustillants à côté."
+      ]
+    },
+    {
+      "day": "lundi",
+      "slot": "soir",
+      "title": "Curry jaune thaï de lieu noir et courge, riz jasmin",
+      "emoji": "🍛",
+      "cuisine": "thaïe",
+      "side": "Chou chinois mariné au citron vert et aux cacahuètes",
+      "minutes": 30,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "filet de lieu noir",
+          "quantity": 1400,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "courge butternut",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "pâte de curry jaune",
+          "quantity": 120,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "lait de coco",
+          "quantity": 800,
+          "unit": "ml",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "sauce poisson",
+          "quantity": 5,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "sucre",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "citron vert",
+          "quantity": 5,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "coriandre fraîche",
+          "quantity": 40,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "riz jasmin",
+          "quantity": 640,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "chou chinois",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "cacahuète",
+          "quantity": 100,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Émincer finement le chou chinois. Le mélanger avec le jus de 2 citrons verts, 20 g de sucre, 1 c. à soupe de sauce poisson et les cacahuètes concassées, puis réserver au frais.",
+        "Cuire le riz jasmin selon le paquet (environ 12 minutes).",
+        "Éplucher la courge et la couper en cubes de 2 cm. Émincer les oignons.",
+        "Dans une grande cocotte, faire revenir les oignons 3 minutes dans l'huile, puis ajouter la pâte de curry et remuer 1 minute.",
+        "Verser le lait de coco, 200 ml d'eau, le reste de sauce poisson et 30 g de sucre. Ajouter la courge et cuire 12 minutes à frémissement.",
+        "Ajouter le lieu noir coupé en gros morceaux et cuire 5 minutes sans trop remuer. Finir avec le jus de 3 citrons verts et la coriandre.",
+        "Servir 4 portions avec le riz et le chou, et garder 4 portions au frais pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "mardi",
+      "slot": "midi",
+      "title": "Restes : Curry jaune thaï de lieu noir et courge, riz jasmin",
+      "emoji": "♻️",
+      "leftoversOf": "lundi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "mardi",
+      "slot": "soir",
+      "title": "Tinga de poulet et tortillas de maïs",
+      "emoji": "🌮",
+      "cuisine": "mexicaine",
+      "side": "Chou rouge mariné au citron vert et à l'origan",
+      "minutes": 30,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "blanc de poulet",
+          "quantity": 1400,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "tomate concassée en boîte",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "ail",
+          "quantity": 4,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "piment chipotle en adobo",
+          "quantity": 100,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "origan séché",
+          "quantity": 3,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "tortilla de maïs",
+          "quantity": 24,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "crème fraîche",
+          "quantity": 250,
+          "unit": "ml",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "coriandre fraîche",
+          "quantity": 40,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "chou rouge",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "citron vert",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Émincer très finement le chou rouge. Le mélanger avec le jus des citrons verts, 1 c. à café d'origan et 1 c. à café de sel, puis laisser mariner pendant la cuisson.",
+        "Couper le poulet en fines lanières. Émincer les oignons et l'ail.",
+        "Dans une grande sauteuse, faire revenir les oignons 5 minutes dans l'huile, puis ajouter l'ail et 2 c. à café d'origan.",
+        "Ajouter les tomates et les chipotles hachés, puis le poulet. Couvrir et laisser mijoter 15 minutes.",
+        "Effilocher le poulet à la fourchette directement dans la sauce et laisser réduire 3 minutes.",
+        "Réchauffer les tortillas à la poêle sèche. Servir 4 portions avec crème fraîche, coriandre et chou rouge mariné, et garder 4 portions de tinga, de tortillas et de chou pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "mercredi",
+      "slot": "midi",
+      "title": "Restes : Tinga de poulet et tortillas de maïs",
+      "emoji": "♻️",
+      "leftoversOf": "mardi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "mercredi",
+      "slot": "soir",
+      "title": "Mapo tofu au porc, riz jasmin",
+      "emoji": "🌶️",
+      "cuisine": "chinoise",
+      "side": "Brocoli rôti au sésame et au vinaigre noir",
+      "minutes": 30,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "tofu ferme",
+          "quantity": 1600,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "porc haché",
+          "quantity": 500,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "pâte de piment doubanjiang",
+          "quantity": 6,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "ail",
+          "quantity": 6,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "gingembre",
+          "quantity": 60,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "oignon nouveau",
+          "quantity": 6,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "poivre de Sichuan",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "bouillon de volaille",
+          "quantity": 800,
+          "unit": "ml",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "fécule de maïs",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "sauce soja",
+          "quantity": 5,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "riz jasmin",
+          "quantity": 640,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "brocoli",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "graine de sésame",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "vinaigre noir",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 6,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C. Détailler le brocoli en fleurettes, les mélanger avec 2 c. à soupe d'huile et les rôtir 18 minutes.",
+        "Cuire le riz jasmin selon le paquet. Couper le tofu en cubes de 2 cm. Hacher l'ail et le gingembre, et émincer les oignons nouveaux.",
+        "Faire griller le poivre de Sichuan 1 minute à sec, puis le moudre.",
+        "Dans un grand wok, chauffer 4 c. à soupe d'huile et faire dorer le porc 5 minutes. Ajouter le doubanjiang, l'ail et le gingembre, et remuer 1 minute.",
+        "Verser le bouillon et 4 c. à soupe de sauce soja, ajouter le tofu et laisser frémir 8 minutes sans trop remuer.",
+        "Délayer la fécule dans 4 c. à soupe d'eau froide, l'ajouter et laisser épaissir 1 minute. Finir avec le poivre de Sichuan et les oignons nouveaux.",
+        "Arroser le brocoli du vinaigre noir et de 1 c. à soupe de sauce soja, et le parsemer de sésame. Servir 4 portions et garder 4 portions pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "jeudi",
+      "slot": "midi",
+      "title": "Restes : Mapo tofu au porc, riz jasmin",
+      "emoji": "♻️",
+      "leftoversOf": "mercredi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "jeudi",
+      "slot": "soir",
+      "title": "Lentilles du Puy à la saucisse de Morteau",
+      "emoji": "🥘",
+      "cuisine": "française",
+      "side": "Endives braisées à l'orange",
+      "minutes": 30,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "lentille verte du Puy",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "saucisse de Morteau",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "carotte",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "feuille de laurier",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "thym séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "moutarde",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "vinaigre de vin",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "endive",
+          "quantity": 12,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "orange",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "beurre",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "miel",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Couper les carottes en rondelles, émincer les oignons et trancher les saucisses en rondelles épaisses.",
+        "Dans une grande cocotte, faire revenir oignons et carottes 3 minutes dans 1 c. à soupe d'huile d'olive. Ajouter les lentilles rincées, les saucisses, le laurier et le thym, puis couvrir largement d'eau.",
+        "Cuire 25 minutes à frémissement, sans saler, jusqu'à ce que les lentilles soient tendres.",
+        "Pendant ce temps, couper les endives en deux et les faire dorer 5 minutes dans le beurre. Ajouter le jus des oranges et le miel, saler, couvrir et braiser 15 minutes.",
+        "Égoutter les lentilles si besoin. Mélanger la moutarde, le vinaigre et 2 c. à soupe d'huile d'olive, verser sur les lentilles, saler et poivrer.",
+        "Servir 4 portions avec les endives et garder 4 portions pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "vendredi",
+      "slot": "midi",
+      "title": "Restes : Lentilles du Puy à la saucisse de Morteau",
+      "emoji": "♻️",
+      "leftoversOf": "jeudi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "vendredi",
+      "slot": "soir",
+      "title": "Onglet de bœuf à l'échalote et pommes de terre sautées",
+      "emoji": "🥩",
+      "cuisine": "française",
+      "side": "Panais rôtis au miel et au thym",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "onglet de bœuf",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Boucher (à acheter vendredi)",
+          "staple": false
+        },
+        {
+          "name": "échalote",
+          "quantity": 6,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "vin rouge",
+          "quantity": 100,
+          "unit": "ml",
+          "aisle": "Boissons",
+          "staple": false
+        },
+        {
+          "name": "beurre",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "pomme de terre",
+          "quantity": 1000,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "panais",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "miel",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "thym séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 220 °C. Couper les panais en bâtonnets, les mélanger avec 1 c. à soupe d'huile d'olive, le miel et le thym, puis les rôtir 22 minutes.",
+        "Couper les pommes de terre en petits cubes. Les faire sauter 20 minutes à feu moyen-vif dans 3 c. à soupe d'huile d'olive, en les remuant souvent. Saler.",
+        "Sortir l'onglet du réfrigérateur. Le saisir 3 à 4 minutes par face dans une poêle très chaude avec 20 g de beurre, puis le laisser reposer sous une feuille de papier aluminium.",
+        "Dans la même poêle, faire fondre les échalotes émincées 3 minutes. Déglacer au vin rouge, réduire de moitié, puis ajouter 30 g de beurre.",
+        "Trancher l'onglet, napper de sauce, poivrer et servir avec les pommes de terre et les panais."
+      ]
+    },
+    {
+      "day": "samedi",
+      "slot": "midi",
+      "title": "Okonomiyaki au chou et aux crevettes",
+      "emoji": "🥞",
+      "cuisine": "japonaise",
+      "side": "Carottes rôties au miso",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "chou pointu",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "farine",
+          "quantity": 250,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "œuf",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "dashi en poudre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "crevette décortiquée",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Surgelés",
+          "staple": false
+        },
+        {
+          "name": "oignon nouveau",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "sauce okonomiyaki",
+          "quantity": 8,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "mayonnaise",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "bonite séchée",
+          "quantity": 10,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "carotte",
+          "quantity": 8,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "pâte de miso",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "miel",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "graine de sésame",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 5,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Couper les carottes en deux dans la longueur. Mélanger le miso, le miel et 1 c. à soupe d'huile, en enrober les carottes et les rôtir 30 minutes. Parsemer de sésame à la sortie.",
+        "Décongeler les crevettes et les éponger. Émincer finement le chou et les oignons nouveaux.",
+        "Mélanger la farine, le dashi, 250 ml d'eau et les œufs. Incorporer le chou, les oignons nouveaux, les crevettes et une pincée de sel.",
+        "Chauffer 1 c. à soupe d'huile dans une poêle. Y verser un quart de la pâte, former une galette épaisse et cuire 5 minutes à couvert à feu moyen.",
+        "Retourner la galette et la cuire encore 5 minutes. Recommencer avec le reste de la pâte, en gardant les galettes au chaud.",
+        "Napper de sauce okonomiyaki et de mayonnaise, parsemer de bonite séchée et servir avec les carottes."
+      ]
+    },
+    {
+      "day": "samedi",
+      "slot": "soir",
+      "title": "Poulet alla cacciatora et polenta grillée",
+      "emoji": "🍗",
+      "cuisine": "italienne",
+      "side": "Fenouil rôti à l'orange et aux graines de fenouil",
+      "minutes": 80,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "cuisse de poulet",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "tomate concassée en boîte",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "vin blanc",
+          "quantity": 150,
+          "unit": "ml",
+          "aisle": "Boissons",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "carotte",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "céleri branche",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "ail",
+          "quantity": 2,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "romarin frais",
+          "quantity": 5,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "olive noire",
+          "quantity": 80,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "polenta instantanée",
+          "quantity": 250,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "beurre",
+          "quantity": 30,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "fenouil",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "orange",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "graine de fenouil",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 5,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Cuire la polenta dans 1 litre d'eau salée selon le paquet, ajouter le beurre, l'étaler sur 2 cm dans un plat huilé et la laisser prendre au frais.",
+        "Faire dorer les cuisses de poulet 8 minutes dans une cocotte avec 2 c. à soupe d'huile d'olive, puis les réserver.",
+        "Faire revenir 5 minutes l'oignon, la carotte et le céleri hachés, puis ajouter l'ail et le romarin. Déglacer au vin blanc et laisser réduire 3 minutes.",
+        "Ajouter les tomates, les olives et le poulet. Saler, poivrer, couvrir et laisser mijoter 40 minutes.",
+        "Préchauffer le four à 200 °C. Couper le fenouil en quartiers, l'arroser de 2 c. à soupe d'huile d'olive et du jus de l'orange, ajouter les graines et un peu de sel, puis rôtir 35 minutes.",
+        "Couper la polenta en rectangles et les faire griller 3 minutes par face dans une poêle avec 1 c. à soupe d'huile d'olive. Servir avec le poulet et le fenouil."
+      ]
+    },
+    {
+      "day": "dimanche",
+      "slot": "midi",
+      "title": "Burger d'agneau au comté et oignons confits",
+      "emoji": "🍔",
+      "cuisine": "burger",
+      "side": "Betteraves rôties à l'orange et au cumin",
+      "minutes": 70,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "agneau haché",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "pain à burger",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Boulangerie",
+          "staple": false
+        },
+        {
+          "name": "comté",
+          "quantity": 120,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "oignon",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "sucre",
+          "quantity": 15,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "roquette",
+          "quantity": 50,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "fromage blanc",
+          "quantity": 100,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false
+        },
+        {
+          "name": "moutarde",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "betterave crue",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "orange",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "cumin moulu",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Éplucher les betteraves et les couper en quartiers. Les mélanger avec 2 c. à soupe d'huile d'olive, le cumin et du sel, puis les rôtir 45 minutes sous une feuille de papier aluminium. Les arroser du jus de l'orange à la sortie.",
+        "Émincer les oignons et les faire confire 25 minutes à feu doux avec 2 c. à soupe d'huile d'olive, le sucre et une pincée de sel.",
+        "Mélanger le fromage blanc et la moutarde. Saler et poivrer.",
+        "Former 4 steaks avec l'agneau, saler et poivrer. Les saisir 3 minutes par face dans une poêle très chaude, poser le comté en tranches dessus et couvrir 1 minute pour le faire fondre.",
+        "Toaster les pains. Monter les burgers avec la sauce, la roquette, le steak et les oignons confits, puis servir avec les betteraves."
+      ]
+    },
+    {
+      "day": "dimanche",
+      "slot": "soir",
+      "title": "Porc braisé hong shao rou aux pommes de terre",
+      "emoji": "🍖",
+      "cuisine": "chinoise",
+      "side": "Pak choï sauté à l'ail et au gingembre",
+      "minutes": 90,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "poitrine de porc",
+          "quantity": 1600,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false
+        },
+        {
+          "name": "pomme de terre",
+          "quantity": 1600,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "sauce soja",
+          "quantity": 8,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "vin de Shaoxing",
+          "quantity": 150,
+          "unit": "ml",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "sucre",
+          "quantity": 80,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "étoile de badiane",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "bâton de cannelle",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false
+        },
+        {
+          "name": "gingembre",
+          "quantity": 100,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "oignon nouveau",
+          "quantity": 6,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "pak choï",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "ail",
+          "quantity": 4,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true
+        }
+      ],
+      "steps": [
+        "Couper la poitrine en cubes de 3 cm. Les plonger 5 minutes dans l'eau bouillante, puis les égoutter.",
+        "Dans une cocotte, faire fondre le sucre avec 2 c. à soupe d'huile jusqu'à obtenir un caramel ambré. Ajouter le porc, en faisant attention aux éclaboussures, et le faire dorer 5 minutes.",
+        "Ajouter 60 g de gingembre en tranches, les oignons nouveaux coupés en tronçons, la badiane et la cannelle. Verser le vin de Shaoxing et la sauce soja, puis couvrir d'eau à hauteur.",
+        "Couvrir et laisser mijoter 35 minutes à feu doux.",
+        "Ajouter les pommes de terre coupées en gros morceaux et cuire encore 30 minutes. Découvrir pour les 10 dernières minutes, afin que la sauce devienne sirupeuse.",
+        "Couper les pak choï en deux. Les faire sauter 4 minutes à feu vif avec 2 c. à soupe d'huile, l'ail émincé, 40 g de gingembre en bâtonnets et un peu de sel.",
+        "Servir 4 portions avec le pak choï et garder 4 portions au frais pour le lundi midi suivant."
+      ]
+    }
+  ],
+  "notified": true
+}

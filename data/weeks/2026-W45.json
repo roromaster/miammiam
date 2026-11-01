@@ -1,7 +1,7 @@
 {
   "week": "2026-W45",
   "startDate": "2026-11-02",
-  "status": "sent",
+  "status": "validated",
   "meals": [
     {
       "day": "lundi",
@@ -114,10 +114,10 @@
     {
       "day": "lundi",
       "slot": "soir",
-      "title": "Curry jaune thaï de lieu noir et courge, riz jasmin",
+      "title": "Curry jaune thaï de lieu noir et courge",
       "emoji": "🍛",
       "cuisine": "thaïe",
-      "side": "Chou chinois mariné au citron vert et aux cacahuètes",
+      "side": "Riz jasmin",
       "minutes": 30,
       "servings": 8,
       "ingredients": [
@@ -163,27 +163,27 @@
         },
         {
           "name": "sauce poisson",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
           "staple": false,
-          "price": 0.5
+          "price": 0.4
         },
         {
           "name": "sucre",
-          "quantity": 50,
+          "quantity": 30,
           "unit": "g",
           "aisle": "Épicerie",
           "staple": true,
-          "price": 0.08
+          "price": 0.05
         },
         {
           "name": "citron vert",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "pièce",
           "aisle": "Fruits et légumes",
           "staple": false,
-          "price": 2
+          "price": 1.2
         },
         {
           "name": "coriandre fraîche",
@@ -200,22 +200,6 @@
           "aisle": "Épicerie",
           "staple": false,
           "price": 1.92
-        },
-        {
-          "name": "chou chinois",
-          "quantity": 800,
-          "unit": "g",
-          "aisle": "Fruits et légumes",
-          "staple": false,
-          "price": 2.4
-        },
-        {
-          "name": "cacahuète",
-          "quantity": 100,
-          "unit": "g",
-          "aisle": "Épicerie",
-          "staple": false,
-          "price": 0.8
         },
         {
           "name": "huile neutre",
@@ -235,19 +219,18 @@
         }
       ],
       "steps": [
-        "Émincer finement le chou chinois. Le mélanger avec le jus de 2 citrons verts, 20 g de sucre, 1 c. à soupe de sauce poisson et les cacahuètes concassées, puis réserver au frais.",
         "Cuire le riz jasmin selon le paquet (environ 12 minutes).",
         "Éplucher la courge et la couper en cubes de 2 cm. Émincer les oignons.",
         "Dans une grande cocotte, faire revenir les oignons 3 minutes dans l'huile, puis ajouter la pâte de curry et remuer 1 minute.",
-        "Verser le lait de coco, 200 ml d'eau, le reste de sauce poisson et 30 g de sucre. Ajouter la courge et cuire 12 minutes à frémissement.",
+        "Verser le lait de coco, 200 ml d'eau, la sauce poisson et le sucre. Ajouter la courge et cuire 12 minutes à frémissement.",
         "Ajouter le lieu noir coupé en gros morceaux et cuire 5 minutes sans trop remuer. Finir avec le jus de 3 citrons verts et la coriandre.",
-        "Servir 4 portions avec le riz et le chou, et garder 4 portions au frais pour le lendemain midi."
+        "Servir 4 portions avec le riz, et garder 4 portions au frais pour le lendemain midi."
       ]
     },
     {
       "day": "mardi",
       "slot": "midi",
-      "title": "Restes : Curry jaune thaï de lieu noir et courge, riz jasmin",
+      "title": "Restes : Curry jaune thaï de lieu noir et courge",
       "emoji": "♻️",
       "leftoversOf": "lundi",
       "ingredients": [],
@@ -389,10 +372,10 @@
     {
       "day": "mercredi",
       "slot": "soir",
-      "title": "Mapo tofu au porc, riz jasmin",
+      "title": "Mapo tofu au porc",
       "emoji": "🌶️",
       "cuisine": "chinoise",
-      "side": "Brocoli rôti au sésame et au vinaigre noir",
+      "side": "Riz jasmin",
       "minutes": 30,
       "servings": 8,
       "ingredients": [
@@ -470,11 +453,11 @@
         },
         {
           "name": "sauce soja",
-          "quantity": 5,
+          "quantity": 4,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
           "staple": false,
-          "price": 0.5
+          "price": 0.4
         },
         {
           "name": "riz jasmin",
@@ -485,52 +468,27 @@
           "price": 1.92
         },
         {
-          "name": "brocoli",
-          "quantity": 1200,
-          "unit": "g",
-          "aisle": "Fruits et légumes",
-          "staple": false,
-          "price": 4.8
-        },
-        {
-          "name": "graine de sésame",
-          "quantity": 3,
-          "unit": "c. à soupe",
-          "aisle": "Épicerie",
-          "staple": false,
-          "price": 0.45
-        },
-        {
-          "name": "vinaigre noir",
-          "quantity": 3,
-          "unit": "c. à soupe",
-          "aisle": "Épicerie",
-          "staple": false,
-          "price": 0.45
-        },
-        {
           "name": "huile neutre",
-          "quantity": 6,
+          "quantity": 4,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
           "staple": true,
-          "price": 0.3
+          "price": 0.2
         }
       ],
       "steps": [
-        "Préchauffer le four à 220 °C. Détailler le brocoli en fleurettes, les mélanger avec 2 c. à soupe d'huile et les rôtir 18 minutes.",
         "Cuire le riz jasmin selon le paquet. Couper le tofu en cubes de 2 cm. Hacher l'ail et le gingembre, et émincer les oignons nouveaux.",
         "Faire griller le poivre de Sichuan 1 minute à sec, puis le moudre.",
         "Dans un grand wok, chauffer 4 c. à soupe d'huile et faire dorer le porc 5 minutes. Ajouter le doubanjiang, l'ail et le gingembre, et remuer 1 minute.",
         "Verser le bouillon et 4 c. à soupe de sauce soja, ajouter le tofu et laisser frémir 8 minutes sans trop remuer.",
         "Délayer la fécule dans 4 c. à soupe d'eau froide, l'ajouter et laisser épaissir 1 minute. Finir avec le poivre de Sichuan et les oignons nouveaux.",
-        "Arroser le brocoli du vinaigre noir et de 1 c. à soupe de sauce soja, et le parsemer de sésame. Servir 4 portions et garder 4 portions pour le lendemain midi."
+        "Servir 4 portions avec le riz, et garder 4 portions au frais pour le lendemain midi."
       ]
     },
     {
       "day": "jeudi",
       "slot": "midi",
-      "title": "Restes : Mapo tofu au porc, riz jasmin",
+      "title": "Restes : Mapo tofu au porc",
       "emoji": "♻️",
       "leftoversOf": "mercredi",
       "ingredients": [],
@@ -688,7 +646,7 @@
     {
       "day": "vendredi",
       "slot": "soir",
-      "title": "Onglet de bœuf à l'échalote et pommes de terre sautées",
+      "title": "Onglet de bœuf à l'échalote",
       "emoji": "🥩",
       "cuisine": "française",
       "side": "Panais rôtis au miel et au thym",
@@ -728,20 +686,12 @@
           "price": 0.6
         },
         {
-          "name": "pomme de terre",
+          "name": "panais",
           "quantity": 1000,
           "unit": "g",
           "aisle": "Fruits et légumes",
           "staple": false,
-          "price": 1.5
-        },
-        {
-          "name": "panais",
-          "quantity": 600,
-          "unit": "g",
-          "aisle": "Fruits et légumes",
-          "staple": false,
-          "price": 2.4
+          "price": 4
         },
         {
           "name": "miel",
@@ -761,11 +711,11 @@
         },
         {
           "name": "huile d'olive",
-          "quantity": 4,
+          "quantity": 2,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
           "staple": true,
-          "price": 0.8
+          "price": 0.4
         },
         {
           "name": "sel",
@@ -785,11 +735,10 @@
         }
       ],
       "steps": [
-        "Préchauffer le four à 220 °C. Couper les panais en bâtonnets, les mélanger avec 1 c. à soupe d'huile d'olive, le miel et le thym, puis les rôtir 22 minutes.",
-        "Couper les pommes de terre en petits cubes. Les faire sauter 20 minutes à feu moyen-vif dans 3 c. à soupe d'huile d'olive, en les remuant souvent. Saler.",
+        "Préchauffer le four à 220 °C. Couper les panais en bâtonnets, les mélanger avec 2 c. à soupe d'huile d'olive, le miel, le thym et le sel, puis les rôtir 22 minutes.",
         "Sortir l'onglet du réfrigérateur. Le saisir 3 à 4 minutes par face dans une poêle très chaude avec 20 g de beurre, puis le laisser reposer sous une feuille de papier aluminium.",
         "Dans la même poêle, faire fondre les échalotes émincées 3 minutes. Déglacer au vin rouge, réduire de moitié, puis ajouter 30 g de beurre.",
-        "Trancher l'onglet, napper de sauce, poivrer et servir avec les pommes de terre et les panais."
+        "Trancher l'onglet, napper de sauce, poivrer et servir avec les panais."
       ]
     },
     {
@@ -935,11 +884,11 @@
     {
       "day": "samedi",
       "slot": "soir",
-      "title": "Poulet alla cacciatora et polenta grillée",
+      "title": "Poulet alla cacciatora",
       "emoji": "🍗",
       "cuisine": "italienne",
-      "side": "Fenouil rôti à l'orange et aux graines de fenouil",
-      "minutes": 80,
+      "side": "Polenta grillée",
+      "minutes": 70,
       "servings": 4,
       "ingredients": [
         {
@@ -1031,36 +980,12 @@
           "price": 0.36
         },
         {
-          "name": "fenouil",
-          "quantity": 3,
-          "unit": "pièce",
-          "aisle": "Fruits et légumes",
-          "staple": false,
-          "price": 3.6
-        },
-        {
-          "name": "orange",
-          "quantity": 1,
-          "unit": "pièce",
-          "aisle": "Fruits et légumes",
-          "staple": false,
-          "price": 0.5
-        },
-        {
-          "name": "graine de fenouil",
-          "quantity": 1,
-          "unit": "c. à café",
-          "aisle": "Épicerie",
-          "staple": false,
-          "price": 0.1
-        },
-        {
           "name": "huile d'olive",
-          "quantity": 5,
+          "quantity": 3,
           "unit": "c. à soupe",
           "aisle": "Épicerie",
           "staple": true,
-          "price": 1
+          "price": 0.6
         },
         {
           "name": "sel",
@@ -1084,8 +1009,7 @@
         "Faire dorer les cuisses de poulet 8 minutes dans une cocotte avec 2 c. à soupe d'huile d'olive, puis les réserver.",
         "Faire revenir 5 minutes l'oignon, la carotte et le céleri hachés, puis ajouter l'ail et le romarin. Déglacer au vin blanc et laisser réduire 3 minutes.",
         "Ajouter les tomates, les olives et le poulet. Saler, poivrer, couvrir et laisser mijoter 40 minutes.",
-        "Préchauffer le four à 200 °C. Couper le fenouil en quartiers, l'arroser de 2 c. à soupe d'huile d'olive et du jus de l'orange, ajouter les graines et un peu de sel, puis rôtir 35 minutes.",
-        "Couper la polenta en rectangles et les faire griller 3 minutes par face dans une poêle avec 1 c. à soupe d'huile d'olive. Servir avec le poulet et le fenouil."
+        "Couper la polenta en rectangles et les faire griller 3 minutes par face dans une poêle avec 1 c. à soupe d'huile d'olive. Servir avec le poulet."
       ]
     },
     {

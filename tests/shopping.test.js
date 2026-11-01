@@ -1,9 +1,9 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { shoppingList, formatItem } from "../lib/shopping.js";
+import { shoppingList, formatItem, formatPricedItem, formatPrice, mealPrice, weekPrice } from "../lib/shopping.js";
 import { makePlan, makeMeal } from "./helpers.js";
 
-const item = (name, quantity, unit, extra = {}) => ({ name, quantity, unit, aisle: "Épicerie", staple: false, ...extra });
+const item = (name, quantity, unit, extra = {}) => ({ name, quantity, unit, aisle: "Épicerie", staple: false, price: 1, ...extra });
 
 function planWith(mardi, lundiMidi = [item("eau", 1, "l", { staple: true })]) {
   const plan = makePlan();
@@ -20,7 +20,7 @@ const formatted = (list) => allItems(list).map(formatItem);
 
 test("additionne les quantités d'un même ingrédient", () => {
   const list = shoppingList(planWith([item("riz", 200, "g"), item("riz", 300, "g")]));
-  assert.deepEqual(allItems(list), [{ name: "riz", quantity: 500, unit: "g" }]);
+  assert.deepEqual(allItems(list), [{ name: "riz", quantity: 500, unit: "g", price: 2 }]);
 });
 
 test("ignore les espaces et la casse des noms", () => {
@@ -63,7 +63,7 @@ test("les ingrédients du lundi midi vont au placard", () => {
 test("un ingrédient du lundi midi reste à acheter pour les autres repas, sans sa quantité", () => {
   const list = shoppingList(planWith([item("riz", 100, "g")], [item("riz", 400, "g")]));
   assert.ok(list.pantry.includes("riz"));
-  assert.deepEqual(allItems(list), [{ name: "riz", quantity: 100, unit: "g" }]);
+  assert.deepEqual(allItems(list), [{ name: "riz", quantity: 100, unit: "g", price: 1 }]);
 });
 
 test("le placard ne contient pas de doublon", () => {
@@ -95,4 +95,32 @@ test("formatItem garde une unité lisible", () => {
   assert.equal(formatItem({ name: "ail", quantity: 1, unit: "gousse" }), "ail : 1 gousse");
   assert.equal(formatItem({ name: "huile", quantity: 2, unit: "c. à soupe" }), "huile : 2 c. à soupe");
   assert.equal(formatItem({ name: "vin", quantity: 750, unit: "ml" }), "vin : 75 cl");
+});
+
+test("la liste additionne les prix et donne un total, sans le placard", () => {
+  const list = shoppingList(planWith(
+    [item("riz", 200, "g", { price: 1.1 }), item("riz", 300, "g", { price: 2.2 }), item("sel", 1, "c. à café", { staple: true, price: 0.01 })],
+    [item("thon", 200, "g", { price: 3 })],
+  ));
+  assert.equal(allItems(list)[0].price, 3.3);
+  assert.equal(list.total, 3.3);
+});
+
+test("le prix d'un repas additionne tous ses ingrédients, placard compris", () => {
+  const meal = makeMeal("mardi", "soir", { ingredients: [item("riz", 1, "g", { price: 0.1 }), item("sel", 1, "g", { staple: true, price: 0.2 })] });
+  assert.equal(mealPrice(meal), 0.3);
+});
+
+test("des restes ne coûtent rien de plus", () => {
+  assert.equal(mealPrice({ leftoversOf: "lundi", ingredients: [] }), 0);
+});
+
+test("le prix de la semaine additionne tous les repas", () => {
+  assert.equal(weekPrice(makePlan()), 34);
+});
+
+test("les prix s'écrivent en euros à la française", () => {
+  assert.equal(formatPrice(3.6), "3,60 €");
+  assert.equal(formatPrice(12), "12,00 €");
+  assert.equal(formatPricedItem({ name: "riz", quantity: 500, unit: "g", price: 2.5 }), "riz : 500 g (≈ 2,50 €)");
 });

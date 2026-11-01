@@ -2,8 +2,8 @@ const DAYS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dima
 const SLOTS = ["midi", "soir"];
 const CUISINES = ["française", "japonaise", "italienne", "thaïe", "mexicaine", "chinoise"];
 const LUNCH_FROM = { mardi: "lundi", mercredi: "mardi", jeudi: "mercredi", vendredi: "jeudi" };
-const RICE = { name: "riz", quantity: 400, unit: "g", aisle: "Épicerie", staple: false };
-const STEAK = { name: "entrecôte", quantity: 800, unit: "g", aisle: "Boucher (à acheter vendredi)", staple: false };
+const RICE = { name: "riz", quantity: 400, unit: "g", aisle: "Épicerie", staple: false, price: 1 };
+const STEAK = { name: "entrecôte", quantity: 800, unit: "g", aisle: "Boucher (à acheter vendredi)", staple: false, price: 24 };
 
 const cookedFor8 = (day, slot) => slot === "soir" && !["vendredi", "samedi"].includes(day);
 

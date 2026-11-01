@@ -23,6 +23,7 @@ Chaque semaine, proposer un plan de repas pour 4 adultes, le faire valider par l
 | Cuisines | Japonaise, chinoise, mexicaine, thaïe, française, italienne, et un burger au plus par semaine |
 | Accompagnements | Un accompagnement simple et original par repas cuisiné |
 | Restes | Du lundi au vendredi, le midi reprend les restes de la veille au soir. Les dîners du dimanche au jeudi donnent 8 portions |
+| Prix | Estimation par Claude de chaque ingrédient (quantité utilisée), additionnée par repas, par ligne de courses et pour la semaine. Le budget de la semaine compte tous les repas, et « Courses à acheter » exclut le placard |
 | Vendredi soir | Pièce de viande du boucher, achetée le jour même et listée à part |
 | Repas | 14 par semaine : midi et soir, du lundi au dimanche |
 | Temps de cuisine | 30 min maximum du lundi au vendredi, 90 min maximum le week-end |
@@ -189,6 +190,6 @@ L'état `sent` n'est écrit qu'après un envoi réussi, et la publication préc�
 - Photos ou illustrations générées des plats
 - Comptes utilisateurs, ou validation par une page web
 - Liste de courses cochable en ligne
-- Prix des ingrédients et commande en ligne
+- Prix relevés en magasin et commande en ligne
 - Informations nutritionnelles
 - Mémorisation des plats préférés

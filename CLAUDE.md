@@ -26,6 +26,10 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
 - Original : une idée qui change vraiment (par exemple carottes rôties au miso, concombre mariné au sésame, maïs grillé au citron vert), jamais du riz, des pâtes, une purée ou une salade verte seuls.
 - Ses ingrédients sont dans `ingredients`, et sa préparation dans `steps`.
 
+**Prix**
+- Chaque ingrédient d'un repas cuisiné a un `price` : le coût estimé en euros de la quantité utilisée, au prix d'un supermarché français de gamme moyenne (boucher pour le vendredi soir).
+- Estimer honnêtement, avec des prix réalistes et positifs, y compris pour les produits du placard. Les prix sont indicatifs, à ne jamais présenter comme relevés en magasin.
+
 **Organisation**
 - 30 minutes maximum du lundi au vendredi, 90 minutes maximum le samedi et le dimanche.
 - Aucun plat repris des 4 semaines précédentes (voir `data/weeks/` et `data/proposals/`).
@@ -52,7 +56,7 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
       "minutes": 25,
       "servings": 8,
       "ingredients": [
-        { "name": "échine de porc", "quantity": 1200, "unit": "g", "aisle": "Viandes et poissons", "staple": false }
+        { "name": "échine de porc", "quantity": 1200, "unit": "g", "aisle": "Viandes et poissons", "staple": false, "price": 14.4 }
       ],
       "steps": ["Saisir le porc."]
     },

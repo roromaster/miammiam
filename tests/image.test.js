@@ -60,3 +60,10 @@ test("l'image s'arrête à la fin de la grille, sans marge vide", async (t) => {
   await renderImage(makePlan(), out);
   assert.ok(readFileSync(out).readUInt32BE(20) < 600);
 });
+
+test("la grille affiche le prix des repas et de la semaine", () => {
+  const html = gridHtml(makePlan());
+  assert.match(html, /≈ 25,00 €/);
+  assert.match(html, /≈ 34,00 €/);
+  assert.match(html, /Inclus la veille/);
+});

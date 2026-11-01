@@ -35,7 +35,7 @@ test("les portions couvrent 4 personnes, ou 8 quand il faut des restes", () => {
   assert.match(errorsFor(withMeal(makePlan(), "vendredi", "soir", { servings: 8 })), /4/);
 });
 
-const ingredient = (o) => [{ name: "riz", quantity: 1, unit: "g", aisle: "Épicerie", staple: false, ...o }];
+const ingredient = (o) => [{ name: "riz", quantity: 1, unit: "g", aisle: "Épicerie", staple: false, price: 1, ...o }];
 
 test("unité et rayon appartiennent aux listes fermées", () => {
   assert.match(errorsFor(withMeal(makePlan(), "lundi", "soir", { ingredients: ingredient({ unit: "poignée" }) })), /poignée/);
@@ -100,7 +100,7 @@ test("sans semaine précédente, le lundi midi est une vraie recette", () => {
 
 test("les fromages refusés sont bloqués, y compris sans accent ou au pluriel", () => {
   const withIngredient = (name) => withMeal(makePlan(), "samedi", "midi", {
-    ingredients: [{ name, quantity: 1, unit: "g", aisle: "Produits laitiers", staple: false }],
+    ingredients: [{ name, quantity: 1, unit: "g", aisle: "Produits laitiers", staple: false, price: 1 }],
   });
   for (const name of ["chèvre", "chevre frais", "roblochon", "reblochon", "parmesan râpé", "Mozzarella", "feta", "fromage râpé", "mascarpone"]) {
     assert.match(errorsFor(withIngredient(name)), /fromage/i, name);
@@ -118,14 +118,14 @@ test("le titre et l'accompagnement ne citent pas de fromage refusé", () => {
 
 test("le vendredi soir comporte une pièce du boucher", () => {
   const plan = withMeal(makePlan(), "vendredi", "soir", {
-    ingredients: [{ name: "riz", quantity: 1, unit: "g", aisle: "Épicerie", staple: false }],
+    ingredients: [{ name: "riz", quantity: 1, unit: "g", aisle: "Épicerie", staple: false, price: 1 }],
   });
   assert.match(errorsFor(plan), /vendredi soir.*boucher/);
 });
 
 test("le rayon du boucher est réservé au vendredi soir", () => {
   const plan = withMeal(makePlan(), "mardi", "soir", {
-    ingredients: [{ name: "bavette", quantity: 1, unit: "g", aisle: "Boucher (à acheter vendredi)", staple: false }],
+    ingredients: [{ name: "bavette", quantity: 1, unit: "g", aisle: "Boucher (à acheter vendredi)", staple: false, price: 1 }],
   });
   assert.match(errorsFor(plan), /mardi soir.*boucher/);
 });
@@ -150,4 +150,11 @@ test("un burger au plus par semaine", () => {
 test("chaque vrai repas a son propre accompagnement", () => {
   assert.match(errorsFor(withMeal(makePlan(), "samedi", "midi", { side: "" })), /accompagnement/);
   assert.match(errorsFor(withMeal(makePlan(), "samedi", "midi", { side: "Accompagnement du lundi soir" })), /accompagnement/);
+});
+
+test("chaque ingrédient d'un vrai repas a un prix positif", () => {
+  for (const price of [undefined, 0, -1, "2"]) {
+    const plan = withMeal(makePlan(), "lundi", "soir", { ingredients: ingredient({ price }) });
+    assert.match(errorsFor(plan), /prix/, String(price));
+  }
 });

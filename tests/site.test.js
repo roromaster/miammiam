@@ -101,3 +101,13 @@ test("la pièce du vendredi a sa propre section de courses", (t) => {
   assert.match(html, /Boucher \(à acheter vendredi\)/);
   assert.match(html, /entrecôte : 800 g/);
 });
+
+test("la page affiche les prix des ingrédients, des repas, des courses et de la semaine", (t) => {
+  const html = build(t, [makePlan()]).read("2026-W46/index.html");
+  assert.match(html, /riz : 400 g \(≈ 1,00 €\)/);
+  assert.match(html, /Prix du repas : ≈ 25,00 €/);
+  assert.match(html, /riz : 3,6 kg \(≈ 9,00 €\)/);
+  assert.match(html, /Budget de la semaine : ≈ 34,00 €/);
+  assert.match(html, /Courses à acheter : ≈ 33,00 €/);
+  assert.match(html, /estim/i);
+});

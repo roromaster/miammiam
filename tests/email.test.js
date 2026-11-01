@@ -162,3 +162,20 @@ test("la proposition montre les accompagnements", () => {
   const text = decodePart(proposalEmail(makePlan(), { to: "a@example.com" }), "text/plain");
   assert.match(text, /Accompagnement du lundi soir/);
 });
+
+test("l'email du lundi donne les prix et le budget", () => {
+  for (const type of ["text/plain", "text/html"]) {
+    const part = decodePart(weekly(), type);
+    assert.match(part, /riz : 3,6 kg \(≈ 9,00 €\)/);
+    assert.match(part, /Budget de la semaine : ≈ 34,00 €/);
+    assert.match(part, /Courses à acheter : ≈ 33,00 €/);
+    assert.match(part, /estim/i);
+  }
+});
+
+test("la proposition donne le prix de chaque repas et de la semaine", () => {
+  const text = decodePart(proposalEmail(makePlan(), { to: "a@example.com" }), "text/plain");
+  assert.match(text, /Plat du vendredi soir.*≈ 25,00 €/);
+  assert.match(text, /Budget de la semaine : ≈ 34,00 €/);
+  assert.doesNotMatch(text, /Restes : Plat du lundi soir.*€/);
+});

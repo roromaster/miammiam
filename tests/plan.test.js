@@ -158,3 +158,26 @@ test("chaque ingrédient d'un vrai repas a un prix positif", () => {
     assert.match(errorsFor(plan), /prix/, String(price));
   }
 });
+
+test("le titre ne porte pas un second accompagnement", () => {
+  for (const title of ["Curry de lieu, riz jasmin", "Onglet à l'échalote et pommes de terre sautées", "Poulet cacciatora et polenta grillée", "Rôti avec purée de céleri"]) {
+    assert.match(errorsFor(withMeal(makePlan(), "samedi", "midi", { title })), /un seul accompagnement/, title);
+  }
+});
+
+test("un féculent qui fait partie du plat reste permis dans le titre", () => {
+  for (const title of ["Spaghetti alla puttanesca", "Tinga de poulet et tortillas de maïs", "Porc braisé aux pommes de terre", "Riz cantonais aux crevettes", "Gratin de pâtes au comté"]) {
+    assert.deepEqual(validatePlan(withMeal(makePlan(), "samedi", "midi", { title })), [], title);
+  }
+});
+
+test("le riz et les pâtes sont permis en accompagnement, au plus deux fois chacun", () => {
+  const sides = (...values) => values.reduce(
+    (plan, [slotDay, side]) => withMeal(plan, slotDay, "soir", { side }),
+    makePlan(),
+  );
+  assert.deepEqual(validatePlan(sides(["lundi", "Riz jasmin"], ["mardi", "Riz basmati au citron"])), []);
+  assert.match(errorsFor(sides(["lundi", "Riz jasmin"], ["mardi", "Riz basmati"], ["mercredi", "Riz complet"])), /riz/);
+  assert.deepEqual(validatePlan(sides(["lundi", "Pâtes au beurre"], ["mardi", "Orzo au citron"])), []);
+  assert.match(errorsFor(sides(["lundi", "Pâtes au beurre"], ["mardi", "Orzo au citron"], ["mercredi", "Tagliatelles à l'ail"])), /pâtes/);
+});

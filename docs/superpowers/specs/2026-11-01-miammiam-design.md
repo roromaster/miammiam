@@ -21,7 +21,7 @@ Chaque semaine, proposer un plan de repas pour 4 adultes, le faire valider par l
 |---|---|
 | Convives | 4 adultes, sans allergie ni régime. Seuls le comté, le gruyère et l'emmental sont acceptés comme fromages |
 | Cuisines | Japonaise, chinoise, mexicaine, thaïe, française, italienne, et un burger au plus par semaine |
-| Accompagnements | Un accompagnement simple et original par repas cuisiné |
+| Accompagnements | Un seul par repas cuisiné, simple et varié. Le riz et les pâtes sont permis, au plus 2 fois chacun par semaine |
 | Restes | Du lundi au vendredi, le midi reprend les restes de la veille au soir. Les dîners du dimanche au jeudi donnent 8 portions |
 | Prix | Estimation par Claude de chaque ingrédient (quantité utilisée), additionnée par repas, par ligne de courses et pour la semaine. Le budget de la semaine compte tous les repas, et « Courses à acheter » exclut le placard |
 | Vendredi soir | Pièce de viande du boucher, achetée le jour même et listée à part |

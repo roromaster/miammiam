@@ -21,9 +21,11 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
 - Rechercher des plats authentiques et variés, pas seulement des plats familiaux français.
 
 **Accompagnements**
-- Chaque repas cuisiné a son accompagnement simple et original, dans le champ `side`, différent à chaque repas.
-- Simple : 5 ingrédients maximum, en plus de l'huile et de l'assaisonnement, et sans technique difficile.
-- Original : une idée qui change vraiment (par exemple carottes rôties au miso, concombre mariné au sésame, maïs grillé au citron vert), jamais du riz, des pâtes, une purée ou une salade verte seuls.
+- Un seul accompagnement par repas cuisiné, dans le champ `side`. Ne pas en ajouter un second, ni dans le titre, ni dans les étapes.
+- Le titre nomme le plat seul : « Curry jaune de lieu noir », pas « Curry jaune de lieu noir, riz jasmin ». Un féculent peut y figurer seulement s'il fait partie du plat (tortillas d'un tinga, pommes de terre braisées dans la sauce, pain d'un burger).
+- Le riz et les pâtes sont permis, au plus 2 fois chacun par semaine. Les servir surtout avec les plats en sauce qui les appellent (curry, mapo tofu).
+- Varier régulièrement les autres accompagnements : légumes, légumineuses, céréales. Les vouloir simples (5 ingrédients maximum, en plus de l'huile et de l'assaisonnement, sans technique difficile) et, souvent, originaux (carottes rôties au miso, concombre mariné au sésame, maïs grillé au citron vert).
+- Ne pas reprendre un accompagnement de la semaine précédente, sauf le riz et les pâtes.
 - Ses ingrédients sont dans `ingredients`, et sa préparation dans `steps`.
 
 **Prix**

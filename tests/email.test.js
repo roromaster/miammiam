@@ -50,7 +50,7 @@ test("les deux versions contiennent le lien et la liste", () => {
     const part = decodePart(weekly(), type);
     assert.match(part, /https:\/\/example\.com\/2026-W46\//);
     assert.match(part, /Épicerie/);
-    assert.match(part, /riz : 5,2 kg/);
+    assert.match(part, /riz : 3,6 kg/);
     assert.match(part, /À vérifier au placard/);
   }
 });
@@ -156,4 +156,9 @@ test("sendRaw n'accepte comme succès qu'une réponse avec un id", async () => {
     await assert.rejects(sendRaw("x", { exec: async () => ({ stdout }) }), /Échec d'envoi/, stdout);
   }
   await sendRaw("x", { exec: async () => ({ stdout: 'Using keyring backend: keyring\n{"id":"abc"}' }) });
+});
+
+test("la proposition montre les accompagnements", () => {
+  const text = decodePart(proposalEmail(makePlan(), { to: "a@example.com" }), "text/plain");
+  assert.match(text, /Accompagnement du lundi soir/);
 });

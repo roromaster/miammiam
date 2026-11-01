@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { checkPlan, notifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 import { loadPlan, savePlan } from "../lib/store.js";
-import { makePlan, withMeal } from "./helpers.js";
+import { makePlan, makeLeftovers, withMeal } from "./helpers.js";
 
 const WEEK = "2026-W46";
 
@@ -50,18 +50,18 @@ test("saveProposal refuse un plan invalide ou un plat récent", (t) => {
   const invalid = saveProposal(withMeal(makePlan(), "mardi", "soir", { minutes: 45 }), deps);
   assert.equal(invalid.saved, false);
   assert.ok(invalid.errors.length > 0);
-  savePlan(withMeal(makePlan({ week: "2026-W45", startDate: "2026-11-02", status: "sent" }), "lundi", "midi", { title: "Plat du mardi midi" }), root);
+  savePlan(withMeal(makePlan({ week: "2026-W45", startDate: "2026-11-02", status: "sent" }), "lundi", "midi", { title: "Plat du mardi soir" }), root);
   const repeated = saveProposal(makePlan(), deps);
   assert.equal(repeated.saved, false);
   assert.match(repeated.errors.join(), /précédentes/);
   assert.equal(loadPlan(WEEK, root), null);
 });
 
-test("notifyProposal envoie une seule fois, au propriétaire seulement", async (t) => {
+test("notifyProposal envoie une seule fois, à tous les destinataires", async (t) => {
   const { root, deps } = setup(t);
   savePlan(makePlan(), root);
   assert.deepEqual(await notifyProposal(WEEK, deps), { sent: true });
-  assert.match(deps.mimes[0], /^To: a@example\.com\r$/m);
+  assert.match(deps.mimes[0], /^To: a@example\.com, b@example\.com\r$/m);
   assert.deepEqual(await notifyProposal(WEEK, deps), { sent: false });
   assert.equal(deps.mimes.length, 1);
 });
@@ -193,6 +193,15 @@ test("republish refuse une proposition", async (t) => {
 
 test("checkPlan contrôle les plats récents", (t) => {
   const { root, deps } = setup(t);
-  savePlan(withMeal(makePlan({ week: "2026-W45", startDate: "2026-11-02", status: "sent" }), "lundi", "midi", { title: "Plat du mardi midi" }), root);
+  savePlan(withMeal(makePlan({ week: "2026-W45", startDate: "2026-11-02", status: "sent" }), "lundi", "midi", { title: "Plat du mardi soir" }), root);
   assert.match(checkPlan(makePlan(), deps).join(), /précédentes/);
+});
+
+test("le lundi midi est contrôlé avec le dimanche de la semaine précédente", (t) => {
+  const { root, deps } = setup(t);
+  savePlan(makePlan({ week: "2026-W45", startDate: "2026-11-02", status: "sent" }), root);
+  const plan = withMeal(makePlan(), "lundi", "midi", makeLeftovers("lundi", "dimanche"));
+  plan.meals = plan.meals.map((m) => (m.leftoversOf || m.title.startsWith("Restes") ? m : { ...m, title: `Nouveau ${m.title}` }));
+  plan.meals = plan.meals.map((m) => (m.leftoversOf && m.leftoversOf !== "dimanche" ? { ...m, title: `Restes : Nouveau Plat du ${m.leftoversOf} soir` } : m));
+  assert.deepEqual(checkPlan(plan, deps), []);
 });

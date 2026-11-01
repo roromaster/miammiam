@@ -19,10 +19,14 @@ Chaque semaine, proposer un plan de repas pour 4 adultes, le faire valider par l
 
 | Sujet | Décision |
 |---|---|
-| Convives | 4 adultes, sans allergie ni régime |
+| Convives | 4 adultes, sans allergie ni régime. Seuls le comté, le gruyère et l'emmental sont acceptés comme fromages |
+| Cuisines | Japonaise, chinoise, mexicaine, thaïe, française, italienne, et un burger au plus par semaine |
+| Accompagnements | Un accompagnement simple et original par repas cuisiné |
+| Restes | Du lundi au vendredi, le midi reprend les restes de la veille au soir. Les dîners du dimanche au jeudi donnent 8 portions |
+| Vendredi soir | Pièce de viande du boucher, achetée le jour même et listée à part |
 | Repas | 14 par semaine : midi et soir, du lundi au dimanche |
 | Temps de cuisine | 30 min maximum du lundi au vendredi, 90 min maximum le week-end |
-| Lundi midi | Produits du placard uniquement, car les courses ne sont pas forcément faites |
+| Lundi midi | Restes du dimanche soir de la semaine précédente, ou recette du placard s'il n'y a pas de semaine précédente |
 | Langue | Français |
 | Exécution | Tâches planifiées de Claude Desktop sur le Mac du propriétaire |
 | Génération | Claude, dans la tâche planifiée, sans clé API séparée |
@@ -34,7 +38,7 @@ Chaque semaine, proposer un plan de repas pour 4 adultes, le faire valider par l
 ```text
 Samedi 9 h : tâche « proposer »
   Claude génère le plan -> validation du plan -> état "proposed"
-  -> email d'invitation à valider, au propriétaire seulement
+  -> email d'invitation à valider, aux deux destinataires
 
 Du samedi au lundi : validation dans une session Claude Desktop du projet
   « remplace mardi soir » -> plan et liste mis à jour
@@ -100,7 +104,7 @@ Les règles vivent dans `CLAUDE.md`, pour que la génération et les remplacemen
 - Saison respectée, et variété des protéines et des féculents sur la semaine.
 - Poisson frais et produits fragiles placés en début de semaine.
 - Noms d'ingrédients écrits au singulier et de façon identique d'un repas à l'autre, pour que les additions fonctionnent.
-- Chaque repas a sa propre recette. La réutilisation des restes n'est pas gérée dans cette version.
+- Du lundi au vendredi, le midi est un repas de restes, sans recette ni courses propres.
 
 ## 6. Liste de courses
 
@@ -115,7 +119,7 @@ La liste n'est pas stockée : elle est toujours recalculée depuis le plan, ce q
 
 ## 7. Validation
 
-- L'email du samedi va au propriétaire seulement. Il liste les 14 plats et indique comment valider.
+- L'email du samedi va aux deux destinataires. Il liste les 14 plats et leurs accompagnements, et indique comment valider.
 - La validation se fait dans une session Claude Desktop du projet, en langage naturel.
 - Après chaque remplacement, le plan repasse par `validate-plan.js`.
 - « Valide » passe l'état à `validated` et publie le site, ce qui permet de faire les courses dès le week-end.
@@ -185,7 +189,6 @@ L'état `sent` n'est écrit qu'après un envoi réussi, et la publication préc�
 - Photos ou illustrations générées des plats
 - Comptes utilisateurs, ou validation par une page web
 - Liste de courses cochable en ligne
-- Réutilisation des restes
 - Prix des ingrédients et commande en ligne
 - Informations nutritionnelles
 - Mémorisation des plats préférés

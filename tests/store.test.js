@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, existsSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { loadPlan, savePlan, publishedPlans, previousTitles, planHash } from "../lib/store.js";
+import { loadPlan, savePlan, publishedPlans, previousTitles, previousSunday, planHash } from "../lib/store.js";
 import { makePlan, withMeal } from "./helpers.js";
 
 function tempRoot(t) {
@@ -67,4 +67,19 @@ test("planHash ne dépend pas du statut, mais du contenu", () => {
 
 test("planHash ne dépend pas de notified", () => {
   assert.equal(planHash(makePlan()), planHash(makePlan({ notified: true })));
+});
+
+test("previousTitles ignore les restes", (t) => {
+  const root = tempRoot(t);
+  savePlan(makePlan({ week: "2026-W45", startDate: "2026-11-02", status: "sent" }), root);
+  const titles = previousTitles("2026-W46", root);
+  assert.ok(titles.includes("Plat du lundi soir"));
+  assert.ok(!titles.includes("Restes : Plat du lundi soir"));
+});
+
+test("previousSunday renvoie le dimanche soir de la semaine précédente", (t) => {
+  const root = tempRoot(t);
+  assert.equal(previousSunday("2026-W46", root), null);
+  savePlan(makePlan({ week: "2026-W45", startDate: "2026-11-02", status: "sent" }), root);
+  assert.equal(previousSunday("2026-W46", root).title, "Plat du dimanche soir");
 });

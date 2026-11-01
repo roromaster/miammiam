@@ -22,7 +22,7 @@ test("la page de semaine contient les recettes et la liste", (t) => {
   assert.equal((html.match(/class="recipe"/g) ?? []).length, 14);
   assert.match(html, /Plat du dimanche soir/);
   assert.match(html, /Cuire le riz\./);
-  assert.match(html, /riz : 4,8 kg|riz : 5,2 kg/);
+  assert.match(html, /riz : 3,6 kg/);
   assert.match(html, /À vérifier au placard/);
 });
 
@@ -81,4 +81,23 @@ test("une semaine retirée disparaît, et l'image des autres est conservée", (t
   buildSite([makePlan()], out);
   assert.ok(!existsSync(join(out, "2026-W01")));
   assert.ok(existsSync(image));
+});
+
+test("les restes renvoient au repas d'origine, sans recette", (t) => {
+  const html = build(t, [makePlan()]).read("2026-W46/index.html");
+  assert.match(html, /Restes : Plat du lundi soir/);
+  assert.match(html, /Restes du lundi soir/);
+  assert.match(html, /8 portions/);
+});
+
+test("une page affiche l'accompagnement et la cuisine", (t) => {
+  const html = build(t, [makePlan()]).read("2026-W46/index.html");
+  assert.match(html, /Accompagnement du lundi soir/);
+  assert.match(html, /Cuisine japonaise/i);
+});
+
+test("la pièce du vendredi a sa propre section de courses", (t) => {
+  const html = build(t, [makePlan()]).read("2026-W46/index.html");
+  assert.match(html, /Boucher \(à acheter vendredi\)/);
+  assert.match(html, /entrecôte : 800 g/);
 });

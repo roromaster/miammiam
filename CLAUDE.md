@@ -6,16 +6,33 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
 
 ## Règles des menus
 
-- Exactement 14 repas : `midi` et `soir`, du `lundi` au `dimanche`.
-- 4 adultes, sans allergie ni régime. `servings` vaut toujours 4.
+**Rythme de la semaine**
+- 14 repas : `midi` et `soir`, du `lundi` au `dimanche`.
+- Du mardi au vendredi, le midi est constitué des restes de la veille au soir.
+- Le lundi midi reprend les restes du dimanche soir de la semaine précédente. S'il n'existe pas de semaine précédente, c'est une vraie recette de 4 portions avec des produits du placard.
+- Le samedi et le dimanche midi sont de vrais repas.
+- Du dimanche soir au jeudi soir, cuisiner 8 portions (`servings: 8`), dont 4 pour les restes du lendemain midi. Choisir des plats qui se gardent et se réchauffent bien.
+- Les autres repas cuisinés donnent 4 portions (`servings: 4`).
+- Le vendredi soir : une pièce de viande du boucher, achetée le jour même. Son ingrédient va dans le rayon `Boucher (à acheter vendredi)`, réservé à ce repas, sans restes.
+
+**Goûts**
+- Fromage : uniquement comté, gruyère ou emmental. Surtout pas de chèvre ni de roblochon. Aucun autre fromage, pas même caché (parmesan dans un pesto, mozzarella, feta, ricotta…). Remplacer ou omettre. Le fromage blanc et la crème restent permis.
+- Cuisines aimées : japonaise, chinoise, mexicaine, thaïe, française, italienne, et un burger de temps en temps (au plus un par semaine). Au moins 4 cuisines différentes par semaine.
+- Rechercher des plats authentiques et variés, pas seulement des plats familiaux français.
+
+**Accompagnements**
+- Chaque repas cuisiné a son accompagnement simple et original, dans le champ `side`, différent à chaque repas.
+- Simple : 5 ingrédients maximum, en plus de l'huile et de l'assaisonnement, et sans technique difficile.
+- Original : une idée qui change vraiment (par exemple carottes rôties au miso, concombre mariné au sésame, maïs grillé au citron vert), jamais du riz, des pâtes, une purée ou une salade verte seuls.
+- Ses ingrédients sont dans `ingredients`, et sa préparation dans `steps`.
+
+**Organisation**
 - 30 minutes maximum du lundi au vendredi, 90 minutes maximum le samedi et le dimanche.
-- Lundi midi : uniquement des produits du placard, car les courses ne sont pas forcément faites.
 - Aucun plat repris des 4 semaines précédentes (voir `data/weeks/` et `data/proposals/`).
 - Respecter la saison, et varier les protéines et les féculents sur la semaine.
 - Placer le poisson frais et les produits fragiles en début de semaine.
-- Chaque repas a sa propre recette complète, sans recours aux restes.
 - Écrire les noms d'ingrédients au singulier et à l'identique d'un repas à l'autre, sinon la liste de courses ne peut pas les additionner.
-- Écrire les recettes en français, avec des étapes claires et les quantités réelles pour 4 personnes.
+- Écrire les recettes en français, avec des étapes claires et les quantités réelles des portions indiquées.
 
 ## Format d'un plan
 
@@ -27,22 +44,35 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
   "meals": [
     {
       "day": "lundi",
-      "slot": "midi",
-      "title": "Pâtes au thon et aux câpres",
-      "emoji": "🍝",
-      "minutes": 20,
-      "servings": 4,
+      "slot": "soir",
+      "title": "Porc au gingembre façon shogayaki",
+      "emoji": "🥢",
+      "cuisine": "japonaise",
+      "side": "Concombre mariné au sésame",
+      "minutes": 25,
+      "servings": 8,
       "ingredients": [
-        { "name": "pâtes", "quantity": 400, "unit": "g", "aisle": "Épicerie", "staple": false }
+        { "name": "échine de porc", "quantity": 1200, "unit": "g", "aisle": "Viandes et poissons", "staple": false }
       ],
-      "steps": ["Faire cuire les pâtes."]
+      "steps": ["Saisir le porc."]
+    },
+    {
+      "day": "mardi",
+      "slot": "midi",
+      "title": "Restes : Porc au gingembre façon shogayaki",
+      "emoji": "♻️",
+      "leftoversOf": "lundi",
+      "ingredients": [],
+      "steps": []
     }
   ]
 }
 ```
 
+- Des restes ont `leftoversOf` (le jour du dîner d'origine), un titre citant ce dîner, et ni ingrédient ni étape.
+- `cuisine` : `japonaise`, `chinoise`, `mexicaine`, `thaïe`, `française`, `italienne`, `burger`.
 - `unit` : `g`, `kg`, `ml`, `cl`, `l`, `pièce`, `c. à soupe`, `c. à café`, `gousse`, `tranche`.
-- `aisle` : `Fruits et légumes`, `Viandes et poissons`, `Produits laitiers`, `Épicerie`, `Surgelés`, `Boulangerie`, `Boissons`.
+- `aisle` : `Fruits et légumes`, `Viandes et poissons`, `Produits laitiers`, `Épicerie`, `Surgelés`, `Boulangerie`, `Boissons`, `Boucher (à acheter vendredi)`.
 - `staple` vaut `true` pour les produits de base généralement en stock (sel, poivre, huile).
 - `startDate` est le lundi de la semaine ISO.
 

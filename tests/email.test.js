@@ -67,7 +67,7 @@ test("les lignes base64 font au plus 76 caractères", () => {
 test("un titre spécial est échappé en HTML et intact en texte", () => {
   const plan = withMeal(makePlan(), "mardi", "soir", {
     title: "Bœuf & <maison>",
-    ingredients: [{ name: "bœuf & <co>", quantity: 1, unit: "kg", aisle: "Épicerie", staple: false }],
+    ingredients: [{ name: "bœuf & <co>", quantity: 1, unit: "kg", aisle: "Épicerie", staple: false, price: 10 }],
   });
   assert.match(decodePart(weekly(plan), "text/html"), /bœuf &amp; &lt;co&gt;/);
   assert.match(decodePart(weekly(plan), "text/plain"), /bœuf & <co>/);
@@ -178,4 +178,19 @@ test("la proposition donne le prix de chaque repas et de la semaine", () => {
   assert.match(text, /Plat du vendredi soir.*≈ 25,00 €/);
   assert.match(text, /Budget de la semaine : ≈ 34,00 €/);
   assert.doesNotMatch(text, /Restes : Plat du lundi soir.*€/);
+});
+
+test("la proposition donne les recettes complètes des plats cuisinés", () => {
+  const plan = withMeal(makePlan(), "lundi", "soir", { steps: ["Rincer le riz.", "Cuire 12 minutes."] });
+  const mime = proposalEmail(plan, { to: "a@example.com" });
+  const text = decodePart(mime, "text/plain");
+  const recipes = text.slice(text.indexOf("RECETTES"));
+  assert.match(recipes, /PLAT DU LUNDI SOIR/);
+  assert.match(recipes, /riz : 400 g \(≈ 1,00 €\)/);
+  assert.match(recipes, /1\. Rincer le riz\.\n2\. Cuire 12 minutes\./);
+  assert.match(recipes, /8 portions, dont 4 pour les restes/);
+  assert.equal((recipes.match(/^Préparation$/gm) ?? []).length, 10);
+  const html = decodePart(mime, "text/html");
+  assert.match(html, /<h2[^>]*>Recettes<\/h2>/);
+  assert.match(html, /<li>Cuire 12 minutes\.<\/li>/);
 });

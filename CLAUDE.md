@@ -31,6 +31,7 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
 **Prix**
 - Chaque ingrédient d'un repas cuisiné a un `price` : le coût estimé en euros de la quantité utilisée, au prix d'un supermarché français de gamme moyenne (boucher pour le vendredi soir).
 - Estimer honnêtement, avec des prix réalistes et positifs, y compris pour les produits du placard. Les prix sont indicatifs, à ne jamais présenter comme relevés en magasin.
+- Ne pas surestimer : compter au prix des grands conditionnements, et seulement la part utilisée. Repères au kilo : poulet (cuisse) 9 €, bœuf haché 10 €, dinde hachée 9,5 €, porc (échine, côte) 9 €, saumon 19 €, crevette crue surgelée 20 €, veau (jarret) 17 €, agneau (épaule) 17 €, entrecôte du boucher 32 €, riz 2,5 à 3,5 €, pâtes 2 à 3 €, légumes courants 1,5 à 3 €. Repères à l'unité : oignon 0,15 €, gousse d'ail 0,06 €, oignon nouveau 0,12 €, citron vert 0,3 €, œuf 0,3 €, botte d'herbes 1 €, conserve de 400 g 0,7 à 1 €. Une cuillère d'épice ou de sauce coûte quelques centimes.
 
 **Organisation**
 - 30 minutes maximum du lundi au vendredi, 90 minutes maximum le samedi et le dimanche.

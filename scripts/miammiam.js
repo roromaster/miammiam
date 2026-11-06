@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { PROJECT_ROOT, loadPlan } from "../lib/store.js";
 import { currentWeek, upcomingWeek } from "../lib/week.js";
-import { checkPlan, defaultDeps, notifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
+import { checkPlan, defaultDeps, notifyProposal, renotifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 
 const USAGE = `Commandes :
   target upcoming|current
@@ -11,6 +11,7 @@ const USAGE = `Commandes :
   check <fichier.json>
   save-proposal <fichier.json>
   notify-proposal <semaine>
+  renotify <semaine>
   validate <semaine>
   send-weekly <semaine>
   republish <semaine>
@@ -54,6 +55,10 @@ const COMMANDS = {
   async "notify-proposal"(week) {
     const { sent } = await notifyProposal(weekArg(week), deps);
     return sent ? "Email de proposition envoyé" : "Aucun email à envoyer";
+  },
+  async renotify(week) {
+    await renotifyProposal(weekArg(week), deps);
+    return "Proposition mise à jour renvoyée";
   },
   validate(week) {
     return validateWeek(weekArg(week), deps);

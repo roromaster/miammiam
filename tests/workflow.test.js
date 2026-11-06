@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { checkPlan, notifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
+import { checkPlan, notifyProposal, renotifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 import { loadPlan, savePlan } from "../lib/store.js";
 import { makePlan, makeLeftovers, withMeal } from "./helpers.js";
 
@@ -102,6 +102,41 @@ test("notifyProposal ne fait rien après validation", async (t) => {
   const { root, deps } = setup(t);
   savePlan(makePlan({ status: "validated" }), root);
   assert.deepEqual(await notifyProposal(WEEK, deps), { sent: false });
+  assert.equal(deps.mimes.length, 0);
+});
+
+test("renotifyProposal renvoie la proposition à chaque demande", async (t) => {
+  const { root, deps } = setup(t);
+  savePlan(makePlan({ notified: true }), root);
+  await renotifyProposal(WEEK, deps);
+  await renotifyProposal(WEEK, deps);
+  assert.equal(deps.mimes.length, 2);
+  assert.match(deps.mimes[0], /^To: a@example\.com, b@example\.com\r$/m);
+  const [, subject] = deps.mimes[0].match(/^Subject: =\?UTF-8\?B\?(.+)\?=$/m);
+  assert.match(Buffer.from(subject, "base64").toString("utf8"), /^🍽️ À valider \(mise à jour\) : /);
+  assert.deepEqual(deps.pushes, []);
+});
+
+test("renotifyProposal marque la proposition comme notifiée et bloque l'envoi du samedi", async (t) => {
+  const { root, deps } = setup(t);
+  savePlan(makePlan(), root);
+  await renotifyProposal(WEEK, deps);
+  assert.equal(loadPlan(WEEK, root).notified, true);
+  assert.deepEqual(await notifyProposal(WEEK, deps), { sent: false });
+  assert.equal(deps.mimes.length, 1);
+});
+
+test("renotifyProposal refuse une semaine validée", async (t) => {
+  const { root, deps } = setup(t);
+  savePlan(makePlan({ status: "validated" }), root);
+  await assert.rejects(renotifyProposal(WEEK, deps), /déjà validée/);
+  assert.equal(deps.mimes.length, 0);
+});
+
+test("renotifyProposal refuse un plan invalide", async (t) => {
+  const { root, deps } = setup(t);
+  savePlan(withMeal(makePlan(), "mardi", "soir", { minutes: 45 }), root);
+  await assert.rejects(renotifyProposal(WEEK, deps), /mardi soir/);
   assert.equal(deps.mimes.length, 0);
 });
 

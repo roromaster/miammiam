@@ -22,36 +22,47 @@ function setup(t, { recipients = { owner: "a@example.com", recipients: ["a@examp
     publish: async () => { order.push("publish"); return `https://example.com/${WEEK}/`; },
     send: async (mime) => { order.push("send"); deps.mimes.push(mime); },
     readImage: () => Buffer.from("png"),
-    pushState: async () => { order.push(`push:${loadPlan(WEEK, root).status}`); },
+    pushData: async (message) => { order.push(`push:${loadPlan(WEEK, root).status}`); deps.pushes.push(message); },
     warn: (message) => deps.warnings.push(message),
     mimes: [],
     warnings: [],
+    pushes: [],
   };
   return { root, deps, order };
 }
 
-test("saveProposal écrit un plan valide en proposed", (t) => {
+test("saveProposal écrit un plan valide en proposed et le pousse", async (t) => {
   const { root, deps } = setup(t);
-  assert.deepEqual(saveProposal(makePlan({ status: "validated" }), deps), { saved: true, errors: [] });
+  assert.deepEqual(await saveProposal(makePlan({ status: "validated" }), deps), { saved: true, errors: [] });
   assert.equal(loadPlan(WEEK, root).status, "proposed");
+  assert.deepEqual(deps.pushes, [`data: proposition de ${WEEK}`]);
 });
 
-test("saveProposal n'écrase jamais un plan existant", (t) => {
+test("saveProposal garde la proposition si le push échoue", async (t) => {
+  const { root, deps } = setup(t);
+  deps.pushData = async () => { throw new Error("push refusé"); };
+  assert.equal((await saveProposal(makePlan(), deps)).saved, true);
+  assert.equal(loadPlan(WEEK, root).status, "proposed");
+  assert.match(deps.warnings[0], /push refusé/);
+});
+
+test("saveProposal n'écrase jamais un plan existant", async (t) => {
   const { root, deps } = setup(t);
   savePlan(makePlan({ status: "sent" }), root);
-  const result = saveProposal(withMeal(makePlan(), "lundi", "midi", { title: "Autre" }), deps);
+  const result = await saveProposal(withMeal(makePlan(), "lundi", "midi", { title: "Autre" }), deps);
   assert.deepEqual(result, { saved: false, errors: [] });
+  assert.deepEqual(deps.pushes, []);
   assert.equal(loadPlan(WEEK, root).status, "sent");
   assert.equal(loadPlan(WEEK, root).meals[0].title, "Plat du lundi midi");
 });
 
-test("saveProposal refuse un plan invalide ou un plat récent", (t) => {
+test("saveProposal refuse un plan invalide ou un plat récent", async (t) => {
   const { root, deps } = setup(t);
-  const invalid = saveProposal(withMeal(makePlan(), "mardi", "soir", { minutes: 45 }), deps);
+  const invalid = await saveProposal(withMeal(makePlan(), "mardi", "soir", { minutes: 45 }), deps);
   assert.equal(invalid.saved, false);
   assert.ok(invalid.errors.length > 0);
   savePlan(withMeal(makePlan({ week: "2026-W45", startDate: "2026-11-02", status: "sent" }), "lundi", "midi", { title: "Plat du mardi soir" }), root);
-  const repeated = saveProposal(makePlan(), deps);
+  const repeated = await saveProposal(makePlan(), deps);
   assert.equal(repeated.saved, false);
   assert.match(repeated.errors.join(), /précédentes/);
   assert.equal(loadPlan(WEEK, root), null);
@@ -64,6 +75,17 @@ test("notifyProposal envoie une seule fois, à tous les destinataires", async (t
   assert.match(deps.mimes[0], /^To: a@example\.com, b@example\.com\r$/m);
   assert.deepEqual(await notifyProposal(WEEK, deps), { sent: false });
   assert.equal(deps.mimes.length, 1);
+  assert.equal(loadPlan(WEEK, root).notified, true);
+  assert.deepEqual(deps.pushes, [`data: proposition de ${WEEK} notifiée`]);
+});
+
+test("notifyProposal : un push refusé après l'envoi reste un avertissement", async (t) => {
+  const { root, deps } = setup(t);
+  savePlan(makePlan(), root);
+  deps.pushData = async () => { throw new Error("push refusé"); };
+  assert.deepEqual(await notifyProposal(WEEK, deps), { sent: true });
+  assert.equal(loadPlan(WEEK, root).notified, true);
+  assert.match(deps.warnings[0], /push refusé/);
 });
 
 test("notifyProposal peut être relancée après un échec d'envoi", async (t) => {
@@ -169,7 +191,7 @@ test("un échec d'envoi laisse la semaine à renvoyer", async (t) => {
 test("un échec de push après l'envoi reste un simple avertissement", async (t) => {
   const { root, deps } = setup(t);
   savePlan(makePlan({ status: "validated" }), root);
-  deps.pushState = async () => { throw new Error("push refusé"); };
+  deps.pushData = async () => { throw new Error("push refusé"); };
   assert.deepEqual(await sendWeekly(WEEK, deps), { sent: true });
   assert.equal(loadPlan(WEEK, root).status, "sent");
   assert.match(deps.warnings[0], /push refusé/);

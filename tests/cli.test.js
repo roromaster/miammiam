@@ -11,7 +11,7 @@ function cli(t) {
   t.after(() => rmSync(root, { recursive: true, force: true }));
   const run = (...args) => spawnSync(process.execPath, ["scripts/miammiam.js", ...args], {
     encoding: "utf8",
-    env: { ...process.env, MIAMMIAM_ROOT: root },
+    env: { ...process.env, MIAMMIAM_ROOT: root, MIAMMIAM_SYNC: "0" },
   });
   const file = (plan) => {
     const path = join(root, "plan.json");

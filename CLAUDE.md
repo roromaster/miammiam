@@ -92,9 +92,18 @@ Le plan ne contient jamais la liste de courses : elle est toujours recalculée.
 1. Trouver la semaine avec `status <semaine>`. Le fichier est dans `data/proposals/` si elle est `proposed`, sinon dans `data/weeks/`.
 2. Si elle est `sent`, l'email est déjà parti : demander d'abord une confirmation explicite. Le site sera mis à jour, sans nouvel email.
 3. Modifier le plat dans le JSON, en gardant toutes les règles, puis lancer `check <fichier>`.
-4. Si la semaine est `validated` ou `sent`, lancer `republish <semaine>`.
+4. Si la semaine est `proposed`, lancer `sync` pour la partager. Si elle est `validated` ou `sent`, lancer `republish <semaine>`.
 
 **Valider.** Lancer `validate <semaine>`, qui publie le site, puis donner le lien renvoyé.
+
+## Plusieurs machines
+
+Le projet est cloné sur plusieurs machines (MacBook, Mac mini, sessions web), et GitHub fait foi.
+- Chaque commande de la CLI, sauf `target`, commence par `git pull --rebase`. Ne jamais lire un plan sans être passé par la CLI juste avant, par exemple avec `status`.
+- `save-proposal`, `notify-proposal`, `validate`, `send-weekly` et `republish` poussent eux-mêmes leurs changements. Après une modification manuelle d'une proposition, lancer `sync`.
+- Si un pull ou un push échoue, sur un conflit par exemple, s'arrêter et le signaler. Ne jamais forcer le push.
+- Seul le Mac mini exécute les tâches planifiées et envoie les emails. Ailleurs, ne lancer ni `notify-proposal` ni `send-weekly` sans demande explicite. Leurs prompts sont dans `docs/taches/`.
+- Le rendu de l'image demande Google Chrome. Une session web peut modifier et contrôler un plan, mais doit laisser `validate` et `republish` à un Mac.
 
 ## Sécurité
 

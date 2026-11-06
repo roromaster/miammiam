@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, existsSync, rmSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { publish, SITE_URL } from "../lib/publish.js";
+import { publish, pullLatest, SITE_URL } from "../lib/publish.js";
 import { planHash, savePlan } from "../lib/store.js";
 import { makePlan } from "./helpers.js";
 
@@ -26,11 +26,11 @@ function setup(t, { dirty = true, gitFailOn } = {}) {
   return { root, plan, git, exec, render, rendered, okFetch };
 }
 
-test("publish ajoute seulement data/weeks et site, puis pousse", async (t) => {
+test("publish ajoute seulement les plans et le site, puis pousse", async (t) => {
   const { root, git, exec, render, okFetch } = setup(t);
   const url = await publish("2026-W46", { root, exec, render, fetch: okFetch, pollMs: 1 });
   assert.equal(url, `${SITE_URL}2026-W46/`);
-  assert.deepEqual(git.find((a) => a[0] === "add"), ["add", "data/weeks", "site"]);
+  assert.deepEqual(git.find((a) => a[0] === "add"), ["add", "--all", "--", "data/proposals", "data/weeks", "site"]);
   assert.ok(git.some((a) => a[0] === "commit"));
   assert.deepEqual(git.at(-1), ["push", "origin", "main"]);
 });
@@ -90,4 +90,10 @@ test("un push refusé fait échouer publish sans contrôle d'URL", async (t) => 
 test("publish refuse une semaine qui n'est pas publiable", async (t) => {
   const { root, exec, render, okFetch } = setup(t);
   await assert.rejects(publish("2026-W47", { root, exec, render, fetch: okFetch, pollMs: 1 }), /2026-W47/);
+});
+
+test("pullLatest rebase sur origin/main en gardant les modifications locales", async () => {
+  const calls = [];
+  await pullLatest({ root: "/projet", exec: async (cmd, args, options) => { calls.push([cmd, args, options.cwd]); return { stdout: "" }; } });
+  assert.deepEqual(calls, [["git", ["pull", "--rebase", "--autostash", "origin", "main"], "/projet"]]);
 });

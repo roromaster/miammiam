@@ -13,9 +13,13 @@ const USAGE = `Commandes :
   notify-proposal <semaine>
   validate <semaine>
   send-weekly <semaine>
-  republish <semaine>`;
+  republish <semaine>
+  sync
 
-const deps = defaultDeps(process.env.MIAMMIAM_ROOT ?? PROJECT_ROOT);
+Chaque commande, sauf target, récupère d'abord le dernier état depuis GitHub.
+MIAMMIAM_SYNC=0 désactive les échanges avec GitHub.`;
+
+const deps = defaultDeps(process.env.MIAMMIAM_ROOT ?? PROJECT_ROOT, { sync: process.env.MIAMMIAM_SYNC !== "0" });
 
 function weekArg(value) {
   if (!/^\d{4}-W\d{2}$/.test(value ?? "")) throw new Error(`Semaine invalide : ${value} (attendu : 2026-W46)`);
@@ -41,9 +45,9 @@ const COMMANDS = {
     if (errors.length > 0) throw new Error(errors.join("\n"));
     return "Plan valide";
   },
-  "save-proposal"(path) {
+  async "save-proposal"(path) {
     const plan = planArg(path);
-    const { saved, errors } = saveProposal(plan, deps);
+    const { saved, errors } = await saveProposal(plan, deps);
     if (errors.length > 0) throw new Error(errors.join("\n"));
     return saved ? `Proposition enregistrée : ${plan.week}` : `${plan.week} existe déjà, rien n'a changé`;
   },
@@ -61,6 +65,10 @@ const COMMANDS = {
   republish(week) {
     return republish(weekArg(week), deps);
   },
+  async sync() {
+    await deps.pushData("data: mise à jour des plans");
+    return "Plans synchronisés avec GitHub";
+  },
 };
 
 const [command, argument] = process.argv.slice(2);
@@ -69,6 +77,7 @@ if (!Object.hasOwn(COMMANDS, command ?? "")) {
   process.exit(1);
 }
 try {
+  if (command !== "target") await deps.pull();
   console.log(await COMMANDS[command](argument));
 } catch (error) {
   console.error(error.message);

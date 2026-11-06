@@ -1,0 +1,1283 @@
+{
+  "week": "2026-W46",
+  "startDate": "2026-11-09",
+  "status": "proposed",
+  "meals": [
+    {
+      "day": "lundi",
+      "slot": "midi",
+      "title": "Restes : Porc braisé hong shao rou aux pommes de terre",
+      "emoji": "♻️",
+      "leftoversOf": "dimanche",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "lundi",
+      "slot": "soir",
+      "title": "Saumon teriyaki",
+      "emoji": "🐟",
+      "cuisine": "japonaise",
+      "side": "Riz japonais",
+      "minutes": 30,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "pavé de saumon",
+          "quantity": 1400,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 30.8
+        },
+        {
+          "name": "sauce soja",
+          "quantity": 10,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1
+        },
+        {
+          "name": "mirin",
+          "quantity": 8,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.6
+        },
+        {
+          "name": "saké de cuisine",
+          "quantity": 6,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.5
+        },
+        {
+          "name": "sucre",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.15
+        },
+        {
+          "name": "gingembre",
+          "quantity": 30,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "graine de sésame",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "oignon nouveau",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.1
+        },
+        {
+          "name": "riz japonais",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 3.2
+        }
+      ],
+      "steps": [
+        "Rincer le riz japonais à l'eau froide jusqu'à ce qu'elle soit claire. Le cuire avec 960 ml d'eau à couvert, 12 minutes à feu doux, puis laisser reposer 10 minutes hors du feu sans soulever le couvercle.",
+        "Préparer la sauce teriyaki : mélanger la sauce soja, le mirin, le saké, le sucre et le gingembre râpé.",
+        "Sécher les pavés de saumon. Dans deux grandes poêles huilées (ou en deux fournées), les saisir 4 minutes côté peau à feu moyen-vif, puis 2 minutes de l'autre côté.",
+        "Verser la sauce dans les poêles et laisser réduire 2 à 3 minutes en arrosant le saumon, jusqu'à ce qu'elle nappe et laque le poisson.",
+        "Parsemer de sésame et d'oignon nouveau émincé. Servir 4 portions avec le riz et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "mardi",
+      "slot": "midi",
+      "title": "Restes : Saumon teriyaki",
+      "emoji": "♻️",
+      "leftoversOf": "lundi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "mardi",
+      "slot": "soir",
+      "title": "Chili con carne",
+      "emoji": "🌶️",
+      "cuisine": "mexicaine",
+      "side": "Maïs poêlé au citron vert et piment",
+      "minutes": 30,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "bœuf haché",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 15.6
+        },
+        {
+          "name": "oignon",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "ail",
+          "quantity": 4,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "poivron rouge",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 2
+        },
+        {
+          "name": "tomate concassée",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2
+        },
+        {
+          "name": "haricot rouge en conserve",
+          "quantity": 1000,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 3.6
+        },
+        {
+          "name": "concentré de tomate",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "cumin moulu",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "piment chipotle en poudre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "origan séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.15
+        },
+        {
+          "name": "chocolat noir",
+          "quantity": 20,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.3
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "maïs doux en conserve",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2.4
+        },
+        {
+          "name": "beurre",
+          "quantity": 30,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "citron vert",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "piment d'Espelette",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "coriandre fraîche",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.99
+        }
+      ],
+      "steps": [
+        "Émincer les oignons, l'ail et les poivrons. Les faire revenir 5 minutes dans l'huile d'olive dans une grande cocotte.",
+        "Ajouter le bœuf haché et le faire dorer 5 minutes à feu vif en l'émiettant. Ajouter le cumin, le piment chipotle, l'origan et le concentré de tomate, remuer 1 minute.",
+        "Verser la tomate concassée et les haricots rouges égouttés, saler, poivrer. Laisser mijoter 15 minutes à couvert, puis incorporer le chocolat noir.",
+        "Pendant ce temps, égoutter le maïs et le faire griller 6 à 8 minutes dans une poêle très chaude avec le beurre, jusqu'à ce qu'il colore. Hors du feu, ajouter le zeste et le jus des citrons verts, le piment d'Espelette et la coriandre ciselée.",
+        "Servir 4 portions et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "mercredi",
+      "slot": "midi",
+      "title": "Restes : Chili con carne",
+      "emoji": "♻️",
+      "leftoversOf": "mardi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "mercredi",
+      "slot": "soir",
+      "title": "Poulet kung pao",
+      "emoji": "🥜",
+      "cuisine": "chinoise",
+      "side": "Riz jasmin",
+      "minutes": 30,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "haut de cuisse de poulet désossé",
+          "quantity": 1400,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 15.4
+        },
+        {
+          "name": "fécule de maïs",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "vin de Shaoxing",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "sauce soja",
+          "quantity": 8,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "vinaigre noir de Chinkiang",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "sucre",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.1
+        },
+        {
+          "name": "cacahuète non salée",
+          "quantity": 150,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "piment séché",
+          "quantity": 12,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "poivre de Sichuan",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "ail",
+          "quantity": 6,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "gingembre",
+          "quantity": 30,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "oignon nouveau",
+          "quantity": 6,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.8
+        },
+        {
+          "name": "poivron vert",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.6
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.2
+        },
+        {
+          "name": "riz jasmin",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2.8
+        }
+      ],
+      "steps": [
+        "Rincer le riz jasmin et le cuire avec 1,1 l d'eau à couvert, 12 minutes à feu doux, puis 10 minutes de repos.",
+        "Couper le poulet en dés de 2 cm et le mélanger avec 2 cuillères à soupe de fécule, le vin de Shaoxing et 2 cuillères à soupe de sauce soja.",
+        "Préparer la sauce : mélanger le reste de sauce soja, le vinaigre noir, le sucre, le reste de fécule et 6 cuillères à soupe d'eau.",
+        "Dans un wok bien chaud huilé, faire griller les cacahuètes 2 minutes et les réserver. Faire revenir 30 secondes les piments séchés coupés en deux et le poivre de Sichuan, puis saisir le poulet en deux fournées, 5 à 6 minutes chacune.",
+        "Ajouter l'ail, le gingembre, le poivron en dés et le blanc des oignons nouveaux, sauter 2 minutes. Remettre tout le poulet, verser la sauce et remuer jusqu'à ce qu'elle épaississe et brille.",
+        "Ajouter les cacahuètes et le vert des oignons nouveaux. Servir 4 portions avec le riz et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "jeudi",
+      "slot": "midi",
+      "title": "Restes : Poulet kung pao",
+      "emoji": "♻️",
+      "leftoversOf": "mercredi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "jeudi",
+      "slot": "soir",
+      "title": "Polpette de dinde al sugo",
+      "emoji": "🍅",
+      "cuisine": "italienne",
+      "side": "Tagliatelles",
+      "minutes": 30,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "dinde hachée",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 14.4
+        },
+        {
+          "name": "chapelure",
+          "quantity": 80,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "œuf",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "comté",
+          "quantity": 80,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 1.6
+        },
+        {
+          "name": "persil plat",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.99
+        },
+        {
+          "name": "ail",
+          "quantity": 3,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "oignon",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "coulis de tomate",
+          "quantity": 1400,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 3.5
+        },
+        {
+          "name": "basilic frais",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.5
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.4
+        },
+        {
+          "name": "sucre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "tagliatelle",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2.8
+        }
+      ],
+      "steps": [
+        "Mélanger la dinde hachée, la chapelure, les œufs, le comté râpé, le persil ciselé, 1 gousse d'ail pressée, du sel et du poivre. Façonner une quarantaine de boulettes.",
+        "Dans une grande sauteuse, faire revenir l'oignon émincé et 2 gousses d'ail dans 2 cuillères à soupe d'huile d'olive, 3 minutes. Verser le coulis de tomate, le sucre, saler et laisser frémir.",
+        "Dans une poêle, dorer les boulettes en deux fournées dans le reste d'huile, 4 minutes en les retournant, puis les plonger dans la sauce. Laisser mijoter 12 minutes à couvert.",
+        "Pendant ce temps, cuire les tagliatelles dans une grande casserole d'eau salée selon le paquet, puis les égoutter.",
+        "Ajouter le basilic déchiré dans la sauce. Servir 4 portions avec les tagliatelles et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "vendredi",
+      "slot": "midi",
+      "title": "Restes : Polpette de dinde al sugo",
+      "emoji": "♻️",
+      "leftoversOf": "jeudi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "vendredi",
+      "slot": "soir",
+      "title": "Entrecôte sauce au poivre",
+      "emoji": "🥩",
+      "cuisine": "française",
+      "side": "Purée de céleri-rave",
+      "minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "entrecôte",
+          "quantity": 1000,
+          "unit": "g",
+          "aisle": "Boucher (à acheter vendredi)",
+          "staple": false,
+          "price": 32
+        },
+        {
+          "name": "poivre noir en grains",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "échalote",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "cognac",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Boissons",
+          "staple": false,
+          "price": 1.5
+        },
+        {
+          "name": "fond de veau",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "crème fraîche",
+          "quantity": 300,
+          "unit": "ml",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 1.8
+        },
+        {
+          "name": "beurre",
+          "quantity": 70,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.7
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "céleri-rave",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 2.5
+        },
+        {
+          "name": "noix de muscade",
+          "quantity": 0.25,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.1
+        }
+      ],
+      "steps": [
+        "Sortir les entrecôtes du réfrigérateur 20 minutes avant la cuisson.",
+        "Éplucher le céleri-rave, le couper en cubes et le cuire 20 minutes à l'eau bouillante salée. L'égoutter et l'écraser avec 40 g de beurre, 100 ml de crème fraîche, la muscade et du sel.",
+        "Concasser grossièrement le poivre. Saler les entrecôtes et les saisir dans une poêle très chaude avec l'huile, 3 minutes par face pour une cuisson saignante. Les laisser reposer sous une feuille d'aluminium.",
+        "Dans la même poêle, faire fondre l'échalote ciselée dans 30 g de beurre, ajouter le poivre, déglacer au cognac, puis ajouter le fond de veau délayé dans 5 cl d'eau et 200 ml de crème fraîche. Réduire 3 minutes.",
+        "Trancher les entrecôtes, napper de sauce et servir avec la purée."
+      ]
+    },
+    {
+      "day": "samedi",
+      "slot": "midi",
+      "title": "Pad thaï aux crevettes",
+      "emoji": "🍤",
+      "cuisine": "thaïe",
+      "side": "Carottes râpées au citron vert et à la menthe",
+      "minutes": 40,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "nouille de riz plate",
+          "quantity": 300,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2.4
+        },
+        {
+          "name": "crevette crue décortiquée",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Surgelés",
+          "staple": false,
+          "price": 9.6
+        },
+        {
+          "name": "œuf",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.9
+        },
+        {
+          "name": "tofu ferme",
+          "quantity": 200,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 2
+        },
+        {
+          "name": "pousse de soja",
+          "quantity": 200,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.5
+        },
+        {
+          "name": "oignon nouveau",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "cacahuète non salée",
+          "quantity": 60,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "pâte de tamarin",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "sauce poisson",
+          "quantity": 5,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "sucre roux",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.15
+        },
+        {
+          "name": "citron vert",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.6
+        },
+        {
+          "name": "ail",
+          "quantity": 2,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.15
+        },
+        {
+          "name": "carotte",
+          "quantity": 5,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1
+        },
+        {
+          "name": "menthe fraîche",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "sucre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        }
+      ],
+      "steps": [
+        "Faire tremper les nouilles de riz 25 minutes dans de l'eau tiède, puis les égoutter. Décongeler les crevettes au réfrigérateur la veille ou sous l'eau froide.",
+        "Pour les carottes, les râper finement et les assaisonner avec le jus de 2 citrons verts, 2 cuillères à soupe de sauce poisson, le sucre et la menthe ciselée. Réserver au frais.",
+        "Préparer la sauce : mélanger la pâte de tamarin, 3 cuillères à soupe de sauce poisson, le sucre roux et 3 cuillères à soupe d'eau.",
+        "Dans un wok très chaud huilé, dorer le tofu en dés 3 minutes, ajouter l'ail haché et les crevettes, sauter 2 minutes. Pousser sur le côté, casser les œufs et les brouiller.",
+        "Ajouter les nouilles et la sauce, sauter 3 minutes jusqu'à ce que les nouilles soient tendres. Ajouter les pousses de soja et les oignons nouveaux, mélanger 30 secondes.",
+        "Servir parsemé de cacahuètes concassées, avec les quartiers des 2 citrons verts restants et les carottes."
+      ]
+    },
+    {
+      "day": "samedi",
+      "slot": "soir",
+      "title": "Osso buco à la milanaise",
+      "emoji": "🍖",
+      "cuisine": "italienne",
+      "side": "Fenouil rôti au citron",
+      "minutes": 90,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "jarret de veau",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 22.8
+        },
+        {
+          "name": "farine",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "oignon",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "carotte",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "céleri branche",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "ail",
+          "quantity": 2,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "vin blanc sec",
+          "quantity": 200,
+          "unit": "ml",
+          "aisle": "Boissons",
+          "staple": false,
+          "price": 1.5
+        },
+        {
+          "name": "tomate concassée",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1
+        },
+        {
+          "name": "bouillon de volaille en cube",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "beurre",
+          "quantity": 30,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.4
+        },
+        {
+          "name": "citron jaune",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1
+        },
+        {
+          "name": "persil plat",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.99
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "fenouil",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 3.6
+        }
+      ],
+      "steps": [
+        "Inciser la bordure des tranches de jarret pour qu'elles ne se recroquevillent pas. Les saler, poivrer et les fariner.",
+        "Dans une cocotte, les dorer 4 minutes par face dans le beurre et 2 cuillères à soupe d'huile d'olive, puis les réserver.",
+        "Faire revenir 5 minutes l'oignon, la carotte et le céleri en petits dés. Déglacer au vin blanc, laisser réduire de moitié, puis ajouter la tomate concassée et le cube de bouillon délayé dans 300 ml d'eau chaude.",
+        "Remettre la viande, couvrir et laisser mijoter 70 minutes à feu doux, en retournant les tranches à mi-cuisson.",
+        "Pour le fenouil, préchauffer le four à 200 °C. Couper les bulbes en quartiers, les arroser de 2 cuillères à soupe d'huile d'olive, saler, poivrer et rôtir 35 minutes. À la sortie du four, arroser du jus d'un demi-citron.",
+        "Préparer la gremolata : hacher finement le persil, l'ail et le zeste d'un citron. En parsemer l'osso buco au moment de servir, avec le fenouil."
+      ]
+    },
+    {
+      "day": "dimanche",
+      "slot": "midi",
+      "title": "Tonkatsu de porc",
+      "emoji": "🐷",
+      "cuisine": "japonaise",
+      "side": "Chou pointu au sésame",
+      "minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "côte de porc désossée",
+          "quantity": 640,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 7.7
+        },
+        {
+          "name": "farine",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.1
+        },
+        {
+          "name": "œuf",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "panko",
+          "quantity": 120,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.8
+        },
+        {
+          "name": "huile de friture",
+          "quantity": 750,
+          "unit": "ml",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2.7
+        },
+        {
+          "name": "sauce Worcestershire",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "ketchup",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "sauce soja",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "sucre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "chou pointu",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.8
+        },
+        {
+          "name": "graine de sésame",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "huile de sésame",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "vinaigre de riz",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.2
+        }
+      ],
+      "steps": [
+        "Émincer le chou pointu très finement et le plonger 10 minutes dans de l'eau glacée pour le rendre croquant. L'égoutter et bien le sécher.",
+        "Mélanger la sauce Worcestershire, le ketchup, 1 cuillère à soupe de sauce soja et le sucre pour faire la sauce tonkatsu.",
+        "Inciser le gras des côtes de porc, les aplatir légèrement, saler et poivrer. Les passer dans la farine, puis dans les œufs battus, puis dans le panko en appuyant bien.",
+        "Chauffer l'huile de friture à 170 °C dans une sauteuse profonde. Frire les côtes 2 par 2, 5 à 6 minutes en les retournant, jusqu'à ce qu'elles soient dorées. Les égoutter sur une grille 3 minutes, puis les trancher en lanières.",
+        "Assaisonner le chou avec le vinaigre de riz, l'huile de sésame, 1 cuillère à soupe de sauce soja et le sésame grillé. Servir avec le porc et la sauce."
+      ]
+    },
+    {
+      "day": "dimanche",
+      "slot": "soir",
+      "title": "Navarin d'agneau aux navets",
+      "emoji": "🐑",
+      "cuisine": "française",
+      "side": "Haricots blancs au thym",
+      "minutes": 90,
+      "servings": 8,
+      "ingredients": [
+        {
+          "name": "épaule d'agneau désossée",
+          "quantity": 2000,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 36
+        },
+        {
+          "name": "navet",
+          "quantity": 1000,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 2.5
+        },
+        {
+          "name": "carotte",
+          "quantity": 6,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "oignon",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "ail",
+          "quantity": 6,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "farine",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "concentré de tomate",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "vin blanc sec",
+          "quantity": 250,
+          "unit": "ml",
+          "aisle": "Boissons",
+          "staple": false,
+          "price": 1.9
+        },
+        {
+          "name": "bouillon de volaille en cube",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "bouquet garni",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "petit pois surgelé",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Surgelés",
+          "staple": false,
+          "price": 1.6
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 7,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.7
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "haricot blanc en conserve",
+          "quantity": 1000,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 3.6
+        },
+        {
+          "name": "thym frais",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.2
+        }
+      ],
+      "steps": [
+        "Couper l'agneau en morceaux de 4 cm. Les dorer en deux fournées dans 3 cuillères à soupe d'huile d'olive dans une grande cocotte, puis remettre toute la viande.",
+        "Ajouter les oignons émincés et 4 gousses d'ail écrasées, saupoudrer de farine, remuer 2 minutes, puis ajouter le concentré de tomate.",
+        "Déglacer au vin blanc, ajouter les cubes de bouillon délayés dans 1 l d'eau chaude et le bouquet garni. Saler, poivrer, couvrir et laisser mijoter 40 minutes.",
+        "Ajouter les navets et les carottes en tronçons, poursuivre 25 minutes, puis les petits pois pour les 5 dernières minutes.",
+        "Pour les haricots, chauffer doucement 4 cuillères à soupe d'huile d'olive avec 2 gousses d'ail émincées et les feuilles de thym, ajouter les haricots blancs égouttés et rincés, réchauffer 5 minutes en écrasant légèrement quelques haricots, saler et poivrer.",
+        "Servir 4 portions et mettre les 4 autres en boîte pour le lundi midi suivant."
+      ]
+    }
+  ]
+}

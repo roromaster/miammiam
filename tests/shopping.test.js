@@ -124,3 +124,9 @@ test("les prix s'écrivent en euros à la française", () => {
   assert.equal(formatPrice(12), "12,00 €");
   assert.equal(formatPricedItem({ name: "riz", quantity: 500, unit: "g", price: 2.5 }), "riz : 500 g (≈ 2,50 €)");
 });
+
+test("un ingrédient en promo le signale dans la liste de courses", () => {
+  const list = shoppingList(planWith([item("saumon", 300, "g", { promo: "Prix promo" }), item("saumon", 200, "g")]));
+  assert.deepEqual(allItems(list), [{ name: "saumon", quantity: 500, unit: "g", price: 2, promo: "Prix promo" }]);
+  assert.equal(formatPricedItem(allItems(list)[0]), "saumon : 500 g (≈ 2,00 €, en promo : Prix promo)");
+});

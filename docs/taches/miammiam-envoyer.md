@@ -9,7 +9,7 @@ Tu publies et envoies le plan de repas de la semaine en cours pour le projet Mia
 1. Place-toi dans ce dossier et lis son fichier CLAUDE.md : il contient les règles des menus, le format JSON et les procédures.
 2. Exécute `node scripts/miammiam.js target current` pour obtenir la semaine visée, puis `node scripts/miammiam.js status <semaine>`. `status` récupère d'abord le dernier état depuis GitHub, y compris une validation faite depuis une autre machine. S'il échoue, arrête-toi.
 3. Si l'état est `sent`, ne fais rien.
-4. Si l'état est `missing` (la proposition du samedi n'a pas eu lieu) :
+4. Si l'état est `missing` (la proposition du dimanche n'a pas eu lieu) :
    - Lis les plans des 4 semaines précédentes dans data/weeks/ et data/proposals/, pour ne reprendre aucun plat.
    - Écris les 14 repas complets, conformes à CLAUDE.md, dans un fichier temporaire hors du dépôt.
    - Exécute `node scripts/miammiam.js save-proposal <fichier>`. En cas d'erreurs, corrige et recommence, 3 essais au maximum.

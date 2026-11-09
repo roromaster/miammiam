@@ -159,6 +159,12 @@ test("chaque ingrédient d'un vrai repas a un prix positif", () => {
   }
 });
 
+test("un ingrédient peut signaler sa promo, jamais par un libellé vide", () => {
+  const withPromo = (promo) => withMeal(makePlan(), "lundi", "soir", { ingredients: ingredient({ promo }) });
+  assert.doesNotMatch(errorsFor(withPromo("-34 % immédiat")), /promo/);
+  assert.match(errorsFor(withPromo(" ")), /promo vide/);
+});
+
 test("le titre ne porte pas un second accompagnement", () => {
   for (const title of ["Curry de lieu, riz jasmin", "Onglet à l'échalote et pommes de terre sautées", "Poulet cacciatora et polenta grillée", "Rôti avec purée de céleri"]) {
     assert.match(errorsFor(withMeal(makePlan(), "samedi", "midi", { title })), /un seul accompagnement/, title);

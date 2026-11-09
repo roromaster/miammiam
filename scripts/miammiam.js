@@ -2,12 +2,14 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { PROJECT_ROOT, loadPlan } from "../lib/store.js";
+import { missingCatalogs } from "../lib/promos.js";
 import { currentWeek, upcomingWeek } from "../lib/week.js";
-import { checkPlan, defaultDeps, notifyProposal, renotifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
+import { checkPlan, defaultDeps, updatePromos, notifyProposal, renotifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 
 const USAGE = `Commandes :
   target upcoming|current
   status <semaine>
+  promos <semaine>
   check <fichier.json>
   save-proposal <fichier.json>
   notify-proposal <semaine>
@@ -40,6 +42,13 @@ const COMMANDS = {
   },
   status(week) {
     return loadPlan(weekArg(week), deps.root)?.status ?? "missing";
+  },
+  async promos(week) {
+    const result = await updatePromos(weekArg(week), deps);
+    const from = result.catalogs.map((c) => `${c.code} du ${c.validFrom} au ${c.validTo}`).join(", ");
+    const missing = missingCatalogs(result);
+    const gap = missing.length > 0 ? `\nCatalogue manquant : ${missing.join(" ; ")}. Relancer promos plus tard pour l'ajouter.` : "";
+    return `${result.promos.length} promos alimentaires enregistrées dans data/promos/${week}.json (catalogues ${from})${gap}`;
   },
   check(path) {
     const errors = checkPlan(planArg(path), deps);

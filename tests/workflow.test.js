@@ -117,7 +117,7 @@ test("renotifyProposal renvoie la proposition à chaque demande", async (t) => {
   assert.deepEqual(deps.pushes, []);
 });
 
-test("renotifyProposal marque la proposition comme notifiée et bloque l'envoi du samedi", async (t) => {
+test("renotifyProposal marque la proposition comme notifiée et bloque l'envoi du dimanche", async (t) => {
   const { root, deps } = setup(t);
   savePlan(makePlan(), root);
   await renotifyProposal(WEEK, deps);

@@ -9,7 +9,7 @@ Chaque semaine, proposer un plan de repas pour 4 adultes, le faire valider par l
 
 ### Critères de réussite
 
-- Un plan de 14 repas (midi et soir, 7 jours) est proposé chaque samedi sans intervention.
+- Un plan de 14 repas (midi et soir, 7 jours) est proposé chaque dimanche sans intervention, une fois publié le catalogue promo qui commence le mardi des courses.
 - Chaque repas a une recette complète et ses ingrédients en quantités pour 4 personnes.
 - Le propriétaire peut remplacer un plat en une phrase, et la liste de courses se met à jour.
 - Toute personne ayant le lien peut consulter tous les plans publiés, sans compte.
@@ -23,7 +23,7 @@ Chaque semaine, proposer un plan de repas pour 4 adultes, le faire valider par l
 | Cuisines | Japonaise, chinoise, mexicaine, thaïe, française, italienne, et un burger au plus par semaine |
 | Accompagnements | Un seul par repas cuisiné, simple et varié. Le riz et les pâtes sont permis, au plus 2 fois chacun par semaine |
 | Restes | Du lundi au vendredi, le midi reprend les restes de la veille au soir. Les dîners du dimanche au jeudi donnent 8 portions |
-| Prix | Estimation par Claude de chaque ingrédient (quantité utilisée), additionnée par repas, par ligne de courses et pour la semaine. Le budget de la semaine compte tous les repas, et « Courses à acheter » exclut le placard |
+| Prix | Estimation par Claude de chaque ingrédient (quantité utilisée), additionnée par repas, par ligne de courses et pour la semaine. Le budget de la semaine compte tous les repas, et « Courses à acheter » exclut le placard. Les ingrédients pris dans les promos du magasin (commande `promos`, `data/promos/`) reprennent le prix du catalogue et sont signalés |
 | Vendredi soir | Pièce de viande du boucher, achetée le jour même et listée à part |
 | Repas | 14 par semaine : midi et soir, du lundi au dimanche |
 | Temps de cuisine | 30 min maximum du lundi au vendredi, 90 min maximum le week-end |
@@ -37,11 +37,11 @@ Chaque semaine, proposer un plan de repas pour 4 adultes, le faire valider par l
 ## 3. Architecture
 
 ```text
-Samedi 9 h : tâche « proposer »
+Dimanche 9 h : tâche « proposer »
   Claude génère le plan -> validation du plan -> état "proposed"
   -> email d'invitation à valider, aux deux destinataires
 
-Du samedi au lundi : validation dans une session Claude Desktop du projet
+Du dimanche au lundi : validation dans une session Claude Desktop du projet
   « remplace mardi soir » -> plan et liste mis à jour
   « valide » -> état "validated" -> publication du site
 
@@ -120,7 +120,7 @@ La liste n'est pas stockée : elle est toujours recalculée depuis le plan, ce q
 
 ## 7. Validation
 
-- L'email du samedi va aux deux destinataires. Il liste les 14 plats et leurs accompagnements, et indique comment valider.
+- L'email du dimanche va aux deux destinataires. Il liste les 14 plats et leurs accompagnements, et indique comment valider.
 - La validation se fait dans une session Claude Desktop du projet, en langage naturel.
 - Après chaque remplacement, le plan repasse par `validate-plan.js`.
 - « Valide » passe l'état à `validated` et publie le site, ce qui permet de faire les courses dès le week-end.
@@ -151,7 +151,7 @@ La liste n'est pas stockée : elle est toujours recalculée depuis le plan, ce q
 
 | Tâche | Cron (heure locale) | Rôle |
 |---|---|---|
-| `miammiam-proposer` | `0 9 * * 6` | Prépare la semaine commençant le lundi suivant |
+| `miammiam-proposer` | `0 9 * * 0` | Prépare la semaine commençant le lundi suivant |
 | `miammiam-envoyer` | `0 7 * * 1` | Publie et envoie la semaine commençant ce lundi |
 
 Chaque prompt est autonome et donne le chemin absolu du projet, car chaque exécution démarre sans mémoire.
@@ -164,7 +164,7 @@ Les deux tâches peuvent être relancées sans risque :
 |---|---|
 | Plan déjà présent lors de « proposer » | Ne l'écrase pas et ne renvoie pas d'email |
 | État `sent` lors de « envoyer » | Ne renvoie rien |
-| Samedi manqué | « envoyer » génère le plan elle-même |
+| Dimanche manqué | « envoyer » génère le plan elle-même |
 | Mac éteint ou app fermée | La tâche part au prochain lancement. L'email indique alors simplement la semaine concernée |
 | Plan invalide | Claude le corrige, jusqu'à 3 essais, puis la tâche échoue visiblement |
 | Échec de publication | Pas d'email, pour éviter un lien mort. La validation reste acquise (`validated`), et une relance republie |

@@ -1,0 +1,67 @@
+{
+ "26G312G": {
+  "uid": "dd84ae4616a771cd7c387122527a216f",
+  "code": "26G312G",
+  "name": "EVENEMENT 12",
+  "catch_phrase": "Plein pouvoirs d'achat",
+  "start_date": "2026-11-10T00:00:00Z",
+  "display_start_date": "2026-11-08T00:00:00Z",
+  "end_date": "2026-11-21T23:59:59Z",
+  "pageCount": "44",
+  "documentUid": "9e42d9c5097d0d5d91e6e533ff6e7471",
+  "is_food": true,
+  "display_catalog": true
+ },
+ "26G311G": {
+  "uid": "85cea33ef6aeb799b10d76597227dd02",
+  "code": "26G311G",
+  "name": "EVENEMENT 11",
+  "catch_phrase": "Plein pouvoirs d'achat",
+  "start_date": "2026-11-03T00:00:00Z",
+  "display_start_date": "2026-11-01T00:00:00Z",
+  "end_date": "2026-11-14T23:59:59Z",
+  "pageCount": "44",
+  "documentUid": "42f42dcd1640d286a891dc8c12930ed1",
+  "is_food": true,
+  "display_catalog": true
+ },
+ "26G312E": {
+  "uid": "8c5ffd81b55668eecabec628d5178325",
+  "code": "26G312E",
+  "name": "EVENEMENT 12 - EXPRESS",
+  "catch_phrase": "Plein pouvoirs d'achat",
+  "start_date": "2026-11-10T00:00:00Z",
+  "display_start_date": "2026-11-08T00:00:00Z",
+  "end_date": "2026-11-21T23:59:59Z",
+  "pageCount": "16",
+  "documentUid": "ac86f4df021c024324f54ac94c14990b",
+  "is_food": true,
+  "display_catalog": true
+ },
+ "26G006G": {
+  "uid": "4a111af2f040febce18e21b94b77bc9c",
+  "code": "26G006G",
+  "name": "CADEAUX 1 - PREPARATION DE NOEL",
+  "catch_phrase": "Déco de Noël",
+  "start_date": "2026-11-03T00:00:00Z",
+  "display_start_date": "2026-11-01T00:00:00Z",
+  "end_date": "2026-11-14T23:59:59Z",
+  "pageCount": "24",
+  "documentUid": "64288e6811b41a31cc5d8f1a4e7fe23d",
+  "is_food": false,
+  "display_catalog": true
+ },
+ "26C002A": {
+  "uid": "ee5c9b76a96324eb2a984538ae29ff43",
+  "code": "26C002A",
+  "name": "CARTE TRAITEUR PERMANENTE",
+  "catch_phrase": "",
+  "start_date": "2026-04-13T00:00:00Z",
+  "display_start_date": "2026-04-11T00:00:00Z",
+  "end_date": "2026-11-29T23:59:59Z",
+  "pageCount": "40",
+  "documentUid": "80f98cec4a4b4700d470aae17b38ee7b",
+  "is_food": true,
+  "display_catalog": true
+ }
+}

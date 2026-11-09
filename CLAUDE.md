@@ -29,9 +29,17 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
 - Ses ingrédients sont dans `ingredients`, et sa préparation dans `steps`.
 
 **Prix**
-- Chaque ingrédient d'un repas cuisiné a un `price` : le coût estimé en euros de la quantité utilisée, au prix habituel de E.Leclerc, hors promotion, en marque Repère quand elle existe (boucher pour le vendredi soir).
+- Chaque ingrédient d'un repas cuisiné a un `price` : le coût estimé en euros de la quantité utilisée, au prix habituel de E.Leclerc, hors promotion, en marque Repère quand elle existe (boucher pour le vendredi soir). Seule exception : un ingrédient choisi dans les promos de la semaine (voir **Promos**).
 - Estimer honnêtement, avec des prix réalistes et positifs, y compris pour les produits du placard. Les prix sont indicatifs, à ne jamais présenter comme relevés en magasin.
 - Ne pas surestimer : compter au prix des grands conditionnements, et seulement la part utilisée. Repères Leclerc au kilo : poulet (haut de cuisse désossé) 8 €, bœuf haché 9 €, dinde hachée 9 €, porc (échine, côte) 7,5 €, saumon 18 €, crevette crue décortiquée surgelée 17 €, veau (jarret) 16 €, agneau (épaule désossée) 20 €, entrecôte du boucher 32 €, riz 2 à 3 €, pâtes 1,5 à 2,5 €, légumes courants 1,5 à 3 €. Repères à l'unité : oignon 0,15 €, gousse d'ail 0,06 €, oignon nouveau 0,12 €, citron vert 0,3 €, œuf 0,25 €, botte d'herbes 1 €, conserve de 400 g 0,5 à 0,8 €. Une cuillère d'épice ou de sauce coûte quelques centimes.
+
+**Promos**
+- `data/promos/<semaine>.json` liste les promos alimentaires du E.Leclerc d'Épluches (Saint-Ouen-l'Aumône) valables le mardi de la semaine (`shoppingDay`), jour des courses, tirées des catalogues en ligne du magasin. Chaque catalogue dure deux semaines et un nouveau démarre chaque mardi : une semaine en compte donc deux, celui commencé le mardi précédent et celui qui commence le mardi des courses. Le nouveau n'est publié que le dimanche d'avant. Chaque promo a `product`, `brand`, `category` (rayon Leclerc), `details` (poids, variétés, prix au kilo), `offer` (la mécanique), `price` (prix affiché par `unit`, ou par article si `unit` est vide), `effectivePrice` (prix unitaire payé une fois la mécanique appliquée), `validFrom` et `validTo`, et parfois `regularPrice`, `minQuantity` (nombre d'articles à acheter pour avoir l'offre), `cardOnly` (remise en Ticket E.Leclerc, sur la carte) et `unitPrice` (prix au kilo ou au litre).
+- Privilégier les produits en promo quand ils servent un plat qui respecte déjà toutes les règles : la promo oriente le choix des plats, elle ne justifie jamais d'enfreindre une règle (fromages, saison, cuisines, accompagnements, plats récents, temps). Les produits frais en promo (viande, poisson, légumes) comptent le plus ; ignorer les produits industriels (plats cuisinés, biscuits, sodas).
+- Les courses se font le mardi : toutes les promos du fichier sont valables ce jour-là (`validFrom` ≤ `shoppingDay` ≤ `validTo`). Ne retenir qu'une promo dont la quantité achetée a du sens pour la recette : si l'offre exige `minQuantity` articles, la recette doit en utiliser une bonne part, sinon compter le prix habituel sans `promo`. Si deux promos portent le même produit, prendre la moins chère.
+- Une promo n'est pas toujours moins chère que les repères de prix ci-dessus : la comparer avant de la retenir.
+- Pour un ingrédient en promo : `price` vaut `effectivePrice` rapporté à la quantité utilisée (au kilo si `unit` est `Le kg`, à l'article sinon, en s'aidant de `details` ou `unitPrice`), et l'ingrédient porte `promo`, un libellé court tiré de `offer` (« -34 % immédiat », « Prix promo »). Le site et l'email le signalent dans la liste de courses. Sans `promo`, aucun ingrédient n'est présenté comme en promotion.
+- Garder les noms d'ingrédients du projet (« pavé de saumon », pas « Filet de saumon »), au singulier, pour que la liste de courses les additionne.
 
 **Organisation**
 - 30 minutes maximum du lundi au vendredi, 90 minutes maximum le samedi et le dimanche.
@@ -59,7 +67,8 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
       "minutes": 25,
       "servings": 8,
       "ingredients": [
-        { "name": "échine de porc", "quantity": 1200, "unit": "g", "aisle": "Viandes et poissons", "staple": false, "price": 14.4 }
+        { "name": "échine de porc", "quantity": 1200, "unit": "g", "aisle": "Viandes et poissons", "staple": false, "price": 14.4 },
+        { "name": "pomme de terre", "quantity": 800, "unit": "g", "aisle": "Fruits et légumes", "staple": false, "price": 0.68, "promo": "Prix promo" }
       ],
       "steps": ["Saisir le porc."]
     },
@@ -81,13 +90,14 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
 - `unit` : `g`, `kg`, `ml`, `cl`, `l`, `pièce`, `c. à soupe`, `c. à café`, `gousse`, `tranche`.
 - `aisle` : `Fruits et légumes`, `Viandes et poissons`, `Produits laitiers`, `Épicerie`, `Surgelés`, `Boulangerie`, `Boissons`, `Boucher (à acheter vendredi)`.
 - `staple` vaut `true` pour les produits de base généralement en stock (sel, poivre, huile).
+- `promo`, facultatif, signale un ingrédient pris en promo (voir **Promos**).
 - `startDate` est le lundi de la semaine ISO.
 
 Le plan ne contient jamais la liste de courses : elle est toujours recalculée.
 
 ## Procédures
 
-**Générer une semaine.** Écrire le plan dans un fichier temporaire, puis `save-proposal <fichier>`. En cas d'erreurs, corriger et recommencer, 3 essais au maximum. Lancer ensuite `notify-proposal <semaine>`, sans risque de doublon : l'email ne part qu'une fois.
+**Générer une semaine.** Lancer d'abord `promos <semaine>`, qui enregistre les promos des deux catalogues de la semaine dans `data/promos/<semaine>.json` et les pousse ; s'il échoue, le signaler et générer sans promos. S'il signale un « Catalogue manquant » (celui du mardi des courses, avant sa publication le dimanche), générer avec les promos disponibles et le mentionner. Lire ce fichier et en tirer parti selon les règles **Promos**. Écrire le plan dans un fichier temporaire, puis `save-proposal <fichier>`. En cas d'erreurs, corriger et recommencer, 3 essais au maximum. Lancer ensuite `notify-proposal <semaine>`, sans risque de doublon : l'email ne part qu'une fois.
 
 **Remplacer un plat.**
 1. Trouver la semaine avec `status <semaine>`. Le fichier est dans `data/proposals/` si elle est `proposed`, sinon dans `data/weeks/`.
@@ -102,7 +112,7 @@ Le plan ne contient jamais la liste de courses : elle est toujours recalculée.
 
 Le projet est cloné sur plusieurs machines (MacBook, Mac mini, sessions web), et GitHub fait foi.
 - Chaque commande de la CLI, sauf `target`, commence par `git pull --rebase`. Ne jamais lire un plan sans être passé par la CLI juste avant, par exemple avec `status`.
-- `save-proposal`, `notify-proposal`, `validate`, `send-weekly` et `republish` poussent eux-mêmes leurs changements. Après une modification manuelle d'une proposition, lancer `sync`.
+- `promos`, `save-proposal`, `notify-proposal`, `validate`, `send-weekly` et `republish` poussent eux-mêmes leurs changements. Après une modification manuelle d'une proposition, lancer `sync`.
 - Si un pull ou un push échoue, sur un conflit par exemple, s'arrêter et le signaler. Ne jamais forcer le push.
 - Seul le Mac mini exécute les tâches planifiées et envoie les emails. Ailleurs, ne lancer ni `notify-proposal`, ni `renotify`, ni `send-weekly` sans demande explicite. Leurs prompts sont dans `docs/taches/`.
 - Le rendu de l'image demande Google Chrome. Une session web peut modifier et contrôler un plan, mais doit laisser `validate` et `republish` à un Mac.

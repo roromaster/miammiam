@@ -28,7 +28,9 @@
           "unit": "g",
           "aisle": "Viandes et poissons",
           "staple": false,
-          "price": 25.2
+          "price": 16.79,
+          "regularPrice": 25.2,
+          "promo": "Prix promo"
         },
         {
           "name": "sauce soja",
@@ -481,7 +483,9 @@
           "unit": "pièce",
           "aisle": "Produits laitiers",
           "staple": false,
-          "price": 0.5
+          "price": 0.43,
+          "regularPrice": 0.5,
+          "promo": "-68 % sur le 2e"
         },
         {
           "name": "comté",
@@ -728,7 +732,9 @@
           "unit": "pièce",
           "aisle": "Produits laitiers",
           "staple": false,
-          "price": 0.75
+          "price": 0.64,
+          "regularPrice": 0.75,
+          "promo": "-68 % sur le 2e"
         },
         {
           "name": "tofu ferme",
@@ -1024,7 +1030,9 @@
           "unit": "pièce",
           "aisle": "Produits laitiers",
           "staple": false,
-          "price": 0.5
+          "price": 0.43,
+          "regularPrice": 0.5,
+          "promo": "-68 % sur le 2e"
         },
         {
           "name": "panko",

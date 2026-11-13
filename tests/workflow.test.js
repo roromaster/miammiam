@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { checkPlan, notifyProposal, renotifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
+import { checkPlan, notifyProposal, renotifyProposal, republish, resendWeekly, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 import { loadPlan, savePlan } from "../lib/store.js";
 import { makePlan, makeLeftovers, withMeal } from "./helpers.js";
 
@@ -261,4 +261,36 @@ test("le lundi midi est contrôlé avec le dimanche de la semaine précédente",
   plan.meals = plan.meals.map((m) => (m.leftoversOf || m.title.startsWith("Restes") ? m : { ...m, title: `Nouveau ${m.title}` }));
   plan.meals = plan.meals.map((m) => (m.leftoversOf && m.leftoversOf !== "dimanche" ? { ...m, title: `Restes : Nouveau Plat du ${m.leftoversOf} soir` } : m));
   assert.deepEqual(checkPlan(plan, deps), []);
+});
+
+test("resendWeekly republie et renvoie l'email de la semaine, marqué mise à jour", async (t) => {
+  const { root, deps, order } = setup(t);
+  savePlan(makePlan({ status: "sent" }), root);
+  await resendWeekly(WEEK, deps);
+  await resendWeekly(WEEK, deps);
+  assert.deepEqual(order, ["publish", "send", "publish", "send"]);
+  const [, subject] = deps.mimes[0].match(/^Subject: =\?UTF-8\?B\?(.+)\?=$/m);
+  assert.match(Buffer.from(subject, "base64").toString("utf8"), /\(mise à jour\)$/);
+  assert.equal(loadPlan(WEEK, root).status, "sent");
+  assert.deepEqual(deps.pushes, []);
+});
+
+test("resendWeekly refuse une semaine pas encore envoyée", async (t) => {
+  const { root, deps } = setup(t);
+  savePlan(makePlan({ status: "validated" }), root);
+  await assert.rejects(resendWeekly(WEEK, deps), /pas encore envoyée/);
+  assert.equal(deps.mimes.length, 0);
+});
+
+test("l'email de la semaine sort les produits du placard de la liste, sans toucher au plan", async (t) => {
+  const { root, deps } = setup(t);
+  mkdirSync(join(root, "data"), { recursive: true });
+  writeFileSync(join(root, "data/pantry.json"), JSON.stringify(["riz"]));
+  savePlan(makePlan({ status: "validated" }), root);
+  await sendWeekly(WEEK, deps);
+  const body = deps.mimes[0].split('text/plain; charset="UTF-8"\r\nContent-Transfer-Encoding: base64\r\n\r\n')[1].split("\r\n--")[0];
+  const text = Buffer.from(body.replaceAll("\r\n", ""), "base64").toString("utf8");
+  assert.match(text, /À vérifier au placard\n- riz/);
+  assert.doesNotMatch(text, /riz : /);
+  assert.ok(loadPlan(WEEK, root).meals.every((m) => m.ingredients.every((i) => !i.staple)));
 });

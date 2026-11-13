@@ -165,6 +165,14 @@ test("un ingrédient peut signaler sa promo, jamais par un libellé vide", () =>
   assert.match(errorsFor(withPromo(" ")), /promo vide/);
 });
 
+test("regularPrice accompagne une promo et n'est pas inférieur au prix payé", () => {
+  const withItem = (fields) => withMeal(makePlan(), "lundi", "soir", { ingredients: ingredient(fields) });
+  const price = ingredient({})[0].price;
+  assert.doesNotMatch(errorsFor(withItem({ promo: "Prix promo", regularPrice: price + 1 })), /regularPrice/);
+  assert.match(errorsFor(withItem({ regularPrice: price + 1 })), /regularPrice sans promo/);
+  assert.match(errorsFor(withItem({ promo: "Prix promo", regularPrice: price / 2 })), /regularPrice invalide/);
+});
+
 test("le titre ne porte pas un second accompagnement", () => {
   for (const title of ["Curry de lieu, riz jasmin", "Onglet à l'échalote et pommes de terre sautées", "Poulet cacciatora et polenta grillée", "Rôti avec purée de céleri"]) {
     assert.match(errorsFor(withMeal(makePlan(), "samedi", "midi", { title })), /un seul accompagnement/, title);
@@ -193,4 +201,46 @@ test("le même riz peut servir deux fois, mais les autres accompagnements ne se 
   assert.deepEqual(validatePlan(twice("Riz jasmin")), []);
   assert.deepEqual(validatePlan(twice("Pâtes au beurre")), []);
   assert.match(errorsFor(twice("Carottes au miso")), /accompagnement présent deux fois/);
+});
+
+// Règles ajoutées à partir de 2026-W47 : temps détaillé, consigne des restes, herbes, unités.
+function strictPlan() {
+  const plan = makePlan({ week: "2026-W47", startDate: "2026-11-16" });
+  plan.meals = plan.meals.map((m) => {
+    if (m.leftoversOf) return m;
+    const detailed = { ...m, prepMinutes: 15, cookMinutes: 5 };
+    return m.servings === 8 ? { ...detailed, leftoverTip: "Réchauffer à feu doux." } : detailed;
+  });
+  return plan;
+}
+const riz = (extra) => ({ name: "riz", quantity: 400, unit: "g", aisle: "Épicerie", staple: false, price: 1, ...extra });
+const herb = (name) => riz({ name, quantity: 1, unit: "pièce", aisle: "Fruits et légumes" });
+
+test("à partir de 2026-W47, un plan détaillé est valide et les anciens plans le restent", () => {
+  assert.deepEqual(validatePlan(strictPlan()), []);
+  assert.deepEqual(validatePlan(makePlan()), []);
+});
+
+test("le temps se décompose en préparation et cuisson", () => {
+  assert.match(errorsFor(withMeal(strictPlan(), "mardi", "soir", { prepMinutes: undefined })), /mardi soir : prepMinutes et cookMinutes manquants/);
+  assert.match(errorsFor(withMeal(strictPlan(), "mardi", "soir", { prepMinutes: 20, cookMinutes: 5 })), /mardi soir : minutes doit valoir/);
+});
+
+test("un dîner de 8 portions donne une consigne pour les restes, et lui seul", () => {
+  assert.match(errorsFor(withMeal(strictPlan(), "mardi", "soir", { leftoverTip: " " })), /mardi soir : leftoverTip manquant/);
+  assert.match(errorsFor(withMeal(strictPlan(), "samedi", "soir", { leftoverTip: "Au frais." })), /samedi soir : leftoverTip réservé/);
+});
+
+test("trois herbes fraîches au plus par semaine, les herbes séchées ne comptent pas", () => {
+  const herbs = (names) => withMeal(strictPlan(), "samedi", "midi", { ingredients: [riz(), ...names.map(herb)] });
+  assert.deepEqual(validatePlan(herbs(["persil plat", "menthe fraîche", "thym frais", "thym séché", "graine de coriandre"])), []);
+  assert.match(errorsFor(herbs(["persil plat", "menthe fraîche", "thym frais", "basilic frais"])), /herbes fraîches : 3 au plus/);
+});
+
+test("un ingrédient garde la même unité d'un repas à l'autre, sauf au placard", () => {
+  const plan = withMeal(strictPlan(), "samedi", "midi", { ingredients: [riz(), riz({ name: "Chou pointu", unit: "pièce", quantity: 1 })] });
+  const mixed = withMeal(plan, "samedi", "soir", { ingredients: [riz({ unit: "kg", quantity: 1 }), riz({ name: "chou pointu", quantity: 600 })] });
+  assert.match(errorsFor(mixed), /« chou pointu » : unités différentes/);
+  assert.doesNotMatch(errorsFor(mixed), /« riz »/);
+  assert.deepEqual(validatePlan(mixed, { pantry: ["chou pointu"] }), []);
 });

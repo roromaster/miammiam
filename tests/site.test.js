@@ -64,12 +64,11 @@ test("l'accueil reste correct sans aucun plan", (t) => {
   assert.match(build(t, []).read("index.html"), /Aucun plan/);
 });
 
-test("les pages sont adaptées au téléphone et sans script", (t) => {
+test("les pages sont adaptées au téléphone, et seule la liste à cocher a un script", (t) => {
   const { read } = build(t, [makePlan()]);
-  for (const page of ["index.html", "2026-W46/index.html"]) {
-    assert.match(read(page), /name="viewport"/);
-    assert.doesNotMatch(read(page), /<script/);
-  }
+  for (const page of ["index.html", "2026-W46/index.html"]) assert.match(read(page), /name="viewport"/);
+  assert.doesNotMatch(read("index.html"), /<script/);
+  assert.equal((read("2026-W46/index.html").match(/<script/g) ?? []).length, 1);
 });
 
 test("une semaine retirée disparaît, et l'image des autres est conservée", (t) => {
@@ -110,4 +109,19 @@ test("la page affiche les prix des ingrédients, des repas, des courses et de la
   assert.match(html, /Budget de la semaine : ≈ 34,00 €/);
   assert.match(html, /Courses à acheter : ≈ 33,00 €/);
   assert.match(html, /estim/i);
+});
+
+test("chaque ligne de courses est une case à cocher, mémorisée par semaine", (t) => {
+  const html = build(t, [makePlan()]).read("2026-W46/index.html");
+  assert.match(html, /<input type="checkbox" data-item="riz\|g"><span>riz : 3,6 kg/);
+  assert.match(html, /miammiam-courses-2026-W46/);
+  assert.match(html, /Tout décocher/);
+});
+
+test("le temps détaillé et la consigne des restes s'affichent sur le dîner et le lendemain midi", (t) => {
+  const plan = withMeal(makePlan(), "lundi", "soir", { minutes: 30, prepMinutes: 20, cookMinutes: 10, leftoverTip: "Garder le riz à part." });
+  const html = build(t, [plan]).read("2026-W46/index.html");
+  assert.match(html, /30 min \(20 de préparation, 10 de cuisson\)/);
+  assert.match(html, /Pour les restes :<\/strong> Garder le riz à part\./);
+  assert.match(html, /Conseil :<\/strong> Garder le riz à part\./);
 });

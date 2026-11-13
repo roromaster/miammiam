@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { PROJECT_ROOT, loadPlan } from "../lib/store.js";
 import { missingCatalogs } from "../lib/promos.js";
 import { currentWeek, upcomingWeek } from "../lib/week.js";
-import { checkPlan, defaultDeps, updatePromos, notifyProposal, renotifyProposal, republish, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
+import { checkPlan, defaultDeps, updatePromos, notifyProposal, renotifyProposal, republish, resendWeekly, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 
 const USAGE = `Commandes :
   target upcoming|current
@@ -16,6 +16,7 @@ const USAGE = `Commandes :
   renotify <semaine>
   validate <semaine>
   send-weekly <semaine>
+  resend-weekly <semaine>
   republish <semaine>
   sync
 
@@ -75,6 +76,10 @@ const COMMANDS = {
   async "send-weekly"(week) {
     const { sent, reason } = await sendWeekly(weekArg(week), deps);
     return sent ? "Email de la semaine envoyé" : `Rien à faire : ${reason}`;
+  },
+  async "resend-weekly"(week) {
+    await resendWeekly(weekArg(week), deps);
+    return "Email de la semaine renvoyé (mise à jour)";
   },
   republish(week) {
     return republish(weekArg(week), deps);

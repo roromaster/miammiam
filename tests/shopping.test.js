@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { shoppingList, formatItem, formatPricedItem, formatPrice, mealPrice, weekPrice } from "../lib/shopping.js";
+import { applyPantry, budgetLines, formatMinutes, shoppingList, formatItem, formatPricedItem, formatPrice, mealPrice, weekPrice } from "../lib/shopping.js";
 import { makePlan, makeMeal } from "./helpers.js";
 
 const item = (name, quantity, unit, extra = {}) => ({ name, quantity, unit, aisle: "Épicerie", staple: false, price: 1, ...extra });
@@ -129,4 +129,33 @@ test("un ingrédient en promo le signale dans la liste de courses", () => {
   const list = shoppingList(planWith([item("saumon", 300, "g", { promo: "Prix promo" }), item("saumon", 200, "g")]));
   assert.deepEqual(allItems(list), [{ name: "saumon", quantity: 500, unit: "g", price: 2, promo: "Prix promo" }]);
   assert.equal(formatPricedItem(allItems(list)[0]), "saumon : 500 g (≈ 2,00 €, en promo : Prix promo)");
+});
+
+test("une promo avec regularPrice affiche le prix habituel et l'économie de la semaine", () => {
+  const plan = planWith([item("saumon", 300, "g", { price: 3, promo: "Prix promo", regularPrice: 5 }), item("saumon", 200, "g", { price: 2 })]);
+  const list = shoppingList(plan);
+  assert.deepEqual(allItems(list), [{ name: "saumon", quantity: 500, unit: "g", price: 5, promo: "Prix promo", regularPrice: 7 }]);
+  assert.equal(list.savings, 2);
+  assert.equal(formatPricedItem(allItems(list)[0]), "saumon : 500 g (≈ 5,00 €, en promo : Prix promo, au lieu de 7,00 €)");
+  assert.match(budgetLines(plan).at(-1), /^Économie grâce aux promos : ≈ 2,00 €$/);
+});
+
+test("sans regularPrice, aucune économie n'est annoncée", () => {
+  const plan = planWith([item("saumon", 300, "g", { promo: "Prix promo" })]);
+  assert.equal(shoppingList(plan).savings, 0);
+  assert.ok(!budgetLines(plan).some((line) => line.startsWith("Économie")));
+});
+
+test("un produit du placard quitte la liste et le total, sans modifier le plan", () => {
+  const plan = planWith([item("Sauce soja", 2, "c. à soupe"), item("riz", 400, "g")]);
+  const list = shoppingList(applyPantry(plan, ["sauce soja"]));
+  assert.deepEqual(formatted(list), ["riz : 400 g"]);
+  assert.ok(list.pantry.includes("sauce soja"));
+  assert.equal(list.total, 1);
+  assert.equal(shoppingList(plan).total, 2);
+});
+
+test("le temps s'affiche détaillé quand le plan le précise", () => {
+  assert.equal(formatMinutes({ minutes: 30 }), "30 min");
+  assert.equal(formatMinutes({ minutes: 30, prepMinutes: 20, cookMinutes: 10 }), "30 min (20 de préparation, 10 de cuisson)");
 });

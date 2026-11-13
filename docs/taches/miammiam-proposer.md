@@ -11,7 +11,8 @@ Tu prépares le plan de repas de la semaine suivante pour le projet MiamMiam, si
 3. Si l'état est `missing` :
    - Lis les plans des 4 semaines précédentes dans data/weeks/ et data/proposals/, pour ne reprendre aucun plat.
    - Exécute `node scripts/miammiam.js promos <semaine>`, puis lis data/promos/<semaine>.json : il contient les promos des deux catalogues valables le mardi de la semaine, jour des courses. Si la commande échoue, continue sans promos ; si elle signale un « Catalogue manquant », continue avec les promos disponibles. Dans les deux cas, signale-le dans ton dernier message.
-   - Écris les 14 repas complets, conformes à CLAUDE.md, dans un fichier temporaire hors du dépôt. Privilégie les produits en promo selon la section « Promos » de CLAUDE.md : prix promo dans `price`, champs `promo` et `regularPrice` sur l'ingrédient, sans jamais enfreindre une autre règle.
+   - Lis data/ingredients.json (catalogue : noms, unités, rayons, prix) et data/pantry.json (produits déjà à la maison).
+   - Écris les 14 repas complets, conformes à CLAUDE.md, dans un fichier temporaire hors du dépôt. Reprends les noms et les unités du catalogue pour les ingrédients connus. Privilégie les produits en promo selon la section « Promos » de CLAUDE.md : prix promo dans `price`, champs `promo` et `regularPrice` sur l'ingrédient, sans jamais enfreindre une autre règle.
    - Exécute `node scripts/miammiam.js save-proposal <fichier>`. En cas d'erreurs, corrige et recommence, 3 essais au maximum. La proposition est poussée sur GitHub par la commande.
 4. Si l'état est maintenant `proposed` (qu'il vienne d'être créé ou qu'il existait déjà), exécute `node scripts/miammiam.js notify-proposal <semaine>`. Cette commande n'envoie jamais deux fois.
 5. Si l'état est `validated` ou `sent`, ne fais rien.

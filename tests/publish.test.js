@@ -30,7 +30,7 @@ test("publish ajoute seulement les plans et le site, puis pousse", async (t) => 
   const { root, git, exec, render, okFetch } = setup(t);
   const url = await publish("2026-W46", { root, exec, render, fetch: okFetch, pollMs: 1 });
   assert.equal(url, `${SITE_URL}2026-W46/`);
-  assert.deepEqual(git.find((a) => a[0] === "add"), ["add", "--all", "--", "data/proposals", "data/weeks", "data/promos", "data/pantry.json", "site"]);
+  assert.deepEqual(git.find((a) => a[0] === "add"), ["add", "--all", "--", "data/proposals", "data/weeks", "data/promos", "data/pantry.json", "data/ingredients.json", "site"]);
   assert.ok(git.some((a) => a[0] === "commit"));
   assert.deepEqual(git.at(-1), ["push", "origin", "main"]);
 });

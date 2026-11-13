@@ -40,10 +40,21 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
 - Écrire ces ingrédients exactement sous le nom du fichier, avec leur `price` et `staple: false` : le placard s'applique à l'affichage, le plan n'est pas modifié.
 - Ajouter ou retirer un nom du fichier seulement à la demande, puis lancer `sync`. Un produit nouveau et rare (une pâte de piment jamais achetée) n'y entre qu'une fois acheté.
 
+**Catalogue**
+- `data/ingredients.json` est la référence des ingrédients : `name`, `aisle`, `unit` (`g`, `ml`, `pièce`, `c. à soupe`, `c. à café`, `gousse`, `tranche`), `unitPrice` (au kilo pour `g`, au litre pour `ml`, à l'unité sinon) et, parfois, `pack`, le conditionnement vendu (`size` dans l'unité de l'ingrédient, `label` au singulier : « boîte de 400 g », « tête »).
+- Le lire avant d'écrire un plan. Pour un ingrédient qui y figure, reprendre exactement son nom et son unité (ou une unité convertible : `kg` pour `g`, `cl` et `l` pour `ml`, cuillères entre elles et avec `ml`). `save-proposal` et `price` remplacent alors son rayon et son `price` par ceux du catalogue : inutile de les calculer, une valeur approchée suffit. Une autre unité (`g` pour un ingrédient compté en `pièce`) est refusée, sauf pour un produit de base ou du placard.
+- Un ingrédient absent du catalogue garde le rayon et le prix estimés du plan (voir **Prix**), et entre au catalogue à ce prix lors de `save-proposal` ou `price`, qui le signalent. Ne pas créer une variante d'un ingrédient existant (« tomate concassée en boîte » pour « tomate concassée »).
+- Un ingrédient en `promo` garde son `price` de promo, et reçoit du catalogue son `regularPrice` s'il manque.
+- La liste de courses indique le nombre de conditionnements à acheter (« ail : 23 gousses, soit 3 têtes »). Le prix reste celui de la quantité utilisée.
+- Le rayon `Épicerie spécialisée (hors Leclerc)` regroupe les produits à trouver en épicerie asiatique ou en ligne (doubanjiang, vin de Shaoxing, chipotle). Limiter ces produits à ceux du placard ou à un ou deux achats nouveaux par semaine.
+- Corriger un prix, un rayon ou un conditionnement dans le fichier à la demande, puis lancer `sync`. Les plans déjà enregistrés gardent leurs prix.
+- `checkedAt` date un prix relevé sur le Drive du magasin (leclercdrive.fr, magasin Saint-Ouen-l'Aumône-Epluches), en marque Repère ou Eco+ et en grand conditionnement. Sans `checkedAt`, le prix est une estimation. Le Drive refuse les scripts : un relevé ne se fait que sur demande, dans le navigateur d'une session, jamais dans une tâche planifiée.
+
 **Prix**
+- Ces règles servent à estimer le prix d'un ingrédient absent du catalogue, et à corriger le catalogue.
 - Chaque ingrédient d'un repas cuisiné a un `price` : le coût estimé en euros de la quantité utilisée, au prix habituel de E.Leclerc, hors promotion, en marque Repère quand elle existe (boucher pour le vendredi soir). Seule exception : un ingrédient choisi dans les promos de la semaine (voir **Promos**).
 - Estimer honnêtement, avec des prix réalistes et positifs, y compris pour les produits du placard. Les prix sont indicatifs, à ne jamais présenter comme relevés en magasin.
-- Ne pas surestimer : compter au prix des grands conditionnements, et seulement la part utilisée. Repères Leclerc au kilo : poulet (haut de cuisse désossé) 8 €, bœuf haché 9 €, dinde hachée 9 €, porc (échine, côte) 7,5 €, saumon 18 €, crevette crue décortiquée surgelée 17 €, veau (jarret) 16 €, agneau (épaule désossée) 20 €, entrecôte du boucher 32 €, riz 2 à 3 €, pâtes 1,5 à 2,5 €, légumes courants 1,5 à 3 €. Repères à l'unité : oignon 0,15 €, gousse d'ail 0,06 €, oignon nouveau 0,12 €, citron vert 0,3 €, œuf 0,25 €, botte d'herbes 1 €, conserve de 400 g 0,5 à 0,8 €. Une cuillère d'épice ou de sauce coûte quelques centimes.
+- Ne pas surestimer : compter au prix des grands conditionnements, et seulement la part utilisée. Repères Leclerc au kilo : poulet (haut de cuisse désossé) 8 €, blanc de poulet 12,5 €, bœuf haché 14,5 €, dinde hachée 10,5 €, porc (échine) 7,5 €, saumon 20 €, crevette crue décortiquée surgelée 17 €, veau (jarret) 16 €, agneau (épaule désossée) 20 €, entrecôte du boucher 32 €, riz 2 à 3 €, pâtes 1,5 à 2,5 €, légumes courants 1,5 à 3 €. Repères à l'unité : oignon 0,15 €, gousse d'ail 0,06 €, oignon nouveau 0,12 €, citron vert 0,3 €, œuf 0,25 €, botte d'herbes 1 €, conserve de 400 g 0,5 à 0,8 €. Une cuillère d'épice ou de sauce coûte quelques centimes.
 
 **Promos**
 - `data/promos/<semaine>.json` liste les promos alimentaires du E.Leclerc d'Épluches (Saint-Ouen-l'Aumône) valables le mardi de la semaine (`shoppingDay`), jour des courses, tirées des catalogues en ligne du magasin. Chaque catalogue dure deux semaines et un nouveau démarre chaque mardi : une semaine en compte donc deux, celui commencé le mardi précédent et celui qui commence le mardi des courses. Le nouveau n'est publié que le dimanche d'avant. Chaque promo a `product`, `brand`, `category` (rayon Leclerc), `details` (poids, variétés, prix au kilo), `offer` (la mécanique), `price` (prix affiché par `unit`, ou par article si `unit` est vide), `effectivePrice` (prix unitaire payé une fois la mécanique appliquée), `validFrom` et `validTo`, et parfois `regularPrice`, `minQuantity` (nombre d'articles à acheter pour avoir l'offre), `cardOnly` (remise en Ticket E.Leclerc, sur la carte) et `unitPrice` (prix au kilo ou au litre).
@@ -104,7 +115,7 @@ La CLI s'utilise depuis la racine du projet : `node scripts/miammiam.js <command
 - Des restes ont `leftoversOf` (le jour du dîner d'origine), un titre citant ce dîner, et ni ingrédient ni étape.
 - `cuisine` : `japonaise`, `chinoise`, `mexicaine`, `thaïe`, `française`, `italienne`, `burger`.
 - `unit` : `g`, `kg`, `ml`, `cl`, `l`, `pièce`, `c. à soupe`, `c. à café`, `gousse`, `tranche`.
-- `aisle` : `Fruits et légumes`, `Viandes et poissons`, `Produits laitiers`, `Épicerie`, `Surgelés`, `Boulangerie`, `Boissons`, `Boucher (à acheter vendredi)`.
+- `aisle` : `Fruits et légumes`, `Viandes et poissons`, `Produits laitiers`, `Épicerie`, `Surgelés`, `Boulangerie`, `Boissons`, `Épicerie spécialisée (hors Leclerc)`, `Boucher (à acheter vendredi)`.
 - `staple` vaut `true` pour les produits de base généralement en stock (sel, poivre, huile).
 - `promo`, facultatif, signale un ingrédient pris en promo, et `regularPrice` donne alors son coût au prix habituel (voir **Promos**).
 - `startDate` est le lundi de la semaine ISO.
@@ -114,12 +125,12 @@ Le plan ne contient jamais la liste de courses : elle est toujours recalculée.
 
 ## Procédures
 
-**Générer une semaine.** Lancer d'abord `promos <semaine>`, qui enregistre les promos des deux catalogues de la semaine dans `data/promos/<semaine>.json` et les pousse ; s'il échoue, le signaler et générer sans promos. S'il signale un « Catalogue manquant » (celui du mardi des courses, avant sa publication le dimanche), générer avec les promos disponibles et le mentionner. Lire ce fichier et en tirer parti selon les règles **Promos**. Écrire le plan dans un fichier temporaire, puis le relire plat par plat avant de l'enregistrer : légumes présents, temps tenable pour les portions réelles, restes qui se réchauffent bien, herbes et produits entamés réutilisés. Lancer ensuite `save-proposal <fichier>`. En cas d'erreurs, corriger et recommencer, 3 essais au maximum. Lancer ensuite `notify-proposal <semaine>`, sans risque de doublon : l'email ne part qu'une fois.
+**Générer une semaine.** Lancer d'abord `promos <semaine>`, qui enregistre les promos des deux catalogues de la semaine dans `data/promos/<semaine>.json` et les pousse ; s'il échoue, le signaler et générer sans promos. S'il signale un « Catalogue manquant » (celui du mardi des courses, avant sa publication le dimanche), générer avec les promos disponibles et le mentionner. Lire ce fichier et en tirer parti selon les règles **Promos**. Lire aussi `data/ingredients.json` et `data/pantry.json`, pour reprendre les noms et les unités des ingrédients connus. Écrire le plan dans un fichier temporaire, puis le relire plat par plat avant de l'enregistrer : légumes présents, temps tenable pour les portions réelles, restes qui se réchauffent bien, herbes et produits entamés réutilisés. Lancer ensuite `save-proposal <fichier>`. En cas d'erreurs, corriger et recommencer, 3 essais au maximum. Lancer ensuite `notify-proposal <semaine>`, sans risque de doublon : l'email ne part qu'une fois.
 
 **Remplacer un plat.**
 1. Trouver la semaine avec `status <semaine>`. Le fichier est dans `data/proposals/` si elle est `proposed`, sinon dans `data/weeks/`.
 2. Si elle est `sent`, l'email est déjà parti : demander d'abord une confirmation explicite. Le site sera mis à jour, sans nouvel email.
-3. Modifier le plat dans le JSON, en gardant toutes les règles, puis lancer `check <fichier>`.
+3. Modifier le plat dans le JSON, en gardant toutes les règles, puis lancer `price <fichier>`, qui recalcule les prix d'après le catalogue, et `check <fichier>`.
 4. Si la semaine est `proposed`, lancer `sync` pour la partager. Si elle est `validated` ou `sent`, lancer `republish <semaine>`.
 5. Si on demande à renvoyer l'email des courses d'une semaine `sent`, lancer `resend-weekly <semaine>` après confirmation explicite : il republie le site et renvoie l'email de la semaine, marqué « mise à jour », à chaque appel.
 6. Si on demande à recevoir la proposition modifiée, lancer `renotify <semaine>` : il renvoie l'email de proposition, marqué « mise à jour », à chaque appel. Seulement sur demande explicite, et seulement pour une semaine `proposed`.
@@ -130,7 +141,7 @@ Le plan ne contient jamais la liste de courses : elle est toujours recalculée.
 
 Le projet est cloné sur plusieurs machines (MacBook, Mac mini, sessions web), et GitHub fait foi.
 - Chaque commande de la CLI, sauf `target`, commence par `git pull --rebase`. Ne jamais lire un plan sans être passé par la CLI juste avant, par exemple avec `status`.
-- `promos`, `save-proposal`, `notify-proposal`, `validate`, `send-weekly` et `republish` poussent eux-mêmes leurs changements. Après une modification manuelle d'une proposition ou de `data/pantry.json`, lancer `sync`.
+- `promos`, `save-proposal`, `notify-proposal`, `validate`, `send-weekly` et `republish` poussent eux-mêmes leurs changements. Après une modification manuelle d'une proposition, de `data/pantry.json` ou de `data/ingredients.json`, lancer `sync`.
 - Si un pull ou un push échoue, sur un conflit par exemple, s'arrêter et le signaler. Ne jamais forcer le push.
 - Seul le Mac mini exécute les tâches planifiées et envoie les emails. Ailleurs, ne lancer ni `notify-proposal`, ni `renotify`, ni `send-weekly`, ni `resend-weekly` sans demande explicite. Leurs prompts sont dans `docs/taches/`.
 - Le rendu de l'image demande Google Chrome. Une session web peut modifier et contrôler un plan, mais doit laisser `validate` et `republish` à un Mac.

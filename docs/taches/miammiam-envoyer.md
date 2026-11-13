@@ -11,7 +11,8 @@ Tu publies et envoies le plan de repas de la semaine en cours pour le projet Mia
 3. Si l'état est `sent`, ne fais rien.
 4. Si l'état est `missing` (la proposition du dimanche n'a pas eu lieu) :
    - Lis les plans des 4 semaines précédentes dans data/weeks/ et data/proposals/, pour ne reprendre aucun plat.
-   - Écris les 14 repas complets, conformes à CLAUDE.md, dans un fichier temporaire hors du dépôt.
+   - Lis data/ingredients.json (catalogue : noms, unités, rayons, prix) et data/pantry.json (produits déjà à la maison).
+   - Écris les 14 repas complets, conformes à CLAUDE.md, dans un fichier temporaire hors du dépôt. Reprends les noms et les unités du catalogue pour les ingrédients connus.
    - Exécute `node scripts/miammiam.js save-proposal <fichier>`. En cas d'erreurs, corrige et recommence, 3 essais au maximum.
 5. Exécute `node scripts/miammiam.js send-weekly <semaine>`. Cette commande publie le site, vérifie qu'il est en ligne, envoie l'email aux destinataires configurés, pousse l'état sur GitHub et n'envoie jamais deux fois.
 

@@ -4,7 +4,7 @@ import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { checkPlan, notifyProposal, renotifyProposal, republish, resendWeekly, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
-import { loadPlan, savePlan } from "../lib/store.js";
+import { loadCatalog, loadPlan, saveCatalog, savePlan } from "../lib/store.js";
 import { makePlan, makeLeftovers, withMeal } from "./helpers.js";
 
 const WEEK = "2026-W46";
@@ -33,7 +33,7 @@ function setup(t, { recipients = { owner: "a@example.com", recipients: ["a@examp
 
 test("saveProposal écrit un plan valide en proposed et le pousse", async (t) => {
   const { root, deps } = setup(t);
-  assert.deepEqual(await saveProposal(makePlan({ status: "validated" }), deps), { saved: true, errors: [] });
+  assert.deepEqual(await saveProposal(makePlan({ status: "validated" }), deps), { saved: true, errors: [], added: ["riz", "entrecôte"] });
   assert.equal(loadPlan(WEEK, root).status, "proposed");
   assert.deepEqual(deps.pushes, [`data: proposition de ${WEEK}`]);
 });
@@ -293,4 +293,24 @@ test("l'email de la semaine sort les produits du placard de la liste, sans touch
   assert.match(text, /À vérifier au placard\n- riz/);
   assert.doesNotMatch(text, /riz : /);
   assert.ok(loadPlan(WEEK, root).meals.every((m) => m.ingredients.every((i) => !i.staple)));
+});
+
+test("saveProposal recalcule les prix d'après le catalogue et y ajoute les ingrédients nouveaux", async (t) => {
+  const { root, deps } = setup(t);
+  saveCatalog([{ name: "riz", aisle: "Épicerie", unit: "g", unitPrice: 2.5 }], root);
+  const { added } = await saveProposal(makePlan(), deps);
+  assert.deepEqual(added, ["entrecôte"]);
+  const friday = loadPlan(WEEK, root).meals.find((m) => m.day === "vendredi" && m.slot === "soir");
+  assert.deepEqual(friday.ingredients.map((i) => i.price), [1, 24]);
+  assert.deepEqual(loadCatalog(root).map((entry) => entry.name), ["entrecôte", "riz"]);
+  assert.equal(loadCatalog(root)[0].unitPrice, 30);
+});
+
+test("saveProposal refuse un ingrédient écrit dans une autre unité que le catalogue", async (t) => {
+  const { root, deps } = setup(t);
+  saveCatalog([{ name: "riz", aisle: "Épicerie", unit: "pièce", unitPrice: 1 }], root);
+  const { saved, errors } = await saveProposal(makePlan(), deps);
+  assert.equal(saved, false);
+  assert.match(errors.join("\n"), /« riz » se compte en pièce dans le catalogue, pas en g/);
+  assert.equal(loadPlan(WEEK, root), null);
 });

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
-import { PROJECT_ROOT, loadPlan } from "../lib/store.js";
-import { missingCatalogs } from "../lib/promos.js";
+import { PROJECT_ROOT, loadCatalog, loadPlan } from "../lib/store.js";
+import { formatFreshPromo, freshPromos, loadPromos, missingCatalogs } from "../lib/promos.js";
 import { currentWeek, upcomingWeek } from "../lib/week.js";
 import { checkPlan, defaultDeps, pricePlan, updatePromos, notifyProposal, renotifyProposal, republish, resendWeekly, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 
@@ -10,6 +10,7 @@ const USAGE = `Commandes :
   target upcoming|current
   status <semaine>
   promos <semaine>
+  promos-fresh <semaine>
   price <fichier.json>
   check <fichier.json>
   save-proposal <fichier.json>
@@ -54,6 +55,14 @@ const COMMANDS = {
     const gap = missing.length > 0 ? `\nCatalogue manquant : ${missing.join(" ; ")}. Relancer promos plus tard pour l'ajouter.` : "";
     return `${result.promos.length} promos alimentaires enregistrées dans data/promos/${week}.json (catalogues ${from})${gap}`;
   },
+  // Présélection des promos de produits frais, à lire avant de choisir les plats.
+  "promos-fresh"(week) {
+    const promos = loadPromos(weekArg(week), deps.root);
+    if (!promos) throw new Error(`Promos de ${week} absentes : lancer d'abord promos ${week}`);
+    const fresh = freshPromos(promos, loadCatalog(deps.root));
+    if (fresh.length === 0) return "Aucune promo de produit frais cette semaine";
+    return `${fresh.length} promos de produits frais, valables le ${promos.shoppingDay} :\n${fresh.map(formatFreshPromo).join("\n")}`;
+  },
   // Recalcule noms, rayons et prix d'après le catalogue, dans le fichier même.
   price(path) {
     const { plan, added, errors, learn } = pricePlan(planArg(path), deps);
@@ -69,9 +78,9 @@ const COMMANDS = {
   },
   async "save-proposal"(path) {
     const plan = planArg(path);
-    const { saved, errors, added } = await saveProposal(plan, deps);
+    const { saved, errors, added, warnings } = await saveProposal(plan, deps);
     if (errors.length > 0) throw new Error(errors.join("\n"));
-    return saved ? `Proposition enregistrée : ${plan.week}${newIngredients(added)}` : `${plan.week} existe déjà, rien n'a changé`;
+    return saved ? `Proposition enregistrée : ${plan.week}${newIngredients(added)}${warnings.map((line) => `\nÀ noter : ${line}`).join("")}` : `${plan.week} existe déjà, rien n'a changé`;
   },
   async "notify-proposal"(week) {
     const { sent } = await notifyProposal(weekArg(week), deps);

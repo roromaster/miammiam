@@ -244,3 +244,12 @@ test("un ingrédient garde la même unité d'un repas à l'autre, sauf au placar
   assert.doesNotMatch(errorsFor(mixed), /« riz »/);
   assert.deepEqual(validatePlan(mixed, { pantry: ["chou pointu"] }), []);
 });
+
+test("source et promosSkipped sont facultatifs mais contrôlés", () => {
+  const sourced = (source) => withMeal(makePlan(), "samedi", "soir", { source });
+  assert.deepEqual(validatePlan(sourced({ name: "750g", url: "https://www.750g.com/blanquette-r1.htm" })), []);
+  assert.match(errorsFor(sourced({ name: "750g", url: "http://www.750g.com/x" })), /samedi soir : source invalide/);
+  assert.match(errorsFor(sourced({ url: "https://www.750g.com/x" })), /source invalide/);
+  assert.deepEqual(validatePlan(makePlan({ promosSkipped: ["Moules : déjà un poisson lundi"] })), []);
+  assert.match(errorsFor(makePlan({ promosSkipped: [""] })), /promosSkipped/);
+});

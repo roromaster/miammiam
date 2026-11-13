@@ -194,3 +194,16 @@ test("la proposition donne les recettes complètes des plats cuisinés", () => {
   assert.match(html, /<h2[^>]*>Recettes<\/h2>/);
   assert.match(html, /<li>Cuire 12 minutes\.<\/li>/);
 });
+
+test("la proposition liste les promos retenues, les promos écartées et la source des recettes", () => {
+  const saumon = { name: "saumon", quantity: 600, unit: "g", aisle: "Viandes et poissons", staple: false, price: 7.19, promo: "Prix promo", regularPrice: 11.88 };
+  const plan = { ...withMeal(makePlan(), "samedi", "soir", { ingredients: [saumon], source: { name: "RecipeTin Eats", url: "https://www.recipetineats.com/x/" } }),
+    promosSkipped: ["Moules de bouchot à 5,68 €/kg : déjà un poisson samedi"] };
+  const mime = proposalEmail(plan, { to: "a@example.com" });
+  const text = decodePart(mime, "text/plain");
+  assert.match(text, /Promos retenues\n- saumon : 600 g \(≈ 7,19 €, en promo : Prix promo, au lieu de 11,88 €\)/);
+  assert.match(text, /Promos fraîches non retenues\n- Moules de bouchot à 5,68 €\/kg : déjà un poisson samedi/);
+  assert.match(text, /Inspiré de RecipeTin Eats : https:\/\/www\.recipetineats\.com\/x\//);
+  assert.match(decodePart(mime, "text/html"), /Inspiré de <a href="https:\/\/www\.recipetineats\.com\/x\/">RecipeTin Eats<\/a>/);
+  assert.doesNotMatch(decodePart(proposalEmail(makePlan(), { to: "a@example.com" }), "text/plain"), /Promos/);
+});

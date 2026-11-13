@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { checkPlan, notifyProposal, renotifyProposal, republish, resendWeekly, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
+import { checkPlan, promoWarnings, notifyProposal, renotifyProposal, republish, resendWeekly, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 import { loadCatalog, loadPlan, saveCatalog, savePlan } from "../lib/store.js";
 import { makePlan, makeLeftovers, withMeal } from "./helpers.js";
 
@@ -33,7 +33,7 @@ function setup(t, { recipients = { owner: "a@example.com", recipients: ["a@examp
 
 test("saveProposal écrit un plan valide en proposed et le pousse", async (t) => {
   const { root, deps } = setup(t);
-  assert.deepEqual(await saveProposal(makePlan({ status: "validated" }), deps), { saved: true, errors: [], added: ["riz", "entrecôte"] });
+  assert.deepEqual(await saveProposal(makePlan({ status: "validated" }), deps), { saved: true, errors: [], added: ["riz", "entrecôte"], warnings: [] });
   assert.equal(loadPlan(WEEK, root).status, "proposed");
   assert.deepEqual(deps.pushes, [`data: proposition de ${WEEK}`]);
 });
@@ -313,4 +313,21 @@ test("saveProposal refuse un ingrédient écrit dans une autre unité que le cat
   assert.equal(saved, false);
   assert.match(errors.join("\n"), /« riz » se compte en pièce dans le catalogue, pas en g/);
   assert.equal(loadPlan(WEEK, root), null);
+});
+
+test("promoWarnings rappelle l'objectif de 3 repas bâtis autour d'une promo fraîche", (t) => {
+  const { root, deps } = setup(t);
+  const promo = (product) => ({ product, brand: "", category: "Viandes et poissons", details: "", offer: "Prix promo", price: 10, unit: "Le kg", effectivePrice: 10 });
+  mkdirSync(join(root, "data/promos"), { recursive: true });
+  const write = (promos) => writeFileSync(join(root, "data/promos", `${WEEK}.json`), JSON.stringify({ week: WEEK, promos }));
+  const fish = { name: "saumon", quantity: 600, unit: "g", aisle: "Viandes et poissons", staple: false, price: 7, promo: "Prix promo" };
+  const built = (days) => days.reduce((plan, day) => withMeal(plan, day, "soir", { ingredients: [fish] }), makePlan());
+
+  assert.deepEqual(promoWarnings(makePlan(), deps), []);
+  write([promo("Filet de saumon"), promo("Paleron")]);
+  assert.deepEqual(promoWarnings(makePlan(), deps), []);
+  write([promo("Filet de saumon"), promo("Paleron"), promo("Moules de bouchot")]);
+  assert.match(promoWarnings(built(["lundi"]), deps)[0], /^1 repas bâti\(s\) autour d'une promo fraîche, pour un objectif de 3 \(3 promos fraîches disponibles\)\. Expliquer/);
+  assert.doesNotMatch(promoWarnings({ ...built(["lundi"]), promosSkipped: ["Moules : pas cette semaine"] }, deps)[0], /Expliquer/);
+  assert.deepEqual(promoWarnings(built(["lundi", "mardi", "mercredi"]), deps), []);
 });

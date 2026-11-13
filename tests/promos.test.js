@@ -181,3 +181,34 @@ test("updatePromos enregistre les promos dans data/promos et les pousse", async 
   assert.deepEqual(pushed, ["data: promos de 2026-W46"]);
   assert.equal(loadPromos("2026-W47", root), null);
 });
+
+test("pricePerKg déduit le prix au kilo payé selon la forme de l'offre", async () => {
+  const { pricePerKg } = await import("../lib/promos.js");
+  const promo = (extra) => ({ price: 10, effectivePrice: 10, unit: "", details: "", ...extra });
+  assert.equal(pricePerKg(promo({ unit: "Le kg", effectivePrice: 11.99 })), 11.99);
+  assert.equal(pricePerKg(promo({ unit: "Les 100 g", effectivePrice: 1.63 })), 16.3);
+  assert.equal(pricePerKg(promo({ unit: "Le sachet de 1,5 kg", effectivePrice: 3 })), 2);
+  assert.equal(pricePerKg(promo({ price: 6.95, effectivePrice: 4.59, unitPrice: "Le kg : 9,17 €", details: "Le kg : 13,90 €." })), 9.17);
+  assert.equal(pricePerKg(promo({ price: 4.59, effectivePrice: 3.67, cardOnly: true, unitPrice: "Le kg : 13,11 €" })), 10.48);
+  assert.equal(pricePerKg(promo({ price: 8, effectivePrice: 4, details: "500 g.Le kg : 16 €." })), 8);
+  assert.equal(pricePerKg(promo({ details: "La pièce." })), null);
+});
+
+test("freshPromos ne garde que le frais brut et cite les prix habituels du catalogue", async () => {
+  const { freshPromos, formatFreshPromo } = await import("../lib/promos.js");
+  const promo = (product, category, extra = {}) => ({ product, brand: "", category, details: "", offer: "Prix promo", price: 10, unit: "Le kg", effectivePrice: 10, ...extra });
+  const fresh = freshPromos({ promos: [
+    promo("Filet de saumon", "Viandes et poissons", { price: 11.99, effectivePrice: 11.99 }),
+    promo("Saumon fumé de l'atlantique", "Viandes et poissons"),
+    promo("Colin d'Alaska pané MSC", "Viandes et poissons"),
+    promo("Pommes bicolores", "Fruits et légumes"),
+    promo("Pommes de terre four puree potage", "Fruits et légumes"),
+    promo("Pizza royale", "Épicerie"),
+  ] }, [
+    { name: "pavé de saumon", aisle: "Viandes et poissons", unit: "g", unitPrice: 19.8 },
+    { name: "sauce soja", aisle: "Épicerie", unit: "c. à soupe", unitPrice: 0.1 },
+  ]);
+  assert.deepEqual(fresh.map((item) => item.product), ["Pommes de terre four puree potage", "Filet de saumon"]);
+  assert.equal(formatFreshPromo(fresh[1]), "[Viandes et poissons] Filet de saumon : 11,99 €/kg | Prix promo | prix habituels du catalogue : pavé de saumon 19,80 €/kg");
+  assert.deepEqual(freshPromos(null), []);
+});

@@ -125,3 +125,16 @@ test("le temps détaillé et la consigne des restes s'affichent sur le dîner et
   assert.match(html, /Pour les restes :<\/strong> Garder le riz à part\./);
   assert.match(html, /Conseil :<\/strong> Garder le riz à part\./);
 });
+
+test("chaque recette a une ancre, et la grille renvoie aux recettes quand ses cases sont connues", (t) => {
+  const { out, read } = build(t, [makePlan()]);
+  assert.match(read("2026-W46/index.html"), /<article class="recipe" id="lundi-soir">/);
+  assert.doesNotMatch(read("2026-W46/index.html"), /class="grille"/);
+  writeFileSync(join(out, "2026-W46", "semaine.json"), JSON.stringify({
+    width: 1200, height: 600,
+    cells: [{ day: "lundi", slot: "soir", x: 120, y: 300, width: 150, height: 150 }],
+  }));
+  buildSite([makePlan()], out);
+  const html = read("2026-W46/index.html");
+  assert.match(html, /<a href="#lundi-soir" style="left:10\.000%;top:50\.000%;width:12\.500%;height:25\.000%" aria-label="Lundi soir : [^"]+"><\/a>/);
+});

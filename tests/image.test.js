@@ -67,3 +67,17 @@ test("la grille affiche le prix des repas et de la semaine", () => {
   assert.match(html, /≈ 34,00 €/);
   assert.match(html, /Inclus la veille/);
 });
+
+test("le rendu relève la position des 14 cases dans l'image", async (t) => {
+  const dir = mkdtempSync(join(tmpdir(), "miammiam-img-"));
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  await renderImage(makePlan(), join(dir, "semaine.png"));
+  const map = JSON.parse(readFileSync(join(dir, "semaine.json"), "utf8"));
+  assert.equal(map.width, 1200);
+  assert.equal(map.cells.length, 14);
+  for (const cell of map.cells) {
+    assert.ok(cell.day && cell.slot);
+    assert.ok(cell.x >= 0 && cell.x + cell.width <= map.width);
+    assert.ok(cell.y >= 0 && cell.y + cell.height <= map.height);
+  }
+});

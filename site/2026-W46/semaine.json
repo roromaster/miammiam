@@ -1,0 +1,118 @@
+{
+  "width": 1200,
+  "height": 581,
+  "cells": [
+    {
+      "day": "lundi",
+      "slot": "midi",
+      "x": 88,
+      "y": 165,
+      "width": 148,
+      "height": 210.78125
+    },
+    {
+      "day": "mardi",
+      "slot": "midi",
+      "x": 244,
+      "y": 165,
+      "width": 148,
+      "height": 210.78125
+    },
+    {
+      "day": "mercredi",
+      "slot": "midi",
+      "x": 400,
+      "y": 165,
+      "width": 148,
+      "height": 210.78125
+    },
+    {
+      "day": "jeudi",
+      "slot": "midi",
+      "x": 556,
+      "y": 165,
+      "width": 148,
+      "height": 210.78125
+    },
+    {
+      "day": "vendredi",
+      "slot": "midi",
+      "x": 712,
+      "y": 165,
+      "width": 148,
+      "height": 210.78125
+    },
+    {
+      "day": "samedi",
+      "slot": "midi",
+      "x": 868,
+      "y": 165,
+      "width": 148,
+      "height": 210.78125
+    },
+    {
+      "day": "dimanche",
+      "slot": "midi",
+      "x": 1024,
+      "y": 165,
+      "width": 148,
+      "height": 210.78125
+    },
+    {
+      "day": "lundi",
+      "slot": "soir",
+      "x": 88,
+      "y": 383.78125,
+      "width": 148,
+      "height": 169.1875
+    },
+    {
+      "day": "mardi",
+      "slot": "soir",
+      "x": 244,
+      "y": 383.78125,
+      "width": 148,
+      "height": 169.1875
+    },
+    {
+      "day": "mercredi",
+      "slot": "soir",
+      "x": 400,
+      "y": 383.78125,
+      "width": 148,
+      "height": 169.1875
+    },
+    {
+      "day": "jeudi",
+      "slot": "soir",
+      "x": 556,
+      "y": 383.78125,
+      "width": 148,
+      "height": 169.1875
+    },
+    {
+      "day": "vendredi",
+      "slot": "soir",
+      "x": 712,
+      "y": 383.78125,
+      "width": 148,
+      "height": 169.1875
+    },
+    {
+      "day": "samedi",
+      "slot": "soir",
+      "x": 868,
+      "y": 383.78125,
+      "width": 148,
+      "height": 169.1875
+    },
+    {
+      "day": "dimanche",
+      "slot": "soir",
+      "x": 1024,
+      "y": 383.78125,
+      "width": 148,
+      "height": 169.1875
+    }
+  ]
+}

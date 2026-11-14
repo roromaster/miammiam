@@ -17,10 +17,20 @@ h3 { font-size: 1.05rem; margin: 18px 0 4px; }
 a { color: var(--accent); }
 nav { color: var(--muted); margin-bottom: 16px; }
 img { display: block; width: 100%; height: auto; border-radius: 10px; margin: 16px 0; }
+.grille { position: relative; margin: 16px 0; }
+.grille img { margin: 0; }
+.grille a { position: absolute; border-radius: 1%; }
+.grille a:hover, .grille a:focus-visible { outline: 3px solid var(--accent); outline-offset: -1px; }
+.recipe { scroll-margin-top: 12px; }
 .card, .recipe { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin: 12px 0; }
 .recipe h3 { margin: 0; font-size: 1.15rem; }
 .meta { color: var(--muted); font-size: .92rem; margin: 2px 0 10px; }
 ul, ol { padding-left: 22px; margin: 6px 0; }
+.shop { list-style: none; padding: 0; }
+.shop label { display: flex; gap: 12px; align-items: flex-start; padding: 7px 0; cursor: pointer; }
+.shop input { flex: none; width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--accent); }
+.shop input:checked + span { text-decoration: line-through; color: var(--muted); }
+button { font: inherit; color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 8px; padding: 6px 12px; margin-top: 14px; cursor: pointer; }
 .weeks { list-style: none; padding: 0; }
 .weeks a { display: block; padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; margin: 8px 0; text-decoration: none; }
 </style>

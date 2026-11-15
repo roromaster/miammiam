@@ -1,0 +1,1247 @@
+{
+  "week": "2026-W47",
+  "startDate": "2026-11-16",
+  "status": "proposed",
+  "promosSkipped": [
+    "Agneau sauté avec os à 10,97 €/kg : navarin d'agneau dimanche dernier et lundi midi, on varie les protéines.",
+    "Moules de bouchot à 5,68 €/kg : déjà un poisson mardi, et elles ne se réchauffent pas pour les restes.",
+    "Haché de bœuf Tradition bouchère à 14,26 €/kg : écart négligeable avec le prix habituel (14,60 €/kg).",
+    "Crevettes Ayaba à 16,30 €/kg : à peine moins chères que d'habitude, et crevettes déjà servies la semaine dernière.",
+    "Lapin entier à 11,59 €/kg : déjà trois viandes en promo bâties sur la semaine, et 90 minutes de cuisson incompatibles avec la semaine."
+  ],
+  "meals": [
+    {
+      "day": "lundi",
+      "slot": "midi",
+      "title": "Restes : Navarin d'agneau aux navets",
+      "emoji": "♻️",
+      "leftoversOf": "dimanche",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "lundi",
+      "slot": "soir",
+      "title": "Picadillo de bœuf aux pommes de terre",
+      "emoji": "🌮",
+      "cuisine": "mexicaine",
+      "side": "Haricots noirs au cumin et au citron vert",
+      "minutes": 28,
+      "prepMinutes": 12,
+      "cookMinutes": 16,
+      "servings": 8,
+      "leftoverTip": "Garder les haricots noirs à part. Réchauffer le picadillo à la poêle avec un fond d'eau, couvert, 5 minutes, et ajouter la coriandre au dernier moment.",
+      "ingredients": [
+        {
+          "name": "bœuf haché",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 17.52
+        },
+        {
+          "name": "pomme de terre",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.68,
+          "promo": "Prix promo",
+          "regularPrice": 1.28
+        },
+        {
+          "name": "carotte",
+          "quantity": 6,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.65,
+          "promo": "Prix promo",
+          "regularPrice": 1.08
+        },
+        {
+          "name": "petit pois surgelé",
+          "quantity": 500,
+          "unit": "g",
+          "aisle": "Surgelés",
+          "staple": false,
+          "price": 0.95
+        },
+        {
+          "name": "tomate concassée",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.4
+        },
+        {
+          "name": "oignon",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "ail",
+          "quantity": 6,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "cumin moulu",
+          "quantity": 4,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "origan séché",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "piment chipotle en poudre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie spécialisée (hors Leclerc)",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "bouillon de volaille en cube",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "haricot noir en conserve",
+          "quantity": 1000,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2.8
+        },
+        {
+          "name": "citron vert",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "coriandre fraîche",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.49
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.15
+        },
+        {
+          "name": "sel",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.02
+        }
+      ],
+      "steps": [
+        "Éplucher les pommes de terre et les carottes, et les couper en petits dés de 1 cm pour qu'elles cuisent vite. Émincer 2 oignons et hacher 4 gousses d'ail.",
+        "Dans une grande sauteuse (ou une cocotte) bien chaude avec 2 cuillères d'huile, faire dorer le bœuf haché 6 minutes en l'émiettant. Ajouter les oignons et l'ail, puis le cumin (3 cuillères), l'origan et le chipotle, et remuer 1 minute.",
+        "Ajouter les dés de pommes de terre et de carottes, la tomate concassée, le cube de bouillon émietté et 300 ml d'eau. Saler, couvrir et laisser mijoter 12 minutes, jusqu'à ce que les légumes soient tendres. Ajouter les petits pois les 4 dernières minutes.",
+        "Pendant ce temps, hacher le dernier oignon et les 2 gousses d'ail restantes, les faire revenir 3 minutes dans une casserole avec 1 cuillère d'huile, ajouter le reste du cumin, puis les haricots noirs égouttés et 100 ml d'eau. Chauffer 5 minutes en écrasant un quart des haricots, et finir avec le jus d'un citron vert.",
+        "Rectifier l'assaisonnement du picadillo, parsemer de coriandre ciselée et servir avec des quartiers du second citron vert. Servir 4 portions et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "mardi",
+      "slot": "midi",
+      "title": "Restes : Picadillo de bœuf aux pommes de terre",
+      "emoji": "♻️",
+      "leftoversOf": "lundi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "mardi",
+      "slot": "soir",
+      "title": "Curry rouge de saumon au brocoli",
+      "emoji": "🍛",
+      "cuisine": "thaïe",
+      "side": "Riz jasmin",
+      "minutes": 28,
+      "prepMinutes": 12,
+      "cookMinutes": 16,
+      "servings": 8,
+      "leftoverTip": "Garder le riz à part. Réchauffer le curry doucement à la casserole, à couvert, sans le faire bouillir pour que le saumon reste moelleux, et ajouter citron vert et coriandre au moment de servir.",
+      "source": {
+        "name": "RecipeTin Eats",
+        "url": "https://www.recipetineats.com/thai-red-curry-with-chicken/"
+      },
+      "ingredients": [
+        {
+          "name": "pavé de saumon",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 14.39,
+          "promo": "Prix promo",
+          "regularPrice": 23.76
+        },
+        {
+          "name": "pâte de curry rouge",
+          "quantity": 100,
+          "unit": "g",
+          "aisle": "Épicerie spécialisée (hors Leclerc)",
+          "staple": false,
+          "price": 2
+        },
+        {
+          "name": "lait de coco",
+          "quantity": 800,
+          "unit": "ml",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2.98
+        },
+        {
+          "name": "bouillon de volaille en cube",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "sauce poisson",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.24
+        },
+        {
+          "name": "sucre roux",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.1
+        },
+        {
+          "name": "brocoli",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 2.4
+        },
+        {
+          "name": "poivron rouge",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 2.4
+        },
+        {
+          "name": "ail",
+          "quantity": 4,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "gingembre",
+          "quantity": 20,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.16
+        },
+        {
+          "name": "citron vert",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "coriandre fraîche",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.49
+        },
+        {
+          "name": "riz jasmin",
+          "quantity": 640,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.44
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.2
+        }
+      ],
+      "steps": [
+        "Rincer le riz jasmin et le cuire avec 960 ml d'eau, à couvert, 12 minutes à feu doux, puis laisser reposer 10 minutes hors du feu.",
+        "Couper le brocoli en petits bouquets et les poivrons en lanières. Retirer la peau du saumon et le couper en gros cubes de 3 cm. Râper l'ail et le gingembre.",
+        "Dans une grande cocotte, chauffer l'huile à feu moyen-vif et y faire frire la pâte de curry avec l'ail et le gingembre 2 minutes, jusqu'à ce qu'elle sente bon et commence à sécher.",
+        "Ajouter 250 ml d'eau et le cube de bouillon, et laisser réduire de moitié 3 minutes à gros bouillons. Verser le lait de coco, la sauce poisson et le sucre, puis ajouter le brocoli et les poivrons, et cuire 4 minutes.",
+        "Plonger les cubes de saumon dans la sauce et les laisser pocher 5 minutes à petit feu, sans trop remuer pour qu'ils ne se défassent pas. Goûter et ajuster avec sauce poisson et jus de citron vert.",
+        "Parsemer de coriandre et servir avec le riz et des quartiers de citron vert. Servir 4 portions et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "mercredi",
+      "slot": "midi",
+      "title": "Restes : Curry rouge de saumon au brocoli",
+      "emoji": "♻️",
+      "leftoversOf": "mardi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "mercredi",
+      "slot": "soir",
+      "title": "Nikujaga au porc",
+      "emoji": "🥔",
+      "cuisine": "japonaise",
+      "side": "Haricots verts au sésame",
+      "minutes": 28,
+      "prepMinutes": 12,
+      "cookMinutes": 16,
+      "servings": 8,
+      "leftoverTip": "Le nikujaga est encore meilleur le lendemain : le réchauffer à la casserole, couvert, avec un fond de bouillon. Garder les haricots au sésame à part et les servir froids ou tièdes.",
+      "ingredients": [
+        {
+          "name": "échine de porc",
+          "quantity": 900,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 6.8
+        },
+        {
+          "name": "pomme de terre",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.02,
+          "promo": "Prix promo",
+          "regularPrice": 1.92
+        },
+        {
+          "name": "carotte",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.44,
+          "promo": "Prix promo",
+          "regularPrice": 0.72
+        },
+        {
+          "name": "oignon",
+          "quantity": 3,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "dashi en poudre",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie spécialisée (hors Leclerc)",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "saké de cuisine",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie spécialisée (hors Leclerc)",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "mirin",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie spécialisée (hors Leclerc)",
+          "staple": false,
+          "price": 0.34
+        },
+        {
+          "name": "sauce soja",
+          "quantity": 11,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.1
+        },
+        {
+          "name": "sucre",
+          "quantity": 60,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.09
+        },
+        {
+          "name": "haricot vert surgelé",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Surgelés",
+          "staple": false,
+          "price": 2.64
+        },
+        {
+          "name": "graine de sésame",
+          "quantity": 6,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.78
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.1
+        }
+      ],
+      "steps": [
+        "Faire bouillir une grande casserole d'eau salée pour les haricots. Éplucher les pommes de terre et les couper en morceaux de 4 cm, les carottes en tronçons biseautés, les oignons en quartiers. Couper l'échine en tranches très fines (plus facile si elle a passé 15 minutes au congélateur).",
+        "Dans une grande cocotte, faire revenir le porc 3 minutes dans l'huile à feu vif. Ajouter les légumes et les enrober de gras 1 minute.",
+        "Verser 700 ml d'eau mélangée au dashi, porter à ébullition et écumer. Ajouter le saké, le mirin et 50 g de sucre, puis, au retour de l'ébullition, 8 cuillères de sauce soja. Couvrir d'un couvercle posé directement sur les légumes (ou d'une feuille de papier cuisson) et mijoter 14 minutes à petit feu, jusqu'à ce que les pommes de terre soient tendres.",
+        "Pendant ce temps, griller le sésame 2 minutes à sec dans une poêle, puis l'écraser grossièrement avec 3 cuillères de sauce soja et le reste du sucre. Cuire les haricots verts 6 minutes dans l'eau bouillante, les refroidir à l'eau froide, bien les égoutter et les mélanger à la sauce au sésame.",
+        "Servir le nikujaga avec un peu de son bouillon, et les haricots à côté. Servir 4 portions et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "jeudi",
+      "slot": "midi",
+      "title": "Restes : Nikujaga au porc",
+      "emoji": "♻️",
+      "leftoversOf": "mercredi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "jeudi",
+      "slot": "soir",
+      "title": "Saucisses aux haricots blancs all'uccelletto",
+      "emoji": "🍅",
+      "cuisine": "italienne",
+      "side": "Chou de Milan sauté à l'ail et au piment",
+      "minutes": 30,
+      "prepMinutes": 12,
+      "cookMinutes": 18,
+      "servings": 8,
+      "leftoverTip": "Les haricots s'imprègnent de sauce en reposant : réchauffer à la casserole avec un peu d'eau, à feu doux. Garder le chou à part et le repasser 2 minutes à la poêle.",
+      "ingredients": [
+        {
+          "name": "saucisse de Toulouse",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 9.6
+        },
+        {
+          "name": "haricot blanc en conserve",
+          "quantity": 1500,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 3.09
+        },
+        {
+          "name": "tomate concassée",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 2.1
+        },
+        {
+          "name": "ail",
+          "quantity": 8,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "romarin frais",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1
+        },
+        {
+          "name": "chou de Milan",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 3.4
+        },
+        {
+          "name": "piment en flocons",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.15
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 6,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "sel",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.02
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        }
+      ],
+      "steps": [
+        "Couper les saucisses en tronçons de 4 cm. Les faire dorer 6 minutes dans une grande cocotte avec 1 cuillère d'huile d'olive, à feu moyen-vif.",
+        "Ajouter 5 gousses d'ail écrasées et 2 brins de romarin, cuire 1 minute, puis la tomate concassée. Laisser frémir 4 minutes, ajouter les haricots blancs rincés et égouttés, saler, poivrer et mijoter 10 minutes à couvert, jusqu'à ce que la sauce nappe les haricots.",
+        "Pendant ce temps, retirer les grosses côtes du chou de Milan et l'émincer en lanières. Dans une grande sauteuse, chauffer 4 cuillères d'huile d'olive avec les 3 gousses d'ail restantes émincées et le piment, ajouter le chou, saler et le faire sauter 3 minutes à feu vif, puis 5 minutes à couvert avec un fond d'eau, jusqu'à ce qu'il soit tendre mais encore vert.",
+        "Retirer le romarin, finir les haricots d'un filet d'huile d'olive et de poivre, et servir avec le chou. Servir 4 portions et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    },
+    {
+      "day": "vendredi",
+      "slot": "midi",
+      "title": "Restes : Saucisses aux haricots blancs all'uccelletto",
+      "emoji": "♻️",
+      "leftoversOf": "jeudi",
+      "ingredients": [],
+      "steps": []
+    },
+    {
+      "day": "vendredi",
+      "slot": "soir",
+      "title": "Tagliata de bœuf aux tomates cerises",
+      "emoji": "🥩",
+      "cuisine": "italienne",
+      "side": "Brocoli rôti au citron et à l'ail",
+      "minutes": 27,
+      "prepMinutes": 12,
+      "cookMinutes": 15,
+      "servings": 4,
+      "source": {
+        "name": "GialloZafferano",
+        "url": "https://www.giallozafferano.com/recipes/Beef-tagliata.html"
+      },
+      "ingredients": [
+        {
+          "name": "entrecôte",
+          "quantity": 750,
+          "unit": "g",
+          "aisle": "Boucher (à acheter vendredi)",
+          "staple": false,
+          "price": 24
+        },
+        {
+          "name": "tomate cerise",
+          "quantity": 250,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.5
+        },
+        {
+          "name": "brocoli",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.8
+        },
+        {
+          "name": "citron jaune",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "ail",
+          "quantity": 3,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "piment en flocons",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.15
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 5,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.01
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        }
+      ],
+      "steps": [
+        "Sortir l'entrecôte du réfrigérateur une heure avant. Préchauffer le four à 220 °C.",
+        "Couper le brocoli en bouquets, les mélanger avec 3 cuillères d'huile d'olive, l'ail émincé, le piment, le zeste du citron, du sel et du poivre. Rôtir 15 minutes sur une plaque, jusqu'à ce que les pointes dorent. Arroser du jus de citron à la sortie du four.",
+        "Couper les tomates cerises en deux. Faire chauffer une poêle-gril ou une poêle en fonte jusqu'à ce qu'elle fume. Huiler la viande et la cuire 3 minutes sur la première face, puis 3 minutes sur l'autre pour une cuisson saignante (environ 53 °C à cœur). La retourner avec une pince, sans la piquer.",
+        "Laisser reposer la viande 3 minutes sous une feuille d'aluminium, puis la trancher en lamelles épaisses avec un couteau bien aiguisé.",
+        "Dresser les tranches avec les tomates cerises, arroser d'un filet d'huile d'olive, de fleur de sel et de poivre, et servir aussitôt avec le brocoli."
+      ]
+    },
+    {
+      "day": "samedi",
+      "slot": "midi",
+      "title": "Smash burger à l'emmental et aux cornichons",
+      "emoji": "🍔",
+      "cuisine": "burger",
+      "side": "Coleslaw au chou blanc et à la carotte",
+      "minutes": 35,
+      "prepMinutes": 25,
+      "cookMinutes": 10,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "bœuf haché",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 8.76
+        },
+        {
+          "name": "pain à burger",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Boulangerie",
+          "staple": false,
+          "price": 1.36
+        },
+        {
+          "name": "emmental",
+          "quantity": 8,
+          "unit": "tranche",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 1.6
+        },
+        {
+          "name": "cornichon",
+          "quantity": 8,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "oignon",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "ketchup",
+          "quantity": 3,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.21
+        },
+        {
+          "name": "moutarde",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "mayonnaise",
+          "quantity": 7,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.7
+        },
+        {
+          "name": "chou blanc",
+          "quantity": 600,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1.2
+        },
+        {
+          "name": "carotte",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.22,
+          "promo": "Prix promo",
+          "regularPrice": 0.36
+        },
+        {
+          "name": "vinaigre de vin",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.06
+        },
+        {
+          "name": "sucre",
+          "quantity": 10,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.02
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        },
+        {
+          "name": "sel",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.01
+        }
+      ],
+      "steps": [
+        "Préparer le coleslaw : émincer finement le chou blanc, râper les carottes. Mélanger 4 cuillères de mayonnaise, le vinaigre, 1 cuillère de moutarde, le sucre et le sel, puis y enrober les légumes. Réserver au frais 15 minutes au moins.",
+        "Mélanger 3 cuillères de mayonnaise, le ketchup et 1 cuillère de moutarde pour la sauce. Émincer l'oignon très finement et trancher les cornichons en longueur.",
+        "Former 8 boules de bœuf haché de 75 g sans trop les tasser. Toaster les pains côté mie dans une grande poêle sèche, puis les réserver.",
+        "Faire chauffer la poêle (ou une plancha) à feu très vif avec un voile d'huile. Y poser les boules, 4 à la fois, les écraser aussitôt très finement avec une spatule, saler et cuire 2 minutes, jusqu'à ce qu'elles croûtent. Retourner, poser une tranche d'emmental sur chacune et cuire encore 1 minute.",
+        "Monter les burgers : sauce, deux galettes empilées, oignon, cornichons, sauce et chapeau. Servir avec le coleslaw."
+      ]
+    },
+    {
+      "day": "samedi",
+      "slot": "soir",
+      "title": "Cuisses de canard braisées à la chinoise",
+      "emoji": "🦆",
+      "cuisine": "chinoise",
+      "side": "Chou chinois sauté au vinaigre noir",
+      "minutes": 85,
+      "prepMinutes": 20,
+      "cookMinutes": 65,
+      "servings": 4,
+      "source": {
+        "name": "The Woks of Life",
+        "url": "https://thewoksoflife.com/chinese-braised-duck-legs/"
+      },
+      "ingredients": [
+        {
+          "name": "cuisse de canard",
+          "quantity": 1200,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 10.19,
+          "promo": "Prix promo",
+          "regularPrice": 13.8
+        },
+        {
+          "name": "vin de Shaoxing",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie spécialisée (hors Leclerc)",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "bouillon de volaille en cube",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "sauce soja",
+          "quantity": 5,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "sucre roux",
+          "quantity": 1,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.05
+        },
+        {
+          "name": "huile de sésame",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.05
+        },
+        {
+          "name": "gingembre",
+          "quantity": 20,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.16
+        },
+        {
+          "name": "ail",
+          "quantity": 6,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.6
+        },
+        {
+          "name": "oignon nouveau",
+          "quantity": 6,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.72
+        },
+        {
+          "name": "étoile de badiane",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "feuille de laurier",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.05
+        },
+        {
+          "name": "chou chinois",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 2
+        },
+        {
+          "name": "vinaigre noir de Chinkiang",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie spécialisée (hors Leclerc)",
+          "staple": false,
+          "price": 0.3
+        },
+        {
+          "name": "piment séché",
+          "quantity": 4,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.16
+        },
+        {
+          "name": "fécule de maïs",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.02
+        },
+        {
+          "name": "huile neutre",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.1
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Retirer l'excès de gras des cuisses de canard et les sécher. Les saisir côté peau dans une cocotte sèche allant au four, à feu moyen, 8 à 10 minutes, jusqu'à ce que la peau soit bien dorée, puis 1 minute de l'autre côté. Réserver les cuisses et vider la graisse (la garder pour des pommes de terre).",
+        "Dans la cocotte, verser le vin de Shaoxing, 500 ml d'eau chaude avec le cube de bouillon, 4 cuillères de sauce soja, le sucre roux, l'huile de sésame, le gingembre en tranches, 3 gousses d'ail émincées, la badiane, le laurier et les oignons nouveaux en tronçons. Remettre les cuisses peau vers le haut : le liquide doit arriver à mi-hauteur.",
+        "Porter à frémissement puis enfourner sans couvercle 30 minutes à 200 °C, puis 25 minutes à 180 °C, jusqu'à ce que la viande soit tendre et la peau croustillante.",
+        "Pendant la fin de cuisson, couper le chou chinois en morceaux de 4 cm en séparant les côtes blanches des feuilles. Dans un wok très chaud avec l'huile, faire revenir les 3 gousses d'ail restantes et les piments 20 secondes, ajouter les côtes 2 minutes, puis les feuilles 1 minute. Arroser du vinaigre noir et de la dernière cuillère de sauce soja, ajouter la fécule délayée dans 2 cuillères d'eau et mélanger 30 secondes.",
+        "Dégraisser le jus de braisage à la cuillère et en napper les cuisses. Servir avec le chou."
+      ]
+    },
+    {
+      "day": "dimanche",
+      "slot": "midi",
+      "title": "Poulet rôti à l'ail et au romarin",
+      "emoji": "🍗",
+      "cuisine": "française",
+      "side": "Carottes rôties au cumin et au miel",
+      "minutes": 85,
+      "prepMinutes": 15,
+      "cookMinutes": 70,
+      "servings": 4,
+      "source": {
+        "name": "750g",
+        "url": "https://www.750g.com/poulet-au-four-aux-herbes-sur-lit-de-pommes-de-terres-r7910.htm"
+      },
+      "ingredients": [
+        {
+          "name": "poulet fermier entier",
+          "quantity": 1600,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 9.55,
+          "promo": "Prix promo",
+          "regularPrice": 12
+        },
+        {
+          "name": "ail",
+          "quantity": 8,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "romarin frais",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1
+        },
+        {
+          "name": "thym séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.1
+        },
+        {
+          "name": "citron jaune",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "beurre",
+          "quantity": 20,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.19
+        },
+        {
+          "name": "carotte",
+          "quantity": 8,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.87,
+          "promo": "Prix promo",
+          "regularPrice": 1.44
+        },
+        {
+          "name": "miel",
+          "quantity": 2,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "cumin moulu",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.1
+        },
+        {
+          "name": "huile d'olive",
+          "quantity": 4,
+          "unit": "c. à soupe",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "sel",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.02
+        },
+        {
+          "name": "poivre",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.05
+        }
+      ],
+      "steps": [
+        "Préchauffer le four à 200 °C. Sortir le poulet du réfrigérateur 30 minutes avant si possible.",
+        "Glisser dans le poulet le citron coupé en deux, 2 gousses d'ail écrasées et la moitié du romarin. Le poser dans un plat, le badigeonner de 2 cuillères d'huile d'olive et du beurre, saler, poivrer et parsemer de thym. Disposer autour les 6 gousses d'ail restantes en chemise et le reste du romarin.",
+        "Enfourner 70 minutes, en arrosant le poulet de son jus toutes les 20 minutes. Il est cuit quand le jus qui coule de la cuisse piquée est clair.",
+        "Éplucher les carottes et les couper en deux dans la longueur. Les mélanger avec 2 cuillères d'huile d'olive, le cumin, le miel, du sel et du poivre, et les enfourner sur une plaque à côté du poulet pour les 35 dernières minutes, en les retournant à mi-cuisson.",
+        "Laisser reposer le poulet 10 minutes sous une feuille d'aluminium avant de le découper. Servir avec les carottes, le jus du plat et les gousses d'ail confites à écraser."
+      ]
+    },
+    {
+      "day": "dimanche",
+      "slot": "soir",
+      "title": "Blanquette de veau aux champignons",
+      "emoji": "🍲",
+      "cuisine": "française",
+      "side": "Riz blanc",
+      "minutes": 80,
+      "prepMinutes": 20,
+      "cookMinutes": 60,
+      "servings": 8,
+      "leftoverTip": "Garder le riz à part. Réchauffer la blanquette à feu très doux, à couvert, sans la faire bouillir pour que la sauce ne tranche pas, et la détendre d'un peu d'eau si elle a épaissi.",
+      "source": {
+        "name": "750g",
+        "url": "https://www.750g.com/blanquette-de-veau-a-lancienne-r20566.htm"
+      },
+      "ingredients": [
+        {
+          "name": "sauté de veau",
+          "quantity": 2400,
+          "unit": "g",
+          "aisle": "Viandes et poissons",
+          "staple": false,
+          "price": 26.14,
+          "promo": "Prix promo",
+          "regularPrice": 33.6
+        },
+        {
+          "name": "carotte",
+          "quantity": 8,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.87,
+          "promo": "Prix promo",
+          "regularPrice": 1.44
+        },
+        {
+          "name": "poireau",
+          "quantity": 400,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 1
+        },
+        {
+          "name": "champignon de Paris",
+          "quantity": 800,
+          "unit": "g",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 4.78
+        },
+        {
+          "name": "oignon",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "ail",
+          "quantity": 2,
+          "unit": "gousse",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.2
+        },
+        {
+          "name": "feuille de laurier",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.1
+        },
+        {
+          "name": "thym séché",
+          "quantity": 1,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.1
+        },
+        {
+          "name": "bouillon de volaille en cube",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.4
+        },
+        {
+          "name": "beurre",
+          "quantity": 90,
+          "unit": "g",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.85
+        },
+        {
+          "name": "farine",
+          "quantity": 70,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 0.07
+        },
+        {
+          "name": "crème fraîche",
+          "quantity": 200,
+          "unit": "ml",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.8
+        },
+        {
+          "name": "œuf",
+          "quantity": 2,
+          "unit": "pièce",
+          "aisle": "Produits laitiers",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "citron jaune",
+          "quantity": 1,
+          "unit": "pièce",
+          "aisle": "Fruits et légumes",
+          "staple": false,
+          "price": 0.5
+        },
+        {
+          "name": "riz jasmin",
+          "quantity": 640,
+          "unit": "g",
+          "aisle": "Épicerie",
+          "staple": false,
+          "price": 1.44
+        },
+        {
+          "name": "sel",
+          "quantity": 2,
+          "unit": "c. à café",
+          "aisle": "Épicerie",
+          "staple": true,
+          "price": 0.02
+        }
+      ],
+      "steps": [
+        "Mettre le veau dans une grande cocotte, couvrir d'eau froide, porter à ébullition et écumer soigneusement 5 minutes. Ajouter les cubes de bouillon, les carottes en tronçons, le poireau en morceaux, les oignons coupés en deux, l'ail, le laurier et le thym. Couvrir à moitié et laisser frémir 60 minutes, jusqu'à ce que la viande soit tendre.",
+        "Pendant la cuisson, couper les champignons en quartiers et les faire sauter 6 minutes dans 20 g de beurre, avec un filet de jus de citron et une pincée de sel.",
+        "Vingt minutes avant la fin, cuire le riz : le rincer puis le cuire avec 960 ml d'eau, à couvert, 12 minutes à feu doux, puis le laisser reposer.",
+        "Retirer la viande et les carottes avec une écumoire et les garder au chaud. Filtrer 1 litre de bouillon. Dans une casserole, faire fondre 70 g de beurre, ajouter la farine et cuire 1 minute sans colorer, puis verser le bouillon en fouettant et laisser épaissir 5 minutes à petits bouillons.",
+        "Hors du feu, incorporer la crème fouettée avec les 2 jaunes d'œufs et le reste du jus de citron. Remettre la viande, les carottes et les champignons dans la sauce et réchauffer sans bouillir. Servir 4 portions avec le riz et mettre les 4 autres en boîte pour le lendemain midi."
+      ]
+    }
+  ]
+}

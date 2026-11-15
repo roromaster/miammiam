@@ -1,3 +1,4 @@
 node_modules/
 config/recipients.local.json
+config/inbox.local.json
 .superpowers/

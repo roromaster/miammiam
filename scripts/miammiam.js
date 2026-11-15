@@ -3,6 +3,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { PROJECT_ROOT, loadCatalog, loadPlan } from "../lib/store.js";
 import { formatFreshPromo, freshPromos, loadPromos, missingCatalogs } from "../lib/promos.js";
+import { formatPending, pendingMessages, replyToMessage } from "../lib/inbox.js";
 import { currentWeek, upcomingWeek } from "../lib/week.js";
 import { checkPlan, defaultDeps, pricePlan, updatePromos, notifyProposal, renotifyProposal, republish, resendWeekly, saveProposal, sendWeekly, validateWeek } from "../lib/workflow.js";
 
@@ -21,6 +22,8 @@ const USAGE = `Commandes :
   resend-weekly <semaine>
   republish <semaine>
   sync
+  inbox
+  reply <id-du-message> <fichier.txt>
 
 Chaque commande, sauf target, récupère d'abord le dernier état depuis GitHub.
 MIAMMIAM_SYNC=0 désactive les échanges avec GitHub.`;
@@ -104,20 +107,30 @@ const COMMANDS = {
   republish(week) {
     return republish(weekArg(week), deps);
   },
+  // Réponses par email aux emails du projet : à lancer sur le Mac mini seulement.
+  async inbox() {
+    return formatPending(await pendingMessages({ root: deps.root }));
+  },
+  async reply(id, path) {
+    if (!/^[0-9a-f]+$/.test(id ?? "")) throw new Error(`Identifiant de message invalide : ${id}`);
+    if (!path) throw new Error("Fichier de réponse manquant");
+    await replyToMessage(id, readFileSync(resolve(path), "utf8"), { root: deps.root });
+    return `Réponse envoyée dans le fil du message ${id}`;
+  },
   async sync() {
     await deps.pushData("data: mise à jour des plans");
     return "Plans synchronisés avec GitHub";
   },
 };
 
-const [command, argument] = process.argv.slice(2);
+const [command, ...args] = process.argv.slice(2);
 if (!Object.hasOwn(COMMANDS, command ?? "")) {
   console.error(USAGE);
   process.exit(1);
 }
 try {
   if (command !== "target") await deps.pull();
-  console.log(await COMMANDS[command](argument));
+  console.log(await COMMANDS[command](...args));
 } catch (error) {
   console.error(error.message);
   process.exit(1);

@@ -83,8 +83,7 @@ test("la proposition liste les 14 plats, sans image, et explique la validation",
   assert.doesNotMatch(mime, /Content-ID/);
   const text = decodePart(mime, "text/plain");
   assert.equal((text.match(/Plat du /g) ?? []).length, 14);
-  assert.match(text, /Claude Desktop/);
-  assert.match(text, /MiamMiam/);
+  assert.match(text, /réponds simplement à cet email/);
 });
 
 function recipientsRoot(t, content) {

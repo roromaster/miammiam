@@ -2,6 +2,7 @@
 name: miammiam-courrier
 description: Toutes les 30 minutes, de 8 h à 22 h, traite les réponses aux emails MiamMiam et répond dans le fil.
 cron: "*/30 8-21 * * *"
+runner: scripts/courrier.sh, via launchd ; Claude ne part que s'il y a du courrier
 ---
 
 Tu traites les réponses reçues par email pour le projet MiamMiam, situé dans <DOSSIER_DU_PROJET>.
